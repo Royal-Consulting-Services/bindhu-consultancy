@@ -1,1 +1,0 @@
-# bindhu-consultancy

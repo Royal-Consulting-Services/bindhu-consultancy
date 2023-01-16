@@ -1,0 +1,60 @@
+@font-face {
+    font-family: RobotoBlack;
+    src: local("Roboto Black"),
+    url(./Roboto/Roboto-Black.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: RobotoBlackItalic;
+    src: local("Roboto BlackItalic"),
+    url(./Roboto/Roboto-BlackItalic.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: RobotoBold;
+    src: local("Roboto Bold"),
+    url(./Roboto/Roboto-Bold.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: RobotoBoldItalic;
+    src: local("Roboto BoldItalic"),
+    url(./Roboto/Roboto-BoldItalic.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: RobotoItalic;
+    src: local("Roboto Italic"),
+    url(./Roboto/Roboto-Italic.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: RobotoMedium;
+    src: local("Roboto Medium"),
+    url(./Roboto/Roboto-Medium.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: RobotoRegular;
+    src: local("Roboto Regular"),
+    url(./Roboto/Roboto-Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: RobotoThin;
+    src: local("Roboto Thin"),
+    url(./Roboto/Roboto-Thin.ttf) format("truetype");
+}
+
+
+
+/* Roboto-Light
+Roboto-LightItalic
+Roboto-Medium
+Roboto-MediumItalic
+Roboto-Regular
+Roboto-Thin
+Roboto-ThinItalic */
+
+
+

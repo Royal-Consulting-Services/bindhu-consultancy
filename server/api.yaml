@@ -1,0 +1,261 @@
+swagger: "2.0"
+info:
+  description: This is Node swagger demo project with CRUD
+  version: 1.0
+  contact:
+    email: gangadharb87@gmail.com
+  licnese:
+    name: testing swagger
+    url: "http://abc.com"
+  servers:
+  -url: "http://localhost:4001/"
+  description: this is my local server
+  -url: "http://ganga.com/"
+  description: this is personal server
+
+  schemas: [http, https]
+
+paths:
+  /getAllUsers:
+    get:
+      summary: Returns current users in database
+      description: It returns users list
+      parameters:
+        - in: header
+          name: authorization
+          schema:
+            type: string
+      responses:
+        200:
+          description: success
+          schema:
+            type: array
+            items:
+              $ref: "#components/schemas/allUsersResponse"
+        400:
+          description: Invalid Credentials or User does not exist
+          schema:
+            items:
+              $ref: "#components/schemas/invalidRequest"
+  /login:
+    post:
+      summary: Returns the login details of user
+      description: It will validate and give user data
+      produces:
+        - application/json
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: user
+          schema:
+            type: object
+            properties:
+              userName:
+                type: string
+              password:
+                type: string
+      responses:
+        200:
+          description: success
+          schema:
+            type: array
+            items:
+              $ref: "#components/schemas/UserResponse"
+  /createUser:
+    post:
+      summary: Returns the newly created user details
+      description: It will validate and create user data
+      produces:
+        - application/json
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: user
+          schema:
+            $ref: "#components/schemas/Users"
+      responses:
+        200:
+          description: success
+          schema:
+            type: array
+            items:
+              $ref: "#components/schemas/UserResponse"
+  /userByUserName/{userName}:
+    get:
+      summary: Returns user based on userName
+      description: It gives the user details based on userName
+      parameters:
+        - in: header
+          name: authorization
+          schema:
+            type: string
+        - name: userName
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: success
+          schema:
+            type: array
+            items:
+              $ref: "#components/schemas/UserResponse"
+        400:
+          description: Invalid Credentials or User does not exist
+          schema:
+            items:
+              $ref: "#components/schemas/invalidRequest"
+  /updateUser:
+    put:
+      summary: Update user based on userName
+      description: It updates the user details based on userName
+      parameters:
+        - in: header
+          name: authorization
+          schema:
+            type: string
+        - in: body
+          name: user
+          schema:
+            $ref: "#components/schemas/Users"
+      responses:
+        200:
+          description: success
+          schema:
+            type: array
+            items:
+              $ref: "#components/schemas/UserUpdateOrDeleteResponse"
+        500:
+          description: Invalid Credentials or User does not exist
+          schema:
+            items:
+              $ref: "#components/schemas/ServerError"
+  /delete/{userName}:
+    delete:
+      summary: Deletes user based on userName
+      description: It returns the deleted user details based on userName
+      parameters:
+        - in: header
+          name: authorization
+          schema:
+            type: string
+        - name: userName
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: success
+          schema:
+            type: array
+            items:
+              $ref: "#components/schemas/UserUpdateOrDeleteResponse"
+        403:
+          description: Forbidden Access
+          schema:
+            items:
+              $ref: "#components/schemas/AccessDenied"
+        500:
+          description: Internal Server Error
+          schema:
+            items:
+              $ref: "#components/schemas/ServerError"
+components:
+    schemas:
+      Users:
+        type: object
+        properties:
+          userName:
+            type: string
+          firstName:
+            type: string
+          lastName:
+            type: string
+          phone:
+            type: Number
+          email:
+            type: string
+          password:
+            type: string
+          role:
+            type: string
+      allUsersResponse:
+        type: object
+        properties:
+          statusCode:
+            type: integer
+          message:
+            type: string
+          users:
+            items:
+              $ref: "#components/schemas/Users"
+      UserResponse:
+        type: object
+        properties:
+          statusCode:
+            type: integer
+          message:
+            type: string
+          users:
+            items:
+              $ref: "#components/schemas/UserDataOjbect"
+      UserDataOjbect:
+        type: object
+        properties:
+          authToken:
+            type: string
+          response:
+            type: boolean
+          doc:
+            items:
+              $ref: "#components/schemas/UserOjbect"
+      UserOjbect:
+        type: object
+        properties:
+          userName:
+            type: string
+          firstName:
+            type: string
+          lastName:
+            type: string
+          phone:
+            type: Number
+          email:
+            type: string
+          password:
+            type: string
+          role:
+            type: string
+      invalidRequest:
+        type: object
+        properties:
+          statusCode:
+            type: integer
+          message:
+            type: string
+      ServerError:
+        type: object
+        properties:
+          statusCode:
+            type: integer
+          message:
+            type: string
+      UserUpdateOrDeleteResponse:
+        type: object
+        properties:
+          message:
+            type: string
+          data:
+            items:
+              $ref: "#components/schemas/UserDataOjbect"
+      AccessDenied:
+        type: object
+        properties:
+          statusCode:
+            type: integer
+          message:
+            type: string
