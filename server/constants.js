@@ -1,15 +1,15 @@
 const secretKey = "ganga1!@#$%_bugga%^&*()!_secret^&*()_Key)(*&^";
 const loginStatus = "Login successful";
-const incorrectData = "incorrect credentials";
-const userNotExist = " user doesnot exist";
-const usersAvailable = "users data available";
+const incorrectData = "Incorrect credentials";
+const userNotExist = " User doesnot exist";
+const usersAvailable = "Users data available";
 const accessDenied = "Access denied for users";
-const isIncorrectOrNotExist = "INvalid credentails or user doesnt exist";
+const isIncorrectOrNotExist = "Invalid credentails or user doesnt exist";
 const isuserExists = "user already exists";
 const isUserUpdated = "user updated successfully";
-const updateFailed = "user update FAILED";
-const userDeleted = "user DELETED successfully";
-const userDeletionFailed = "user DELETION failed";
+const updateFailed = "User update failed";
+const userDeleted = "User Deleted successfully";
+const userDeletionFailed = "user Deletion failed";
 
 module.exports = {
   secretKey,
