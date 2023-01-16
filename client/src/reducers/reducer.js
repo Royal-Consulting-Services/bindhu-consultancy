@@ -3,9 +3,9 @@ const initialState = {
 };
 
 function Reducer(state = initialState, action) {
-  switch(action.type) {
+  switch (action.type) {
     case 'MENUTOGGLE':
-      return { ...state, menuToggle: !state.menuToggle};
+      return { ...state, menuToggle: !state.menuToggle };
     default:
       return state;
   }
