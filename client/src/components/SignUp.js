@@ -4,6 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import { Slide1 } from '../images/images';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
+import { faClose } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 function SignUp(props) {
   const [inputValues, setInputValues] = useState({
     userName: '',
@@ -129,11 +131,16 @@ function SignUp(props) {
   }
   return (
     <Container fluid className='signup-bg'>
+      <FontAwesomeIcon
+        icon={faClose}
+        className={'page-close'}
+        onClick={() => signupNavigate('/')}
+      />
       <div className='overlay'></div>
       <Image src={Slide1} className='backgrnd-img' />
       <div className='login-form-content'>
         <Row>
-          <Col xs={4} md={{ span: 6, offset: 3 }}>
+          <Col xs={12} md={{ span: 6, offset: 3 }}>
             <h3
               style={{
                 color: '#ffffff',
@@ -147,6 +154,7 @@ function SignUp(props) {
               <Row>
                 <Col xs={12} md={6}>
                   <Form.Group className='mb-3' controlId='formFirstName'>
+                  <Form.Label>First Name</Form.Label>
                     <Form.Control
                       type='text'
                       name={'firstName'}
@@ -161,6 +169,7 @@ function SignUp(props) {
                 </Col>
                 <Col xs={12} md={6}>
                   <Form.Group className='mb-3' controlId='formLastName'>
+                  <Form.Label>Last Name</Form.Label>
                     <Form.Control
                       type='text'
                       name={'lastName'}
@@ -177,6 +186,7 @@ function SignUp(props) {
               <Row>
                 <Col xs={12} md={6}>
                   <Form.Group className='mb-3' controlId='formEmail'>
+                  <Form.Label>Email</Form.Label>
                     <Form.Control
                       type='email'
                       name={'email'}
@@ -195,6 +205,7 @@ function SignUp(props) {
                     className='mb-4 react-phone-control'
                     controlId='formMobile'
                   >
+                    <Form.Label>Mobile</Form.Label>
                     <PhoneInput
                       name={'mobile'}
                       placeholder='Mobile'
@@ -216,6 +227,7 @@ function SignUp(props) {
               <Row>
                 <Col xs={12} md={6}>
                   <Form.Group className='mb-3' controlId='formPassword'>
+                  <Form.Label>Password</Form.Label>
                     <Form.Control
                       type='password'
                       name={'passWord'}
@@ -227,6 +239,7 @@ function SignUp(props) {
                 </Col>
                 <Col xs={12} md={6}>
                   <Form.Group className='mb-3' controlId='formUserName'>
+                  <Form.Label>User Name</Form.Label>
                     <Form.Control
                       type='text'
                       name={'userName'}
@@ -246,6 +259,23 @@ function SignUp(props) {
                 </Button>
               </div>
             </Form>
+            <hr />
+            <p
+              style={{
+                color: '#ffffff',
+                margin: '0px auto 20px auto',
+              }}
+            >
+              Already have a account login here
+            </p>
+            <div className='d-grid gap-2'>
+              <Button
+                variant='outline-primary'
+                onClick={() => signupNavigate('/login')}
+              >
+                Login
+              </Button>
+            </div>
           </Col>
         </Row>
       </div>

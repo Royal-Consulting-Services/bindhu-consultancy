@@ -46,7 +46,7 @@ function Careers() {
             </Col>
           </Row>
         </div>
-        <ScrollAnimation animateIn='slideInUp'>
+        {/* <ScrollAnimation animateIn='slideInUp'> */}
           <Row className={'career-tabs'}>
             <Col xs={12} md={4}>
               <ListGroup>
@@ -60,7 +60,7 @@ function Careers() {
               {Careerlist}
             </Col>
           </Row>
-        </ScrollAnimation>
+        {/* </ScrollAnimation> */}
       </Container>
     </>
   );

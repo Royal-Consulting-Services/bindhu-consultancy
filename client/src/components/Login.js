@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Button, Container, Form, Row, Col, Image } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import { Slide1 } from '../images/images';
-
+import { faClose } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 function Login(props) {
   const [userName, setUserName] = useState('');
   const [password, setPassword] = useState('');
@@ -51,6 +52,11 @@ function Login(props) {
   return (
     <Container fluid className='login-bg'>
       <div className='overlay'></div>
+      <FontAwesomeIcon
+        icon={faClose}
+        className={'page-close'}
+        onClick={() => loginNavigate('/')}
+      />
       <Image src={Slide1} className='backgrnd-img' />
       <div className='login-form-content'>
         <h3
@@ -63,7 +69,7 @@ function Login(props) {
           Log In
         </h3>
         <Row>
-          <Col xs={4} md={{ span: 4, offset: 4 }}>
+          <Col xs={12} md={{ span: 4, offset: 4 }}>
             {(errMessage || regMessage) && (
               <b
                 style={{
@@ -109,6 +115,23 @@ function Login(props) {
                 </Button>
               </div>
             </Form>
+            <hr />
+            <p
+              style={{
+                color: '#ffffff',
+                margin: '0px auto 20px auto',
+              }}
+            >
+              Please Sign Up Here
+            </p>
+            <div className='d-grid gap-2'>
+              <Button
+                variant='outline-primary'
+                onClick={() => loginNavigate('/signup')}
+              >
+                Sign Up
+              </Button>
+            </div>
           </Col>
         </Row>
       </div>
