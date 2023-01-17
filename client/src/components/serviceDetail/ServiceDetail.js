@@ -39,7 +39,7 @@ function ServiceDetail(props) {
   return (
     <>
       <div className='page-banner'>
-        <Image src={Servicebnr} />
+        <Image fluid={true} src={Servicebnr} />
       </div>
       <Container>
         <h3 className={'mt-5 mb-5 content-heading'}>

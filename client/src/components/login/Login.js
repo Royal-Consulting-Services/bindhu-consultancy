@@ -58,7 +58,7 @@ function Login(props) {
         className={'page-close'}
         onClick={() => loginNavigate('/')}
       />
-      <Image src={Slide1} className='backgrnd-img' />
+      <Image src={Slide1} fluid={true} className='backgrnd-img' />
       <div className='login-form-content'>
         <h3
           style={{

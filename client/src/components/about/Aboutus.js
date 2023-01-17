@@ -8,7 +8,7 @@ function Aboutus() {
   return (
     <>
       <div className='page-banner'>
-        <Image src={Aboutusbnr} />
+        <Image fluid={true} src={Aboutusbnr} />
       </div>
       <Container>
         <h3 className={'mt-5 mb-5 content-heading'}>

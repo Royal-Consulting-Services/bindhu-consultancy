@@ -146,7 +146,7 @@ function SignUp(props) {
         onClick={() => signupNavigate('/')}
       />
       <div className='overlay'></div>
-      <Image src={Slide1} className='backgrnd-img' />
+      <Image src={Slide1} fluid={true} className='backgrnd-img' />
       <div className='login-form-content'>
         <Row>
           <Col xs={12} md={{ span: 6, offset: 3 }}>
