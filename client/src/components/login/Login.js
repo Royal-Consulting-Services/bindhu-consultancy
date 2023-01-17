@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Button, Container, Form, Row, Col, Image } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
-import { Slide1 } from '../images/images';
+import { Slide1 } from '../../images/images';
 import { faClose } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 function Login(props) {
@@ -139,4 +139,4 @@ function Login(props) {
   );
 }
 
-export default Login;
+export { Login };

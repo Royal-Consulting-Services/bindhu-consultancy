@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/iframe-has-title */
 import React from 'react';
 import { Container, Row, Col, Card, Image } from 'react-bootstrap';
-import { Contactusbnr } from '../images/images';
+import { Contactusbnr } from '../../images/images';
 import {
   faLocationDot,
   faPhone,
@@ -81,4 +81,4 @@ function Contact() {
   );
 }
 
-export default Contact;
+export { Contact };

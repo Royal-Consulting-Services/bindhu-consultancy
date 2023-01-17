@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Button, Container, Form, Row, Col, Image } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
-import { Slide1 } from '../images/images';
+import { Slide1 } from '../../images/images';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 import { faClose } from '@fortawesome/free-solid-svg-icons';
@@ -154,7 +154,7 @@ function SignUp(props) {
               <Row>
                 <Col xs={12} md={6}>
                   <Form.Group className='mb-3' controlId='formFirstName'>
-                  <Form.Label>First Name</Form.Label>
+                    <Form.Label>First Name</Form.Label>
                     <Form.Control
                       type='text'
                       name={'firstName'}
@@ -169,7 +169,7 @@ function SignUp(props) {
                 </Col>
                 <Col xs={12} md={6}>
                   <Form.Group className='mb-3' controlId='formLastName'>
-                  <Form.Label>Last Name</Form.Label>
+                    <Form.Label>Last Name</Form.Label>
                     <Form.Control
                       type='text'
                       name={'lastName'}
@@ -186,7 +186,7 @@ function SignUp(props) {
               <Row>
                 <Col xs={12} md={6}>
                   <Form.Group className='mb-3' controlId='formEmail'>
-                  <Form.Label>Email</Form.Label>
+                    <Form.Label>Email</Form.Label>
                     <Form.Control
                       type='email'
                       name={'email'}
@@ -227,7 +227,7 @@ function SignUp(props) {
               <Row>
                 <Col xs={12} md={6}>
                   <Form.Group className='mb-3' controlId='formPassword'>
-                  <Form.Label>Password</Form.Label>
+                    <Form.Label>Password</Form.Label>
                     <Form.Control
                       type='password'
                       name={'passWord'}
@@ -239,7 +239,7 @@ function SignUp(props) {
                 </Col>
                 <Col xs={12} md={6}>
                   <Form.Group className='mb-3' controlId='formUserName'>
-                  <Form.Label>User Name</Form.Label>
+                    <Form.Label>User Name</Form.Label>
                     <Form.Control
                       type='text'
                       name={'userName'}
@@ -283,4 +283,4 @@ function SignUp(props) {
   );
 }
 
-export default SignUp;
+export { SignUp };

@@ -21,6 +21,7 @@ import {
   faInstagram,
 } from '@fortawesome/free-brands-svg-icons';
 import { MENULINK } from '../../content';
+
 function Footer(props) {
   const [show, setShow] = useState(false);
   const [showBtn, setShowBtn] = useState('hidden-btn');
@@ -257,4 +258,4 @@ function Footer(props) {
   );
 }
 
-export default Footer;
+export { Footer };

@@ -1,6 +1,6 @@
 import React from 'react';
-import { Carousel, Container, Row, Col, Card, Button } from 'react-bootstrap';
-import { SLIDERS } from '../content';
+import { Carousel, Container, Row, Col, Card, Button,Image } from 'react-bootstrap';
+import { SLIDERS } from '../../content';
 import {
   Technology,
   Aboutuscont,
@@ -15,9 +15,8 @@ import {
   Cloudmigration,
   Cloudarchitecture,
   Businessanalytics,
-} from '../images/images';
+} from '../../images/images';
 
-import Image from 'react-bootstrap/Image';
 import ScrollAnimation from 'react-animate-on-scroll';
 import { useNavigate } from 'react-router-dom';
 
@@ -32,8 +31,7 @@ const slides = SLIDERS.map((slider) => {
     </Carousel.Item>
   );
 });
-
-function Home() {
+function SSHome() {
   const homeNavigate = useNavigate();
   return (
     <>
@@ -45,11 +43,7 @@ function Home() {
               <h3 className={'mt-5 mb-5 content-heading'}>
                 <span>About Us</span>
               </h3>
-              <Image
-                rounded={true}
-                src={Aboutuscont}
-                className={'d-flex w-100'}
-              />
+              <Image rounded={true} src={Aboutuscont} className={'d-flex w-100'} />
               At BR Group Tech, we are a premier software services company that
               provides tailor-made cloud solutions to organizations across the
               United States. Our highly skilled professionals offer
@@ -89,10 +83,10 @@ function Home() {
           </Col>
           <Col xs={12} md={6}>
             <ScrollAnimation animateIn='flipInX'>
-              <Image
-                rounded={true}
+              <img
                 className='d-block w-100'
                 src={Technology}
+                alt='First slide'
               />
             </ScrollAnimation>
           </Col>
@@ -113,7 +107,7 @@ function Home() {
                     Implementation
                   </Card.Title>
                   <Card.Text>
-                    <Image rounded={true} src={Implement} className={'w-100'} />
+                    <Image src={Implement} className={'w-100'} />
                     <p className='tech-content'></p>
                   </Card.Text>
                 </Card.Body>
@@ -133,7 +127,7 @@ function Home() {
                     Project management
                   </Card.Title>
                   <Card.Text>
-                    <Image rounded={true} src={Projmanag} className={'w-100'} />
+                    <Image src={Projmanag} className={'w-100'} />
                     <p className='tech-content'></p>
                   </Card.Text>
                 </Card.Body>
@@ -149,7 +143,7 @@ function Home() {
                     Staff Augmentation
                   </Card.Title>
                   <Card.Text>
-                    <Image rounded={true} src={Staffaug} className={'w-100'} />
+                    <Image src={Staffaug} className={'w-100'} />
                     <p className='tech-content'></p>
                   </Card.Text>
                 </Card.Body>
@@ -169,7 +163,7 @@ function Home() {
                     Consultancy
                   </Card.Title>
                   <Card.Text>
-                    <Image rounded={true} src={Consult} className={'w-100'} />
+                    <Image src={Consult} className={'w-100'} />
                     <p className='tech-content'></p>
                   </Card.Text>
                 </Card.Body>
@@ -189,7 +183,7 @@ function Home() {
                     Migration
                   </Card.Title>
                   <Card.Text>
-                    <Image rounded={true} src={Migrate} className={'w-100'} />
+                    <Image src={Migrate} className={'w-100'} />
                     <p className='tech-content'></p>
                   </Card.Text>
                 </Card.Body>
@@ -208,11 +202,7 @@ function Home() {
                   <Card.Title>
                     Database Creation & Database Migrations
                   </Card.Title>
-                  <Image
-                    rounded={true}
-                    src={Databasemigrte}
-                    className={'d-flex w-100'}
-                  />
+                  <Image src={Databasemigrte} className={'d-flex w-100'} />
                   <Card.Text>
                     <p className='help-content'>
                       Our certified cloud engineers provide a tailored database
@@ -225,10 +215,10 @@ function Home() {
                     </p>
                   </Card.Text>
                   <Button
-                    variant='secondary'
+                    variant='link'
                     onClick={() => homeNavigate('/service')}
                   >
-                    Read more
+                    read more{' '}
                   </Button>
                 </Card.Body>
               </Card>
@@ -237,11 +227,7 @@ function Home() {
               <Card className='help-cont-card'>
                 <Card.Body>
                   <Card.Title>IT Consulting</Card.Title>
-                  <Image
-                    rounded={true}
-                    src={Itconsulting}
-                    className={'d-flex w-100'}
-                  />
+                  <Image src={Itconsulting} className={'d-flex w-100'} />
                   <Card.Text>
                     <p className='help-content'>
                       Our IT consulting solutions focus on helping you achieve
@@ -257,10 +243,10 @@ function Home() {
                     </p>
                   </Card.Text>
                   <Button
-                    variant='secondary'
+                    variant='link'
                     onClick={() => homeNavigate('/service')}
                   >
-                    Read more
+                    read more{' '}
                   </Button>
                 </Card.Body>
               </Card>
@@ -269,11 +255,7 @@ function Home() {
               <Card className='help-cont-card'>
                 <Card.Body>
                   <Card.Title>Cloud Migration</Card.Title>
-                  <Image
-                    rounded={true}
-                    src={Cloudmigration}
-                    className={'d-flex w-100'}
-                  />
+                  <Image src={Cloudmigration} className={'d-flex w-100'} />
                   <Card.Text>
                     <p className='help-content'>
                       At BR Group Tech, our cloud migration service is designed
@@ -286,10 +268,10 @@ function Home() {
                     </p>
                   </Card.Text>
                   <Button
-                    variant='secondary'
+                    variant='link'
                     onClick={() => homeNavigate('/service')}
                   >
-                    Read more
+                    read more{' '}
                   </Button>
                 </Card.Body>
               </Card>
@@ -302,11 +284,7 @@ function Home() {
               <Card className='help-cont-card'>
                 <Card.Body>
                   <Card.Title>Cloud Architecture</Card.Title>
-                  <Image
-                    rounded={true}
-                    src={Cloudarchitecture}
-                    className={'d-flex w-100'}
-                  />
+                  <Image src={Cloudarchitecture} className={'d-flex w-100'} />
                   <Card.Text>
                     <p className='help-content'>
                       Our team provides tailored cloud architecture services
@@ -321,10 +299,10 @@ function Home() {
                     </p>
                   </Card.Text>
                   <Button
-                    variant='secondary'
+                    variant='link'
                     onClick={() => homeNavigate('/service')}
                   >
-                    Read more
+                    read more{' '}
                   </Button>
                 </Card.Body>
               </Card>
@@ -333,11 +311,7 @@ function Home() {
               <Card className='help-cont-card'>
                 <Card.Body>
                   <Card.Title>Business Analytics</Card.Title>
-                  <Image
-                    rounded={true}
-                    src={Businessanalytics}
-                    className={'d-flex w-100'}
-                  />
+                  <Image src={Businessanalytics} className={'d-flex w-100'} />
                   <Card.Text>
                     <p className='help-content'>
                       At BR Group Tech, we provide ad hoc business analytics
@@ -349,10 +323,10 @@ function Home() {
                     </p>
                   </Card.Text>
                   <Button
-                    variant='secondary'
+                    variant='link'
                     onClick={() => homeNavigate('/service')}
                   >
-                    Read more
+                    read more{' '}
                   </Button>
                 </Card.Body>
               </Card>
@@ -365,7 +339,7 @@ function Home() {
           </h3>
           <Col xs={12} md={6}>
             <ScrollAnimation animateIn='flipInY'>
-              <Image rounded={true} className='choose-image' src={Whychoose} />
+              <Image className='choose-image' src={Whychoose} />
             </ScrollAnimation>
           </Col>
           <Col xs={12} md={6}>
@@ -392,4 +366,4 @@ function Home() {
   );
 }
 
-export default Home;
+export { SSHome };

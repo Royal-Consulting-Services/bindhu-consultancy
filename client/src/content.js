@@ -6,14 +6,12 @@ import {
   faSitemap,
   faBusinessTime,
 } from '@fortawesome/free-solid-svg-icons';
-import { Card, Image } from 'react-bootstrap';
 import {
   Implement,
   Projmanag,
   Staffaug,
   Consult,
   Migrate,
-  Whychoose,
   Databasemigrte,
   Itconsulting,
   Cloudmigration,

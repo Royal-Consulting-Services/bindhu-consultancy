@@ -11,7 +11,7 @@ import {
   Modal,
   Badge,
 } from 'react-bootstrap';
-import Header from './header/Header';
+import { HeaderConnect } from '../header';
 import {
   faClose,
   faAdd,
@@ -289,7 +289,7 @@ function AdminHome(props) {
                 </Alert>
               )}
               <div className='scroll-content'>
-                <Header
+                <HeaderConnect
                   menuLink={USERTABLEMENU}
                   type={'table'}
                   fluid={true}
@@ -471,4 +471,5 @@ const mapStateToProps = (state) => ({
   menuToggle: state.menuToggle,
 });
 
-export default connect(mapStateToProps, '')(AdminHome);
+const AdminHomeConnect = connect(mapStateToProps, '')(AdminHome);
+export { AdminHomeConnect };

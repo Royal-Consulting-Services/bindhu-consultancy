@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
-import { CAREERLIST } from '../content';
-import { Careerbnr } from '../images/images';
+import { CAREERLIST } from '../../content';
+import { Careerbnr } from '../../images/images';
 import Image from 'react-bootstrap/Image';
 const Careerlist = CAREERLIST.map((career, index) => {
   return index === 1 ? (
@@ -54,4 +54,4 @@ function CareersDescription() {
   );
 }
 
-export default CareersDescription;
+export { CareersDescription };

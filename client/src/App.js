@@ -1,28 +1,32 @@
 import React, { useEffect, useState } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Provider } from 'react-redux';
+
 import './App.css';
-import Home from './components/Home';
+
 import 'bootstrap/dist/css/bootstrap.css';
 import './css/master.scss';
 import 'animate.css';
-import AdminHome from './components/AdminHome';
-import Aboutus from './components/Aboutus';
-import SSHome from './components/SSHome';
-import Service from './components/Service';
-import Careers from './components/Careers';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { SLIDERS, MENULINK, ADMINMENULINK } from './content';
+import { Home } from './components/home';
+import { AdminHomeConnect } from './components/adminHome';
+import { Aboutus } from './components/about';
+import { SSHome } from './components/selfHome';
+import { Service } from './components/service';
+import { Careers } from './components/careers';
+
 import store from './store/store';
-import { Provider } from 'react-redux';
-import Contact from './components/Contact';
-import Login from './components/Login';
-import SignUp from './components/SignUp';
-import Header from './components/header/Header';
-import ServiceDetail from './components/ServiceDetail';
-import Footer from './components/footer/Footer';
-import CareersDescription from './components/CareersDescription';
+
+import { Contact } from './components/contact';
+import { Login } from './components/login';
+import { SignUp } from './components/signUp';
+import { HeaderConnect } from './components/header';
+import { ServiceDetail } from './components/serviceDetail';
+import { Footer } from './components/footer';
+import { CareersDescription } from './components/careersDescription';
+import { MENULINK, ADMINMENULINK } from './content';
+
 function App() {
   const stringifiedPerson = JSON.parse(localStorage.getItem('user-info'));
-  let loginUser = stringifiedPerson?.loggedinUser?.userName;
   const [userLogin, setUserLogin] = useState(
     JSON.parse(localStorage.getItem('user-info'))?.loggedinUser?.userName
   );
@@ -58,7 +62,7 @@ function App() {
     <Provider store={store}>
       <BrowserRouter>
         {userLogin === 'admin' ? (
-          <Header
+          <HeaderConnect
             menuLink={ADMINMENULINK}
             className={'app-header'}
             type={'adminpage'}
@@ -69,7 +73,7 @@ function App() {
             forceLoad={refresh}
           />
         ) : userLogin && userLogin !== 'admin' ? (
-          <Header
+          <HeaderConnect
             menuLink={MENULINK}
             selectedMenu={url === '/' ? 'home' : url.replace('/', '')}
             className={'app-header'}
@@ -80,7 +84,7 @@ function App() {
             forceLoad={refresh}
           />
         ) : (
-          <Header
+          <HeaderConnect
             menuLink={MENULINK}
             selectedMenu={url === '/' ? 'home' : url.replace('/', '')}
             className={'app-header'}
@@ -95,7 +99,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path='/home' element={<Home />} />
           <Route path='/aboutus' element={<Aboutus />} />
-          <Route path='/admin' element={<AdminHome />} />
+          <Route path='/admin' element={<AdminHomeConnect />} />
           <Route path='/self' element={<SSHome />} />
           <Route
             path='/service'

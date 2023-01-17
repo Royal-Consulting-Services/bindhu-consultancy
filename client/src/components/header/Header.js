@@ -277,10 +277,7 @@ function Header(props) {
 
             <Navbar.Toggle aria-controls='navbarScroll' />
             <Navbar.Collapse id='navbarScroll'>
-              <Nav
-                className='me-auto my-2 my-lg-0'
-                navbarScroll
-              >
+              <Nav className='me-auto my-2 my-lg-0' navbarScroll>
                 {Menu}
               </Nav>
               {(props.type === 'adminpage' || props.type === 'selfpage') && (
@@ -690,4 +687,6 @@ const mapDispatchToProps = (dispatch) => ({
   menuClick: () => dispatch(menuClick()),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Header);
+const HeaderConnect = connect(mapStateToProps, mapDispatchToProps)(Header);
+
+export { HeaderConnect };

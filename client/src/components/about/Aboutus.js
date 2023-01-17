@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import { Aboutusbnr, Aboutuscont, Whychoose } from '../images/images';
+import { Aboutusbnr, Aboutuscont, Whychoose } from '../../images/images';
 import Image from 'react-bootstrap/Image';
 import ScrollAnimation from 'react-animate-on-scroll';
 
@@ -76,4 +76,4 @@ function Aboutus() {
   );
 }
 
-export default Aboutus;
+export { Aboutus };

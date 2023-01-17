@@ -1,11 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Carousel, Container, Row, Col, Card, Button } from 'react-bootstrap';
-import Header from './header/Header';
-import { SLIDERS, MENULINK } from '../content';
+import { SLIDERS } from '../../content';
 import {
   Technology,
-  Blog1,
-  Blog2,
   Aboutuscont,
   Implement,
   Projmanag,
@@ -18,17 +15,8 @@ import {
   Cloudmigration,
   Cloudarchitecture,
   Businessanalytics,
-} from '../images/images';
-import Footer from './footer/Footer';
-import {
-  faDesktop,
-  faFolder,
-  faLifeRing,
-  faScrewdriverWrench,
-  faCartShopping,
-  faPenToSquare,
-} from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+} from '../../images/images';
+
 import Image from 'react-bootstrap/Image';
 import ScrollAnimation from 'react-animate-on-scroll';
 import { useNavigate } from 'react-router-dom';
@@ -44,9 +32,9 @@ const slides = SLIDERS.map((slider) => {
     </Carousel.Item>
   );
 });
-function SSHome() {
+
+function Home() {
   const homeNavigate = useNavigate();
-  const stringifiedPerson = JSON.parse(localStorage.getItem('user-info'));
   return (
     <>
       <Carousel>{slides}</Carousel>
@@ -57,7 +45,11 @@ function SSHome() {
               <h3 className={'mt-5 mb-5 content-heading'}>
                 <span>About Us</span>
               </h3>
-              <Image src={Aboutuscont} className={'d-flex w-100'} />
+              <Image
+                rounded={true}
+                src={Aboutuscont}
+                className={'d-flex w-100'}
+              />
               At BR Group Tech, we are a premier software services company that
               provides tailor-made cloud solutions to organizations across the
               United States. Our highly skilled professionals offer
@@ -97,10 +89,10 @@ function SSHome() {
           </Col>
           <Col xs={12} md={6}>
             <ScrollAnimation animateIn='flipInX'>
-              <img
+              <Image
+                rounded={true}
                 className='d-block w-100'
                 src={Technology}
-                alt='First slide'
               />
             </ScrollAnimation>
           </Col>
@@ -121,10 +113,7 @@ function SSHome() {
                     Implementation
                   </Card.Title>
                   <Card.Text>
-                    {/* <span className='tech-icon-span'>
-                    <FontAwesomeIcon icon={faDesktop} className="tech-icon" />
-                  </span> */}
-                    <Image src={Implement} className={'w-100'} />
+                    <Image rounded={true} src={Implement} className={'w-100'} />
                     <p className='tech-content'></p>
                   </Card.Text>
                 </Card.Body>
@@ -144,10 +133,7 @@ function SSHome() {
                     Project management
                   </Card.Title>
                   <Card.Text>
-                    {/* <span className='tech-icon-span'>
-                    <FontAwesomeIcon icon={faFolder} className="tech-icon" />
-                  </span> */}
-                    <Image src={Projmanag} className={'w-100'} />
+                    <Image rounded={true} src={Projmanag} className={'w-100'} />
                     <p className='tech-content'></p>
                   </Card.Text>
                 </Card.Body>
@@ -163,10 +149,7 @@ function SSHome() {
                     Staff Augmentation
                   </Card.Title>
                   <Card.Text>
-                    {/* <span className='tech-icon-span'>
-                    <FontAwesomeIcon icon={faLifeRing} className="tech-icon" />
-                  </span> */}
-                    <Image src={Staffaug} className={'w-100'} />
+                    <Image rounded={true} src={Staffaug} className={'w-100'} />
                     <p className='tech-content'></p>
                   </Card.Text>
                 </Card.Body>
@@ -186,10 +169,7 @@ function SSHome() {
                     Consultancy
                   </Card.Title>
                   <Card.Text>
-                    {/* <span className='tech-icon-span'>
-                    <FontAwesomeIcon icon={faScrewdriverWrench} className="tech-icon" />
-                  </span> */}
-                    <Image src={Consult} className={'w-100'} />
+                    <Image rounded={true} src={Consult} className={'w-100'} />
                     <p className='tech-content'></p>
                   </Card.Text>
                 </Card.Body>
@@ -209,10 +189,7 @@ function SSHome() {
                     Migration
                   </Card.Title>
                   <Card.Text>
-                    {/* <span className='tech-icon-span'>
-                    <FontAwesomeIcon icon={faCartShopping} className="tech-icon" />
-                  </span> */}
-                    <Image src={Migrate} className={'w-100'} />
+                    <Image rounded={true} src={Migrate} className={'w-100'} />
                     <p className='tech-content'></p>
                   </Card.Text>
                 </Card.Body>
@@ -231,7 +208,11 @@ function SSHome() {
                   <Card.Title>
                     Database Creation & Database Migrations
                   </Card.Title>
-                  <Image src={Databasemigrte} className={'d-flex w-100'} />
+                  <Image
+                    rounded={true}
+                    src={Databasemigrte}
+                    className={'d-flex w-100'}
+                  />
                   <Card.Text>
                     <p className='help-content'>
                       Our certified cloud engineers provide a tailored database
@@ -244,10 +225,10 @@ function SSHome() {
                     </p>
                   </Card.Text>
                   <Button
-                    variant='link'
+                    variant='secondary'
                     onClick={() => homeNavigate('/service')}
                   >
-                    read more{' '}
+                    Read more
                   </Button>
                 </Card.Body>
               </Card>
@@ -256,7 +237,11 @@ function SSHome() {
               <Card className='help-cont-card'>
                 <Card.Body>
                   <Card.Title>IT Consulting</Card.Title>
-                  <Image src={Itconsulting} className={'d-flex w-100'} />
+                  <Image
+                    rounded={true}
+                    src={Itconsulting}
+                    className={'d-flex w-100'}
+                  />
                   <Card.Text>
                     <p className='help-content'>
                       Our IT consulting solutions focus on helping you achieve
@@ -272,10 +257,10 @@ function SSHome() {
                     </p>
                   </Card.Text>
                   <Button
-                    variant='link'
+                    variant='secondary'
                     onClick={() => homeNavigate('/service')}
                   >
-                    read more{' '}
+                    Read more
                   </Button>
                 </Card.Body>
               </Card>
@@ -284,7 +269,11 @@ function SSHome() {
               <Card className='help-cont-card'>
                 <Card.Body>
                   <Card.Title>Cloud Migration</Card.Title>
-                  <Image src={Cloudmigration} className={'d-flex w-100'} />
+                  <Image
+                    rounded={true}
+                    src={Cloudmigration}
+                    className={'d-flex w-100'}
+                  />
                   <Card.Text>
                     <p className='help-content'>
                       At BR Group Tech, our cloud migration service is designed
@@ -297,10 +286,10 @@ function SSHome() {
                     </p>
                   </Card.Text>
                   <Button
-                    variant='link'
+                    variant='secondary'
                     onClick={() => homeNavigate('/service')}
                   >
-                    read more{' '}
+                    Read more
                   </Button>
                 </Card.Body>
               </Card>
@@ -313,7 +302,11 @@ function SSHome() {
               <Card className='help-cont-card'>
                 <Card.Body>
                   <Card.Title>Cloud Architecture</Card.Title>
-                  <Image src={Cloudarchitecture} className={'d-flex w-100'} />
+                  <Image
+                    rounded={true}
+                    src={Cloudarchitecture}
+                    className={'d-flex w-100'}
+                  />
                   <Card.Text>
                     <p className='help-content'>
                       Our team provides tailored cloud architecture services
@@ -328,10 +321,10 @@ function SSHome() {
                     </p>
                   </Card.Text>
                   <Button
-                    variant='link'
+                    variant='secondary'
                     onClick={() => homeNavigate('/service')}
                   >
-                    read more{' '}
+                    Read more
                   </Button>
                 </Card.Body>
               </Card>
@@ -340,7 +333,11 @@ function SSHome() {
               <Card className='help-cont-card'>
                 <Card.Body>
                   <Card.Title>Business Analytics</Card.Title>
-                  <Image src={Businessanalytics} className={'d-flex w-100'} />
+                  <Image
+                    rounded={true}
+                    src={Businessanalytics}
+                    className={'d-flex w-100'}
+                  />
                   <Card.Text>
                     <p className='help-content'>
                       At BR Group Tech, we provide ad hoc business analytics
@@ -352,10 +349,10 @@ function SSHome() {
                     </p>
                   </Card.Text>
                   <Button
-                    variant='link'
+                    variant='secondary'
                     onClick={() => homeNavigate('/service')}
                   >
-                    read more{' '}
+                    Read more
                   </Button>
                 </Card.Body>
               </Card>
@@ -368,7 +365,7 @@ function SSHome() {
           </h3>
           <Col xs={12} md={6}>
             <ScrollAnimation animateIn='flipInY'>
-              <Image className='choose-image' src={Whychoose} />
+              <Image rounded={true} className='choose-image' src={Whychoose} />
             </ScrollAnimation>
           </Col>
           <Col xs={12} md={6}>
@@ -395,4 +392,4 @@ function SSHome() {
   );
 }
 
-export default SSHome;
+export { Home };

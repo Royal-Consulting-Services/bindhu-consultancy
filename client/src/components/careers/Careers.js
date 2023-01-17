@@ -1,11 +1,11 @@
 import React from 'react';
 import { Container, Row, Col, ListGroup } from 'react-bootstrap';
-import { CAREERLIST } from '../content';
-import { Careerbnr } from '../images/images';
+import { CAREERLIST } from '../../content';
+import { Careerbnr } from '../../images/images';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'react-bootstrap/Image';
-import ScrollAnimation from 'react-animate-on-scroll';
+
 const Careerlist = CAREERLIST.map((career) => {
   return (
     <div className='job-list'>
@@ -24,6 +24,7 @@ const Careerlist = CAREERLIST.map((career) => {
     </div>
   );
 });
+
 function Careers() {
   return (
     <>
@@ -46,24 +47,22 @@ function Careers() {
             </Col>
           </Row>
         </div>
-        {/* <ScrollAnimation animateIn='slideInUp'> */}
-          <Row className={'career-tabs'}>
-            <Col xs={12} md={4}>
-              <ListGroup>
-                <ListGroup.Item>All Locations (10)</ListGroup.Item>
-                <ListGroup.Item>India (2)</ListGroup.Item>
-                <ListGroup.Item>USA (2)</ListGroup.Item>
-                <ListGroup.Item>UK (1)</ListGroup.Item>
-              </ListGroup>
-            </Col>
-            <Col xs={12} md={8}>
-              {Careerlist}
-            </Col>
-          </Row>
-        {/* </ScrollAnimation> */}
+        <Row className={'career-tabs'}>
+          <Col xs={12} md={4}>
+            <ListGroup>
+              <ListGroup.Item>All Locations (10)</ListGroup.Item>
+              <ListGroup.Item>India (2)</ListGroup.Item>
+              <ListGroup.Item>USA (2)</ListGroup.Item>
+              <ListGroup.Item>UK (1)</ListGroup.Item>
+            </ListGroup>
+          </Col>
+          <Col xs={12} md={8}>
+            {Careerlist}
+          </Col>
+        </Row>
       </Container>
     </>
   );
 }
 
-export default Careers;
+export { Careers };

@@ -362,6 +362,7 @@ body {
 
   .foo-content-text {
     font-size: 20px;
+    margin-top: 1rem;
   }
 
   .list-group.list-group-horizontal.foo-social-icon {
@@ -782,31 +783,32 @@ body {
     // width: 100px;
     margin: auto;
     position: relative;
-  
+
     h5.technology-timetitle {
       font-size: 15px;
     }
-  
+
     img {
       width: 150px !important;
       margin: auto;
       display: block;
     }
   }
-  .col-md-2_5{
+  .col-md-2_5 {
     width: 80%;
     margin: auto;
   }
   .technology-timeline.firsttimeline::after {
     left: 35%;
   }
-  
+
   .technology-timeline.lasttimeline::after {
     right: 35%;
   }
-  
-  .technology-timeline::after,.firsttimeline::after {
-    content: "";
+
+  .technology-timeline::after,
+  .firsttimeline::after {
+    content: '';
     background-color: #000;
     position: absolute;
     width: 5px;
@@ -814,9 +816,8 @@ body {
     top: 16px;
     left: 50% !important;
     display: block;
-}
+  }
 
-  
   .main-footer {
     padding: 10px;
     .foo-menu-link {
@@ -825,7 +826,7 @@ body {
         width: auto !important;
       }
     }
-}
+  }
 }
 
 @media only screen and (max-width: 768px) {

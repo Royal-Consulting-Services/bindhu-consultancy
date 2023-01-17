@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import { DSERVICES } from '../content';
-import { Servicebnr } from '../images/images';
+import { DSERVICES } from '../../content';
+import { Servicebnr } from '../../images/images';
 
 import Image from 'react-bootstrap/Image';
 
@@ -70,4 +70,4 @@ function ServiceDetail(props) {
   );
 }
 
-export default ServiceDetail;
+export { ServiceDetail };

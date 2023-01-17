@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
-import { SERVICES, DSERVICES } from '../content';
-import { Servicebnr } from '../images/images';
+import { SERVICES, DSERVICES } from '../../content';
+import { Servicebnr } from '../../images/images';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'react-bootstrap/Image';
@@ -96,4 +96,4 @@ function Service(props) {
   );
 }
 
-export default Service;
+export { Service };
