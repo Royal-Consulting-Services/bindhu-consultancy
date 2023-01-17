@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { Slide1 } from '../../images/images';
 import { faClose } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 function Login(props) {
   const [userName, setUserName] = useState('');
   const [password, setPassword] = useState('');
@@ -14,33 +15,33 @@ function Login(props) {
   const loginUser = stringifiedPerson?.loggedinUser?.userName;
   console.log(loginUser);
   async function loginSubmit() {
-    console.log(userName, password);
-    let item = { userName, password };
-    let result = await fetch('http://localhost:4004/login', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Accept: 'application/json',
-      },
-      body: JSON.stringify(item),
-    });
-    result = await result.json();
-    result.loggedinUser = {
-      userName: userName,
-      passWord: password,
-    };
-    if (result.statusCode === 200) {
-      localStorage.setItem('user-info', JSON.stringify(result));
-      console.log(result.data.authToken);
-      if (userName === 'admin') {
-        loginNavigate('/admin');
-        props.loginCall();
+    if (userName !== '' && password !== '') {
+      let item = { userName, password };
+      let result = await fetch('http://localhost:4004/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify(item),
+      });
+      result = await result.json();
+      result.loggedinUser = {
+        userName: userName,
+        passWord: password,
+      };
+      if (result.statusCode === 200) {
+        localStorage.setItem('user-info', JSON.stringify(result));
+        if (userName === 'admin') {
+          loginNavigate('/admin');
+          props.loginCall();
+        } else {
+          loginNavigate('/self');
+          props.loginCall();
+        }
       } else {
-        loginNavigate('/self');
-        props.loginCall();
+        setErrMessage(true);
       }
-    } else {
-      setErrMessage(true);
     }
   }
 
@@ -73,7 +74,11 @@ function Login(props) {
             {(errMessage || regMessage) && (
               <b
                 style={{
-                  color: errMessage ? 'red' : regMessage ? 'green' : '',
+                  color: errMessage
+                    ? 'firebrick'
+                    : regMessage
+                    ? 'forestgreen'
+                    : '',
                   marginBottom: '20px',
                   display: 'block',
                 }}

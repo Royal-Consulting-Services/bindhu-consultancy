@@ -90,39 +90,48 @@ function SignUp(props) {
   }, [inputValues]);
 
   const signupSubmit = () => {
-    fetch('http://localhost:4004/createUser', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Accept: 'application/json',
-      },
-      body: JSON.stringify({
-        userName: inputValues.userName,
-        firstName: inputValues.firstName,
-        lastName: inputValues.lastName,
-        email: inputValues.email,
-        phone: inputValues.mobile,
-        password: inputValues.passWord,
-        role: 'user',
-      }),
-    })
-      .then((res) => res.json())
-      .then((res) => {
-        console.log(res);
-        signupNavigate('/login');
-        props.SignUpcall(
-          'Successfully Completed Your Registration, You Can Login Now!'
-        );
-        setInputValues({
-          userName: '',
-          firstName: '',
-          lastName: '',
-          email: '',
-          mobile: '',
-          passWord: '',
+    if (
+      inputValues.userName !== '' &&
+      inputValues.firstName !== '' &&
+      inputValues.lastName !== '' &&
+      inputValues.email !== '' &&
+      inputValues.mobile !== '' &&
+      inputValues.passWord!== ''
+    ) {
+      fetch('http://localhost:4004/createUser', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          userName: inputValues.userName,
+          firstName: inputValues.firstName,
+          lastName: inputValues.lastName,
+          email: inputValues.email,
+          phone: inputValues.mobile,
+          password: inputValues.passWord,
           role: 'user',
+        }),
+      })
+        .then((res) => res.json())
+        .then((res) => {
+          console.log(res);
+          props.SignUpcall(
+            'Successfully Completed Your Registration, You Can Login Now!'
+          );
+          signupNavigate('/login');
+          setInputValues({
+            userName: '',
+            firstName: '',
+            lastName: '',
+            email: '',
+            mobile: '',
+            passWord: '',
+            role: 'user',
+          });
         });
-      });
+    }
   };
 
   function handleChange(event) {
@@ -163,7 +172,9 @@ function SignUp(props) {
                       onChange={(e) => handleChange(e)}
                     />
                     {validation.firstName && (
-                      <p style={{ color: 'red' }}>{validation.firstName}</p>
+                      <p style={{ color: 'firebrick' }}>
+                        {validation.firstName}
+                      </p>
                     )}
                   </Form.Group>
                 </Col>
@@ -178,7 +189,9 @@ function SignUp(props) {
                       onChange={(e) => handleChange(e)}
                     />
                     {validation.lastName && (
-                      <p style={{ color: 'red' }}>{validation.lastName}</p>
+                      <p style={{ color: 'firebrick' }}>
+                        {validation.lastName}
+                      </p>
                     )}
                   </Form.Group>
                 </Col>
@@ -195,7 +208,7 @@ function SignUp(props) {
                       onChange={(e) => handleChange(e)}
                     />
                     {validation.email && (
-                      <p style={{ color: 'red' }}>{validation.email}</p>
+                      <p style={{ color: 'firebrick' }}>{validation.email}</p>
                     )}
                   </Form.Group>
                 </Col>
@@ -248,7 +261,9 @@ function SignUp(props) {
                       onChange={(e) => handleChange(e)}
                     />
                     {validation.userName && (
-                      <p style={{ color: 'red' }}>{validation.userName}</p>
+                      <p style={{ color: 'firebrick' }}>
+                        {validation.userName}
+                      </p>
                     )}
                   </Form.Group>
                 </Col>

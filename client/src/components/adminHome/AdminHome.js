@@ -264,8 +264,8 @@ function AdminHome(props) {
               md={3}
               style={{ boxShadow: '1px 0px 5px 0px #403c4329', padding: '0px' }}
             >
-              <ListGroup defaultActiveKey='#link1' className='side-menu'>
-                <ListGroup.Item action href='#link1'>
+              <ListGroup  className='side-menu'>
+                <ListGroup.Item action>
                   <FontAwesomeIcon
                     icon={faUsers}
                     style={{ marginRight: '5px' }}

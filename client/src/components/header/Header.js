@@ -375,7 +375,7 @@ function Header(props) {
                                 onChange={(e) => handleChange(e)}
                               />
                               {validation.firstName && (
-                                <p style={{ color: 'red' }}>
+                                <p style={{ color: 'firebrick' }}>
                                   {validation.firstName}
                                 </p>
                               )}
@@ -394,7 +394,7 @@ function Header(props) {
                                 onChange={(e) => handleChange(e)}
                               />
                               {validation.lastName && (
-                                <p style={{ color: 'red' }}>
+                                <p style={{ color: 'firebrick' }}>
                                   {validation.lastName}
                                 </p>
                               )}
@@ -412,7 +412,7 @@ function Header(props) {
                                 onChange={(e) => handleChange(e)}
                               />
                               {validation.email && (
-                                <p style={{ color: 'red' }}>
+                                <p style={{ color: 'firebrick' }}>
                                   {validation.email}
                                 </p>
                               )}
@@ -428,7 +428,7 @@ function Header(props) {
                                 onChange={(e) => handleChange(e)}
                               />
                               {validation.mobile && (
-                                <p style={{ color: 'red' }}>
+                                <p style={{ color: 'firebrick' }}>
                                   {validation.mobile}
                                 </p>
                               )}
@@ -463,7 +463,7 @@ function Header(props) {
                                 onChange={(e) => handleChange(e)}
                               />
                               {validation.userName && (
-                                <p style={{ color: 'red' }}>
+                                <p style={{ color: 'firebrick' }}>
                                   {validation.userName}
                                 </p>
                               )}
@@ -499,9 +499,9 @@ function Header(props) {
                         <p
                           style={{
                             color: errMessage
-                              ? 'red'
+                              ? 'firebrick'
                               : regMessage
-                              ? 'green'
+                              ? 'forestgreen'
                               : '',
                           }}
                         >
