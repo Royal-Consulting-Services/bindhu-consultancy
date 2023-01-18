@@ -22,7 +22,7 @@ function Contact() {
             <span>Contact</span>
           </h3>
           <Row>
-            <Col xs={12} md={4}>
+            <Col xs={12} md={4} className={'mb-4'}>
               <Card className='contact-card'>
                 <Card.Body>
                   <FontAwesomeIcon
@@ -37,7 +37,7 @@ function Contact() {
                 </Card.Body>
               </Card>
             </Col>
-            <Col xs={12} md={4}>
+            <Col xs={12} md={4} className={'mb-4'}>
               <Card className='contact-card'>
                 <Card.Body>
                   <FontAwesomeIcon icon={faPhone} className='contact-icon' />
@@ -51,7 +51,7 @@ function Contact() {
                 </Card.Body>
               </Card>
             </Col>
-            <Col xs={12} md={4}>
+            <Col xs={12} md={4} className={'mb-4'}>
               <Card className='contact-card'>
                 <Card.Body>
                   <FontAwesomeIcon icon={faGlobe} className='contact-icon' />

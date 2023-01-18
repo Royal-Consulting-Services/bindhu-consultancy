@@ -46,7 +46,7 @@ function Service(props) {
   return (
     <>
       <div className='page-banner'>
-        <Image src={Servicebnr} />
+        <Image fluid src={Servicebnr} />
       </div>
       <Container>
         <div className={'service-tabs animate__animated animate__backInUp'}>

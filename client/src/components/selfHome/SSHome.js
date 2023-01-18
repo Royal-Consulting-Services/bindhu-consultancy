@@ -39,7 +39,7 @@ function SSHome() {
       <Container>
         <Row>
           <Col xs={12} md={{ span: 8, offset: 2 }}>
-            <ScrollAnimation animateIn='slideInDown'>
+            <ScrollAnimation animateIn='slideInDown' initiallyVisible>
               <h3 className={'mt-5 mb-5 content-heading'}>
                 <span>About Us</span>
               </h3>

@@ -1,5 +1,6 @@
+import { isMobile } from "react-device-detect";
 const initialState = {
-  menuToggle: false,
+  menuToggle: isMobile ? true : false,
 };
 
 function Reducer(state = initialState, action) {

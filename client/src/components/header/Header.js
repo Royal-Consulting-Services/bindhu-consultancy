@@ -46,6 +46,7 @@ function Header(props) {
   const [regMessage, setRegMessage] = useState('');
   const [showProfile, setShowProfile] = useState(false);
   const [formType, setFormType] = useState('');
+  const [headerType] = useState(props.type);
   const headerNavigate = useNavigate();
 
   async function loginSubmit(props) {
@@ -260,7 +261,7 @@ function Header(props) {
           expand='lg'
           fixed={props.fixed}
         >
-          <Container fluid={props.fluid}>
+          <Container fluid={props.fluid} className={"app-header-container"}>
             {props.type === 'adminpage' && (
               <FontAwesomeIcon
                 icon={faBars}
@@ -274,58 +275,63 @@ function Header(props) {
                 <Image src={MainLogo} style={{ height: '38px' }} />
               </Navbar.Brand>
             )}
-
-            <Navbar.Toggle aria-controls='navbarScroll' />
-            <Navbar.Collapse id='navbarScroll'>
-              <Nav className='me-auto my-2 my-lg-0' navbarScroll>
-                {Menu}
-              </Nav>
-              {(props.type === 'adminpage' || props.type === 'selfpage') && (
-                <div className='d-flex'>
-                  <Dropdown drop={'start'}>
-                    <Dropdown.Toggle
-                      variant='link'
-                      id='dropdown-basic'
-                      className='user-profile'
-                    >
-                      <FontAwesomeIcon icon={faUser} className='profile-icon' />
-                      <h5 className='profile-username'>
-                        {props?.loggedin?.loggedinUser?.userName}
-                      </h5>
-                    </Dropdown.Toggle>
-                    <Dropdown.Menu>
-                      <Dropdown.Item onClick={() => myProfile()}>
-                        Profile
-                      </Dropdown.Item>
-                      <Dropdown.Item onClick={() => signOut()}>
-                        Sign Out
-                      </Dropdown.Item>
-                    </Dropdown.Menu>
-                  </Dropdown>
-                </div>
+            {(props?.type !== 'adminpage' && props?.type !== 'table') && (
+              <Navbar.Toggle aria-controls='navbarScroll' />
               )}
-              {props.type === 'homepage' && (
-                <div className='d-flex'>
-                  <>
-                    <Button
-                      variant='secondary'
-                      size={'sm'}
-                      onClick={navigateLogin}
-                    >
-                      Login
-                    </Button>
-                    <Button
-                      variant='primary'
-                      size={'sm'}
-                      className={'left'}
-                      onClick={navigateSignup}
-                    >
-                      Signup
-                    </Button>
-                  </>
-                </div>
-              )}
-            </Navbar.Collapse>
+              {props?.type === 'table' ? <>{Menu}</> :
+              <Navbar.Collapse id='navbarScroll'>
+                <Nav className='me-auto my-2 my-lg-0' navbarScroll>
+                  {Menu}
+                </Nav>
+                {props.type === 'homepage' && (
+                  <div className='d-flex'>
+                    <>
+                      <Button
+                        variant='secondary'
+                        size={'sm'}
+                        onClick={navigateLogin}
+                      >
+                        Login
+                      </Button>
+                      <Button
+                        variant='primary'
+                        size={'sm'}
+                        className={'left'}
+                        onClick={navigateSignup}
+                      >
+                        Signup
+                      </Button>
+                    </>
+                  </div>
+                )}
+                </Navbar.Collapse>
+            }
+                            <>
+                {(props.type === 'adminpage' || props.type === 'selfpage') && (
+                  <div className='d-flex profile-dd'>
+                    <Dropdown drop={'start'}>
+                      <Dropdown.Toggle
+                        variant='link'
+                        id='dropdown-basic'
+                        className='user-profile'
+                      >
+                        <FontAwesomeIcon icon={faUser} className='profile-icon' />
+                        <h5 className='profile-username'>
+                          {props?.loggedin?.loggedinUser?.userName}
+                        </h5>
+                      </Dropdown.Toggle>
+                      <Dropdown.Menu>
+                        <Dropdown.Item onClick={() => myProfile()}>
+                          Profile
+                        </Dropdown.Item>
+                        <Dropdown.Item onClick={() => signOut()}>
+                          Sign Out
+                        </Dropdown.Item>
+                      </Dropdown.Menu>
+                    </Dropdown>
+                  </div>
+                )}
+                </>
           </Container>
         </Navbar>
         <Modal

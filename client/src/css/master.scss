@@ -763,6 +763,15 @@ body {
 }
 
 @media only screen and (max-width: 481px) {
+  .app-header{
+    .app-header-container{
+      justify-content: unset;
+      .profile-dd{
+        margin-left: auto;
+      }
+    }
+
+  }
   .signup-bg {
     padding: 0px;
 
@@ -778,6 +787,19 @@ body {
       padding: 10px;
       margin-top: 60% !important;
     }
+  }
+  .page-banner{
+    height: auto;
+  }
+  .panel{
+    width: 100%;
+  }
+  .mob-sidemenu{
+    width: 280px;
+    position: fixed;
+    top: 60px;
+    height: 100%;
+    background: #ffffff;
   }
   .technology-timeline {
     // width: 100px;

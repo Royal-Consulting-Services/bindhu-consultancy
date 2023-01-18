@@ -29,7 +29,7 @@ function Careers() {
   return (
     <>
       <div className='page-banner'>
-        <Image src={Careerbnr} />
+        <Image fluid src={Careerbnr} />
       </div>
       <Container>
         <div className={'service-tabs animate__animated animate__backInUp'}>

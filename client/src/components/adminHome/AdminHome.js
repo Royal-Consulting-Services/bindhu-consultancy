@@ -262,6 +262,7 @@ function AdminHome(props) {
             <Col
               xs={12}
               md={3}
+              className={"mob-sidemenu"}
               style={{ boxShadow: '1px 0px 5px 0px #403c4329', padding: '0px' }}
             >
               <ListGroup  className='side-menu'>
@@ -332,7 +333,7 @@ function AdminHome(props) {
             </h4>
             <div className='panel-content'>
               <Row>
-                <Col xs={6} md={{ span: 12 }}>
+                <Col xs={12} md={{ span: 12 }}>
                   <>
                     <Form>
                       <Row>

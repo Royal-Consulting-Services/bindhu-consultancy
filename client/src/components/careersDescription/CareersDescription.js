@@ -26,7 +26,7 @@ function CareersDescription() {
   return (
     <>
       <div className='page-banner'>
-        <Image src={Careerbnr} />
+        <Image src={Careerbnr} initiallyVisible />
       </div>
       <Container>
         <div
