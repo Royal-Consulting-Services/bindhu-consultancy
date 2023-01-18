@@ -257,6 +257,7 @@ body {
 .help-cont-card {
   // height: 180px;
   cursor: pointer;
+  margin-bottom: 6px;
 
   // .card-body {
   //     .card-title {
@@ -763,14 +764,13 @@ body {
 }
 
 @media only screen and (max-width: 481px) {
-  .app-header{
-    .app-header-container{
+  .app-header {
+    .app-header-container {
       justify-content: unset;
-      .profile-dd{
+      .profile-dd {
         margin-left: auto;
       }
     }
-
   }
   .signup-bg {
     padding: 0px;
@@ -788,13 +788,13 @@ body {
       margin-top: 60% !important;
     }
   }
-  .page-banner{
+  .page-banner {
     height: auto;
   }
-  .panel{
+  .panel {
     width: 100%;
   }
-  .mob-sidemenu{
+  .mob-sidemenu {
     width: 280px;
     position: fixed;
     top: 60px;

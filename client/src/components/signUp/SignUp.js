@@ -96,7 +96,7 @@ function SignUp(props) {
       inputValues.lastName !== '' &&
       inputValues.email !== '' &&
       inputValues.mobile !== '' &&
-      inputValues.passWord!== ''
+      inputValues.passWord !== ''
     ) {
       fetch('http://localhost:4004/createUser', {
         method: 'POST',

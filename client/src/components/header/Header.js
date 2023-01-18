@@ -261,7 +261,7 @@ function Header(props) {
           expand='lg'
           fixed={props.fixed}
         >
-          <Container fluid={props.fluid} className={"app-header-container"}>
+          <Container fluid={props.fluid} className={'app-header-container'}>
             {props.type === 'adminpage' && (
               <FontAwesomeIcon
                 icon={faBars}
@@ -270,15 +270,16 @@ function Header(props) {
               />
             )}
             {props.type !== 'table' && (
-              <Navbar.Brand href='#'>
-                {' '}
+              <Navbar.Brand href='/'>
                 <Image src={MainLogo} style={{ height: '38px' }} />
               </Navbar.Brand>
             )}
-            {(props?.type !== 'adminpage' && props?.type !== 'table') && (
+            {props?.type !== 'adminpage' && props?.type !== 'table' && (
               <Navbar.Toggle aria-controls='navbarScroll' />
-              )}
-              {props?.type === 'table' ? <>{Menu}</> :
+            )}
+            {props?.type === 'table' ? (
+              <>{Menu}</>
+            ) : (
               <Navbar.Collapse id='navbarScroll'>
                 <Nav className='me-auto my-2 my-lg-0' navbarScroll>
                   {Menu}
@@ -304,34 +305,34 @@ function Header(props) {
                     </>
                   </div>
                 )}
-                </Navbar.Collapse>
-            }
-                            <>
-                {(props.type === 'adminpage' || props.type === 'selfpage') && (
-                  <div className='d-flex profile-dd'>
-                    <Dropdown drop={'start'}>
-                      <Dropdown.Toggle
-                        variant='link'
-                        id='dropdown-basic'
-                        className='user-profile'
-                      >
-                        <FontAwesomeIcon icon={faUser} className='profile-icon' />
-                        <h5 className='profile-username'>
-                          {props?.loggedin?.loggedinUser?.userName}
-                        </h5>
-                      </Dropdown.Toggle>
-                      <Dropdown.Menu>
-                        <Dropdown.Item onClick={() => myProfile()}>
-                          Profile
-                        </Dropdown.Item>
-                        <Dropdown.Item onClick={() => signOut()}>
-                          Sign Out
-                        </Dropdown.Item>
-                      </Dropdown.Menu>
-                    </Dropdown>
-                  </div>
-                )}
-                </>
+              </Navbar.Collapse>
+            )}
+            <>
+              {(props.type === 'adminpage' || props.type === 'selfpage') && (
+                <div className='d-flex profile-dd'>
+                  <Dropdown drop={'start'}>
+                    <Dropdown.Toggle
+                      variant='link'
+                      id='dropdown-basic'
+                      className='user-profile'
+                    >
+                      <FontAwesomeIcon icon={faUser} className='profile-icon' />
+                      <h5 className='profile-username'>
+                        {props?.loggedin?.loggedinUser?.userName}
+                      </h5>
+                    </Dropdown.Toggle>
+                    <Dropdown.Menu>
+                      <Dropdown.Item onClick={() => myProfile()}>
+                        Profile
+                      </Dropdown.Item>
+                      <Dropdown.Item onClick={() => signOut()}>
+                        Sign Out
+                      </Dropdown.Item>
+                    </Dropdown.Menu>
+                  </Dropdown>
+                </div>
+              )}
+            </>
           </Container>
         </Navbar>
         <Modal
@@ -511,8 +512,7 @@ function Header(props) {
                               : '',
                           }}
                         >
-                          {errMessage &&
-                            'Please verify your Username or Password are incorrect'}
+                          {errMessage && 'Username or Password are incorrect'}
                           {regMessage && regMessage}{' '}
                         </p>
                       )}
@@ -547,16 +547,7 @@ function Header(props) {
                             </Form.Group>
                           </Col>
                         </Row>
-                        <Form.Group
-                          className='mb-3'
-                          controlId='formBasicCheckbox'
-                        >
-                          <Form.Check
-                            type='checkbox'
-                            label='Remember Me'
-                            style={{ color: '#ffffff' }}
-                          />
-                        </Form.Group>
+
                         <div className='d-grid gap-2'>
                           <Button variant='primary' onClick={loginSubmit}>
                             Submit
@@ -595,8 +586,7 @@ function Header(props) {
                                 type='text'
                                 placeholder='First Name'
                                 value={inputValues.firstName}
-                                onChange={(e) => handleChange(e)}
-                                disabled={false}
+                                disabled={true}
                               />
                             </Form.Group>
                           </Col>
@@ -609,8 +599,7 @@ function Header(props) {
                                 type='text'
                                 placeholder='Last Name'
                                 value={inputValues.lastName}
-                                onChange={(e) => handleChange(e)}
-                                disabled={false}
+                                disabled={true}
                               />
                             </Form.Group>
                           </Col>
@@ -622,8 +611,7 @@ function Header(props) {
                                 type='email'
                                 placeholder='Email'
                                 value={inputValues.email}
-                                onChange={(e) => handleChange(e)}
-                                disabled={false}
+                                disabled={true}
                               />
                             </Form.Group>
                           </Col>
@@ -635,8 +623,7 @@ function Header(props) {
                                 maxlength={10}
                                 placeholder='Mobile'
                                 value={inputValues.mobile}
-                                onChange={(e) => handleChange(e)}
-                                disabled={false}
+                                disabled={true}
                               />
                             </Form.Group>
                           </Col>
@@ -651,8 +638,7 @@ function Header(props) {
                                 type='password'
                                 placeholder='Password'
                                 value={inputValues.passWord}
-                                disabled={false}
-                                onChange={(e) => handleChange(e)}
+                                disabled={true}
                               />
                             </Form.Group>
                           </Col>
@@ -665,8 +651,7 @@ function Header(props) {
                                 type='text'
                                 placeholder='User Name'
                                 value={inputValues.userName}
-                                disabled={false}
-                                onChange={(e) => handleChange(e)}
+                                disabled={true}
                               />
                             </Form.Group>
                           </Col>

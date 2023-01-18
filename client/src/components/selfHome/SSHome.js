@@ -1,5 +1,13 @@
 import React from 'react';
-import { Carousel, Container, Row, Col, Card, Button,Image } from 'react-bootstrap';
+import {
+  Carousel,
+  Container,
+  Row,
+  Col,
+  Card,
+  Button,
+  Image,
+} from 'react-bootstrap';
 import { SLIDERS } from '../../content';
 import {
   Technology,
@@ -43,7 +51,11 @@ function SSHome() {
               <h3 className={'mt-5 mb-5 content-heading'}>
                 <span>About Us</span>
               </h3>
-              <Image rounded={true} src={Aboutuscont} className={'d-flex w-100'} />
+              <Image
+                rounded={true}
+                src={Aboutuscont}
+                className={'d-flex w-100'}
+              />
               At BR Group Tech, we are a premier software services company that
               provides tailor-made cloud solutions to organizations across the
               United States. Our highly skilled professionals offer

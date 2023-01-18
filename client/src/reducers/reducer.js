@@ -1,4 +1,4 @@
-import { isMobile } from "react-device-detect";
+import { isMobile } from 'react-device-detect';
 const initialState = {
   menuToggle: isMobile ? true : false,
 };

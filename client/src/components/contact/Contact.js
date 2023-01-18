@@ -14,7 +14,7 @@ function Contact() {
   return (
     <>
       <div className='page-banner'>
-        <Image fluid={true}src={Contactusbnr} />
+        <Image fluid={true} src={Contactusbnr} />
       </div>
       <Container>
         <div className={'animate__animated animate__backInUp'}>

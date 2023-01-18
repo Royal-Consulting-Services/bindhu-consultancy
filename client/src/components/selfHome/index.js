@@ -1,1 +1,1 @@
-export * from './SSHome'
+export * from './SSHome';

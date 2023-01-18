@@ -143,30 +143,40 @@ function AdminHome(props) {
       });
   };
   let AddUserData = () => {
-    fetch('http://localhost:4004/createUser', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Accept: 'application/json',
-      },
-      body: JSON.stringify({
-        userName: userName,
-        firstName: firstName,
-        lastName: lastName,
-        email: email,
-        phone: mobile,
-        password: passWord,
-        role: 'user',
-      }),
-    })
-      .then((res) => res.json())
-      .then((res) => {
-        setAddUserPnl(false);
-        getData();
-        setMessage(res.message);
-        setMessageType('success');
-      });
+    if (
+      userName !== '' &&
+      firstName !== '' &&
+      lastName !== '' &&
+      email !== '' &&
+      mobile !== '' &&
+      passWord !== ''
+    ) {
+      fetch('http://localhost:4004/createUser', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          userName: userName,
+          firstName: firstName,
+          lastName: lastName,
+          email: email,
+          phone: mobile,
+          password: passWord,
+          role: 'user',
+        }),
+      })
+        .then((res) => res.json())
+        .then((res) => {
+          setAddUserPnl(false);
+          getData();
+          setMessage(res.message);
+          setMessageType('success');
+        });
+    }
   };
+
   useEffect(() => {
     getData();
     document.getElementsByClassName('scroll-content')[0].style.height =
@@ -184,6 +194,7 @@ function AdminHome(props) {
       }, 3000);
     }
   }, [message]);
+
   async function getData() {
     const response = await fetch('http://localhost:4004/getAllUsers', {
       method: 'GET',
@@ -262,10 +273,10 @@ function AdminHome(props) {
             <Col
               xs={12}
               md={3}
-              className={"mob-sidemenu"}
+              className={'mob-sidemenu'}
               style={{ boxShadow: '1px 0px 5px 0px #403c4329', padding: '0px' }}
             >
-              <ListGroup  className='side-menu'>
+              <ListGroup className='side-menu'>
                 <ListGroup.Item action>
                   <FontAwesomeIcon
                     icon={faUsers}
@@ -296,7 +307,13 @@ function AdminHome(props) {
                   fluid={true}
                   inputonChange={(e) => requestSearch(e.target.value, userList)}
                 />
-                <div style={{ display: 'flex', justifyContent: 'end' }}>
+                <div
+                  style={{
+                    display: 'flex',
+                    justifyContent: 'end',
+                    paddingRight: '4px',
+                  }}
+                >
                   Total users : <Badge bg='secondary'>{users.length}</Badge>
                 </div>
                 <Table responsive='xl' striped bordered>
@@ -326,7 +343,10 @@ function AdminHome(props) {
             <FontAwesomeIcon
               icon={faClose}
               className={'panel-close'}
-              onClick={() => (setAddUserPnl(false), setSelectedItem([]))}
+              onClick={() => {
+                setAddUserPnl(false);
+                setSelectedItem([]);
+              }}
             />
             <h4 className='panel-header content-heading'>
               {selectedItem.userName ? 'Edit User' : 'Add User'}
@@ -418,7 +438,10 @@ function AdminHome(props) {
                 <Button
                   variant='secondary'
                   size={'sm'}
-                  onClick={() => (setAddUserPnl(false), setSelectedItem([]))}
+                  onClick={() => {
+                    setAddUserPnl(false);
+                    setSelectedItem([]);
+                  }}
                 >
                   Cancel
                 </Button>
