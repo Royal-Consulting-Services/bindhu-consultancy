@@ -208,13 +208,22 @@ function SSHome() {
             <h3 className={'mt-5 mb-5 content-heading'}>
               <span>Services </span>
             </h3>
-            <Col xs={12} md={4}>
-              <Card className='help-cont-card'>
+            <Col xs={12} md={4} className="mb-2">
+              <Card className='help-cont-card' onClick={() => homeNavigate('/service')}>
+                <div class="overlay"></div>
+                <div class="first-line"></div>
+                <div class="second-line"></div>
+                <div class="third-line"></div>
+                <div class="fourth-line"></div>
                 <Card.Body>
                   <Card.Title>
                     Database Creation & Database Migrations
                   </Card.Title>
-                  <Image src={Databasemigrte} className={'d-flex w-100'} />
+                  <Image
+                    rounded={true}
+                    src={Databasemigrte}
+                    className={'d-flex w-100'}
+                  />
                   <Card.Text>
                     <p className='help-content'>
                       Our certified cloud engineers provide a tailored database
@@ -226,20 +235,23 @@ function SSHome() {
                       cloud.
                     </p>
                   </Card.Text>
-                  <Button
-                    variant='link'
-                    onClick={() => homeNavigate('/service')}
-                  >
-                    read more{' '}
-                  </Button>
                 </Card.Body>
               </Card>
             </Col>
-            <Col xs={12} md={4}>
-              <Card className='help-cont-card'>
+            <Col xs={12} md={4} className="mb-2">
+              <Card className='help-cont-card' onClick={() => homeNavigate('/service')}>
+                <div class="overlay"></div>
+                <div class="first-line"></div>
+                <div class="second-line"></div>
+                <div class="third-line"></div>
+                <div class="fourth-line"></div>
                 <Card.Body>
                   <Card.Title>IT Consulting</Card.Title>
-                  <Image src={Itconsulting} className={'d-flex w-100'} />
+                  <Image
+                    rounded={true}
+                    src={Itconsulting}
+                    className={'d-flex w-100'}
+                  />
                   <Card.Text>
                     <p className='help-content'>
                       Our IT consulting solutions focus on helping you achieve
@@ -254,20 +266,23 @@ function SSHome() {
                       organizational needs.
                     </p>
                   </Card.Text>
-                  <Button
-                    variant='link'
-                    onClick={() => homeNavigate('/service')}
-                  >
-                    read more{' '}
-                  </Button>
                 </Card.Body>
               </Card>
             </Col>
-            <Col xs={12} md={4}>
-              <Card className='help-cont-card'>
+            <Col xs={12} md={4} className="mb-2">
+              <Card className='help-cont-card' onClick={() => homeNavigate('/service')}>
+                <div class="overlay"></div>
+                <div class="first-line"></div>
+                <div class="second-line"></div>
+                <div class="third-line"></div>
+                <div class="fourth-line"></div>
                 <Card.Body>
                   <Card.Title>Cloud Migration</Card.Title>
-                  <Image src={Cloudmigration} className={'d-flex w-100'} />
+                  <Image
+                    rounded={true}
+                    src={Cloudmigration}
+                    className={'d-flex w-100'}
+                  />
                   <Card.Text>
                     <p className='help-content'>
                       At BR Group Tech, our cloud migration service is designed
@@ -279,24 +294,27 @@ function SSHome() {
                       process that won't disrupt your day-to-day operations.
                     </p>
                   </Card.Text>
-                  <Button
-                    variant='link'
-                    onClick={() => homeNavigate('/service')}
-                  >
-                    read more{' '}
-                  </Button>
                 </Card.Body>
               </Card>
             </Col>
           </Row>
         </ScrollAnimation>
         <ScrollAnimation animateIn='slideInUp'>
-          <Row className='mt-5'>
-            <Col xs={12} md={4}>
-              <Card className='help-cont-card'>
+          <Row>
+            <Col xs={12} md={4} className="mb-2">
+              <Card className='help-cont-card' onClick={() => homeNavigate('/service')}>
+                <div class="overlay"></div>
+                <div class="first-line"></div>
+                <div class="second-line"></div>
+                <div class="third-line"></div>
+                <div class="fourth-line"></div>
                 <Card.Body>
                   <Card.Title>Cloud Architecture</Card.Title>
-                  <Image src={Cloudarchitecture} className={'d-flex w-100'} />
+                  <Image
+                    rounded={true}
+                    src={Cloudarchitecture}
+                    className={'d-flex w-100'}
+                  />
                   <Card.Text>
                     <p className='help-content'>
                       Our team provides tailored cloud architecture services
@@ -310,20 +328,23 @@ function SSHome() {
                       future-proofed.
                     </p>
                   </Card.Text>
-                  <Button
-                    variant='link'
-                    onClick={() => homeNavigate('/service')}
-                  >
-                    read more{' '}
-                  </Button>
                 </Card.Body>
               </Card>
             </Col>
-            <Col xs={12} md={4}>
-              <Card className='help-cont-card'>
+            <Col xs={12} md={4} className="mb-2">
+              <Card className='help-cont-card' onClick={() => homeNavigate('/service')}>
+                <div class="overlay"></div>
+                <div class="first-line"></div>
+                <div class="second-line"></div>
+                <div class="third-line"></div>
+                <div class="fourth-line"></div>
                 <Card.Body>
                   <Card.Title>Business Analytics</Card.Title>
-                  <Image src={Businessanalytics} className={'d-flex w-100'} />
+                  <Image
+                    rounded={true}
+                    src={Businessanalytics}
+                    className={'d-flex w-100'}
+                  />
                   <Card.Text>
                     <p className='help-content'>
                       At BR Group Tech, we provide ad hoc business analytics
@@ -334,12 +355,6 @@ function SSHome() {
                       performance and achieving short- and long-term goals.
                     </p>
                   </Card.Text>
-                  <Button
-                    variant='link'
-                    onClick={() => homeNavigate('/service')}
-                  >
-                    read more{' '}
-                  </Button>
                 </Card.Body>
               </Card>
             </Col>

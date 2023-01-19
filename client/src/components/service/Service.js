@@ -55,7 +55,7 @@ function Service(props) {
           </h3>
           <br />
           <br />
-          <Row style={{ borderBottom: 'none', marginTop: '50px' }}>
+          <Row style={{ borderBottom: 'none' }}>
             {deliveryService}
           </Row>
         </div>
@@ -72,20 +72,26 @@ function Service(props) {
                 onClick={(e) => serviceClick(item)}
               >
                 <Card.Body>
-                  <Card.Title>
-                    <FontAwesomeIcon icon={item.icon} className='tech-icon' />
-                    <br />
-                    <br /> {item.title}
-                  </Card.Title>
-                  <Card.Text>
-                    <p className='help-content'>{item.content}</p>
-                    <div className='help-navigate'>
-                      <FontAwesomeIcon
-                        icon={faChevronRight}
-                        className='tech-icon'
-                      />
+                  <div class="help-cs-inner">
+                    <div class="help-cs-front">
+                      <Card.Title>
+                        <FontAwesomeIcon icon={item.icon} className='tech-icon' />
+                        <br />
+                        <br /> {item.title}
+                      </Card.Title>
                     </div>
-                  </Card.Text>
+                    <div class="help-cs-back">
+                      <Card.Text>
+                        <p className='help-content'>{item.content}</p>
+                        <div className='help-navigate effect-7 sub-b'>
+                          <FontAwesomeIcon
+                            icon={faChevronRight}
+                            className='tech-icon'
+                          />
+                        </div>
+                      </Card.Text>
+                    </div>
+                  </div>
                 </Card.Body>
               </Card>
             </Col>

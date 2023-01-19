@@ -202,8 +202,13 @@ function Home() {
             <h3 className={'mt-5 mb-5 content-heading'}>
               <span>Services </span>
             </h3>
-            <Col xs={12} md={4}>
-              <Card className='help-cont-card'>
+            <Col xs={12} md={4} className="mb-2">
+              <Card className='help-cont-card' onClick={() => homeNavigate('/service')}>
+                <div class="overlay"></div>
+                <div class="first-line"></div>
+                <div class="second-line"></div>
+                <div class="third-line"></div>
+                <div class="fourth-line"></div>
                 <Card.Body>
                   <Card.Title>
                     Database Creation & Database Migrations
@@ -224,17 +229,16 @@ function Home() {
                       cloud.
                     </p>
                   </Card.Text>
-                  <Button
-                    variant='secondary'
-                    onClick={() => homeNavigate('/service')}
-                  >
-                    Read more
-                  </Button>
                 </Card.Body>
               </Card>
             </Col>
-            <Col xs={12} md={4}>
-              <Card className='help-cont-card'>
+            <Col xs={12} md={4} className="mb-2">
+              <Card className='help-cont-card' onClick={() => homeNavigate('/service')}>
+                <div class="overlay"></div>
+                <div class="first-line"></div>
+                <div class="second-line"></div>
+                <div class="third-line"></div>
+                <div class="fourth-line"></div>
                 <Card.Body>
                   <Card.Title>IT Consulting</Card.Title>
                   <Image
@@ -256,17 +260,16 @@ function Home() {
                       organizational needs.
                     </p>
                   </Card.Text>
-                  <Button
-                    variant='secondary'
-                    onClick={() => homeNavigate('/service')}
-                  >
-                    Read more
-                  </Button>
                 </Card.Body>
               </Card>
             </Col>
-            <Col xs={12} md={4}>
-              <Card className='help-cont-card'>
+            <Col xs={12} md={4} className="mb-2">
+              <Card className='help-cont-card' onClick={() => homeNavigate('/service')}>
+                <div class="overlay"></div>
+                <div class="first-line"></div>
+                <div class="second-line"></div>
+                <div class="third-line"></div>
+                <div class="fourth-line"></div>
                 <Card.Body>
                   <Card.Title>Cloud Migration</Card.Title>
                   <Image
@@ -285,21 +288,20 @@ function Home() {
                       process that won't disrupt your day-to-day operations.
                     </p>
                   </Card.Text>
-                  <Button
-                    variant='secondary'
-                    onClick={() => homeNavigate('/service')}
-                  >
-                    Read more
-                  </Button>
                 </Card.Body>
               </Card>
             </Col>
           </Row>
         </ScrollAnimation>
         <ScrollAnimation animateIn='slideInUp'>
-          <Row className='mt-5'>
-            <Col xs={12} md={4}>
-              <Card className='help-cont-card'>
+          <Row>
+            <Col xs={12} md={4} className="mb-2">
+              <Card className='help-cont-card' onClick={() => homeNavigate('/service')}>
+                <div class="overlay"></div>
+                <div class="first-line"></div>
+                <div class="second-line"></div>
+                <div class="third-line"></div>
+                <div class="fourth-line"></div>
                 <Card.Body>
                   <Card.Title>Cloud Architecture</Card.Title>
                   <Image
@@ -320,17 +322,16 @@ function Home() {
                       future-proofed.
                     </p>
                   </Card.Text>
-                  <Button
-                    variant='secondary'
-                    onClick={() => homeNavigate('/service')}
-                  >
-                    Read more
-                  </Button>
                 </Card.Body>
               </Card>
             </Col>
-            <Col xs={12} md={4}>
-              <Card className='help-cont-card'>
+            <Col xs={12} md={4} className="mb-2">
+              <Card className='help-cont-card' onClick={() => homeNavigate('/service')}>
+                <div class="overlay"></div>
+                <div class="first-line"></div>
+                <div class="second-line"></div>
+                <div class="third-line"></div>
+                <div class="fourth-line"></div>
                 <Card.Body>
                   <Card.Title>Business Analytics</Card.Title>
                   <Image
@@ -348,12 +349,6 @@ function Home() {
                       performance and achieving short- and long-term goals.
                     </p>
                   </Card.Text>
-                  <Button
-                    variant='secondary'
-                    onClick={() => homeNavigate('/service')}
-                  >
-                    Read more
-                  </Button>
                 </Card.Body>
               </Card>
             </Col>

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Button, Container, Form, Row, Col, Image } from 'react-bootstrap';
+import { Button, Container, Form, Row, Col, Image, InputGroup } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import { Slide1 } from '../../images/images';
-import { faClose } from '@fortawesome/free-solid-svg-icons';
+import { faClose, faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function Login(props) {
@@ -13,6 +13,7 @@ function Login(props) {
   const loginNavigate = useNavigate();
   const stringifiedPerson = JSON.parse(localStorage.getItem('user-info'));
   const loginUser = stringifiedPerson?.loggedinUser?.userName;
+  const [showPassword, setShowPassword] = useState(false);
   console.log(loginUser);
   async function loginSubmit() {
     if (userName !== '' && password !== '') {
@@ -91,26 +92,32 @@ function Login(props) {
             <Form>
               <Row>
                 <Col xs={12} md={12}>
-                  <Form.Group className='mb-3' controlId='formBasicEmail'>
+                  <InputGroup className='mb-3' controlId='userName'>
                     <Form.Control
                       type='text'
-                      placeholder='User Name / Email'
+                      placeholder='User Name '
                       value={userName}
                       onChange={(e) => setUserName(e.target.value)}
                     />
-                  </Form.Group>
+                  </InputGroup>
                 </Col>
               </Row>
               <Row>
                 <Col xs={12} md={12}>
-                  <Form.Group className='mb-3' controlId='formBasicEmail'>
+                  <InputGroup className='mb-3' controlId='password'>
                     <Form.Control
-                      type='password'
+                      type={!showPassword ? 'password' : 'text'}
                       placeholder='Password'
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
                     />
-                  </Form.Group>
+                    <InputGroup.Text id='basic-addon1'>
+                      <FontAwesomeIcon
+                        icon={!showPassword ? faEye : faEyeSlash}
+                        onClick={() => setShowPassword(!showPassword)}
+                      />
+                    </InputGroup.Text>
+                  </InputGroup>
                 </Col>
               </Row>
 

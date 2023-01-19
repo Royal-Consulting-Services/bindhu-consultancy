@@ -170,71 +170,88 @@ body {
 .help-cont-service:hover {
   cursor: pointer;
 
-  .card-title:hover {
-    text-align: center;
-    margin: 20px;
-    color: #ffffff;
-    font-weight: 600;
+  .help-cs-inner {
+    transform: rotateY(180deg);
+    .card-text {
+      .help-navigate:hover {
+        height: 50px;
+        width: 50px;
+        float: right;
+        border-radius: 50%;
+        border: solid 2px#f05423;
 
-    .tech-icon {
-      font-size: 35px;
-      color: #ffffff;
-    }
-  }
-
-  .card-text {
-    .help-navigate:hover {
-      height: 50px;
-      width: 50px;
-      float: right;
-      border-radius: 50%;
-      border: solid 2px#f05423;
-
-      .tech-icon {
-        height: 30px;
-        padding: 10px 11px;
+        .tech-icon {
+          height: 30px;
+          padding: 10px 11px;
+        }
       }
     }
   }
 }
 
 .help-cont-service {
-  // height: 320px;
   background: #020226;
   color: #fff;
   height: 300px;
-  .card-title {
+
+  .help-cs-inner {
+    position: relative;
+    height: 100%;
     text-align: center;
-    margin: 20px;
-    color: #f05423;
-    font-weight: 600;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
 
-    .tech-icon {
-      font-size: 35px;
-      color: #f05423;
-    }
-  }
-
-  .card-text {
-    .help-content {
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
-    .help-navigate {
-      height: 50px;
-      width: 50px;
-      float: right;
+    .help-cs-front,
+    .help-cs-back {
       position: absolute;
-      right: 10px;
-      bottom: 10px;
-      .tech-icon {
-        height: 30px;
-        padding: 10px 11px;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+
+    .help-cs-front {
+      .card-title {
+        text-align: center;
+        margin: 80px 20px;
         color: #f05423;
+        font-weight: 600;
+
+        .tech-icon {
+          font-size: 35px;
+          color: #f05423;
+        }
+      }
+
+    }
+
+    .help-cs-back {
+      transform: rotateY(180deg);
+
+      .card-text {
+        .help-content {
+          display: -webkit-box;
+          -webkit-line-clamp: 4;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          margin: 80px 20px;
+        }
+
+        .help-navigate {
+          height: 50px;
+          width: 50px;
+          float: right;
+          position: absolute;
+          right: 10px;
+          bottom: 10px;
+
+          .tech-icon {
+            height: 30px;
+            padding: 10px 11px;
+            color: #f05423;
+          }
+        }
       }
     }
   }
@@ -247,6 +264,7 @@ body {
   cursor: pointer;
   position: absolute;
   bottom: 0px;
+
   .tech-icon {
     height: 30px;
     padding: 10px 11px;
@@ -255,7 +273,15 @@ body {
 }
 
 .help-cont-card {
-  // height: 180px;
+  width: 100%;
+  /* for the image outside invisibility */
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  /* For the text defined in the image-container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
   margin-bottom: 6px;
 
@@ -280,19 +306,83 @@ body {
   //         left: 16px;
   //     }
   // }
+  .first-line,
+  .second-line,
+  .third-line,
+  .fourth-line {
+    position: absolute;
+    background-color: #fff;
+    transition: width .2s, height .2s;
+    z-index: 3;
+  }
+
+  .first-line {
+    left: 0;
+    top: 10px;
+    width: 0;
+    height: 2px;
+  }
+
+  .second-line {
+    right: 10px;
+    top: 0;
+    height: 0;
+    width: 2px;
+  }
+
+  .third-line {
+    right: 0;
+    bottom: 10px;
+    width: 0;
+    height: 2px;
+  }
+
+  .fourth-line {
+    bottom: 0;
+    left: 10px;
+    height: 0;
+    width: 2px;
+  }
+
+  .overlay {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.349);
+    opacity: .7;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    transition: all .3s;
+    z-index: 2;
+  }
+
   .card-body {
+    padding: 0px;
+
     .card-title {
       font-size: 20px;
       height: 50px;
+      position: absolute;
+      top: 20px;
+      left: 30px;
+      right: 30px;
+      z-index: 1000;
+      color: #ffffff;
     }
 
     .card-text {
       opacity: 1;
-      transition: all 1s ease-in;
+      transition: all .3s;
+      position: absolute;
+      opacity: 0;
+      top: 40%;
+      z-index: 100;
+      left: 30px;
+      right: 30px;
 
       .help-content {
         display: -webkit-box;
-        -webkit-line-clamp: 2;
+        -webkit-line-clamp: 4;
         -webkit-box-orient: vertical;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -301,25 +391,68 @@ body {
   }
 }
 
+.help-cont-card:hover .first-line {
+  width: 100%;
+  transition-delay: 0;
+}
+
+.help-cont-card:hover .second-line {
+  height: 100%;
+  transition-delay: .2s;
+}
+
+.help-cont-card:hover .third-line {
+  width: 100%;
+  transition-delay: .4s;
+}
+
+.help-cont-card:hover .fourth-line {
+  height: 100%;
+  transition-delay: .6s;
+}
+
+.help-cont-card:hover img {
+  transform: scale(1.2);
+  transition-delay: .3s;
+}
+
+.help-cont-card:hover .overlay {
+  opacity: .4;
+}
+
+.help-cont-card:hover::before {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .help-cont-card:hover {
   // height: 180px;
   cursor: pointer;
+
+  .overlay {
+    position: absolute;
+    background-color: #000;
+    opacity: .7;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    transition: all .3s;
+    z-index: 2;
+  }
+
   .card-body {
     .card-title {
-      font-size: 20px;
-      height: 50px;
+      opacity: 1;
     }
 
     .card-text {
       opacity: 1;
-      transition: all 1s ease-in;
+      transition: all .3s;
 
       .help-content {
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        opacity: 1;
+        color: #ffffff;
       }
     }
   }
@@ -542,6 +675,7 @@ body {
 }
 
 .side-menu {
+
   .list-group-item.active,
   .list-group-item {
     background-color: transparent;
@@ -641,6 +775,7 @@ body {
 
 .login-bg {
   padding-left: 0;
+
   .page-close {
     position: fixed;
     top: 10px;
@@ -648,6 +783,7 @@ body {
     font-size: 25px;
     color: #ffffff;
   }
+
   .backgrnd-img {
     position: fixed;
     z-index: -3;
@@ -672,6 +808,7 @@ body {
 
 .signup-bg {
   padding-left: 0;
+
   .page-close {
     position: fixed;
     top: 10px;
@@ -679,6 +816,7 @@ body {
     font-size: 25px;
     color: #ffffff;
   }
+
   .backgrnd-img {
     position: fixed;
     z-index: -3;
@@ -698,9 +836,11 @@ body {
 
   .login-form-content {
     margin-top: 5%;
+
     .form-label {
       color: #ffffff;
     }
+
     .error-msg {
       color: firebrick;
       margin-bottom: 0px;
@@ -772,6 +912,7 @@ body {
       }
     }
   }
+
   .signup-bg {
     padding: 0px;
 
@@ -780,6 +921,7 @@ body {
       margin-top: 12% !important;
     }
   }
+
   .login-bg {
     padding: 0px;
 
@@ -801,6 +943,7 @@ body {
     height: 100%;
     background: #ffffff;
   }
+
   .technology-timeline {
     // width: 100px;
     margin: auto;
@@ -816,10 +959,12 @@ body {
       display: block;
     }
   }
+
   .col-md-2_5 {
     width: 80%;
     margin: auto;
   }
+
   .technology-timeline.firsttimeline::after {
     left: 35%;
   }
@@ -842,6 +987,7 @@ body {
 
   .main-footer {
     padding: 10px;
+
     .foo-menu-link {
       .list-group-item {
         padding: 0px;
