@@ -29,6 +29,9 @@ body {
 a {
   color: white;
 }
+.link {
+  color: #02061f !important;
+}
 .rounded,
 .choose-image {
   border-radius: 20px !important;
@@ -196,7 +199,7 @@ p {
         width: 50px;
         float: right;
         border-radius: 50%;
-        border: solid 2px#f05423;
+        border: solid 2px#02061f;
 
         .tech-icon {
           height: 30px;
@@ -208,7 +211,7 @@ p {
 }
 
 .help-cont-service {
-  background: #020226;
+  background: #5369b4;
   color: #fff;
   height: 300px;
 
@@ -232,12 +235,12 @@ p {
       .card-title {
         text-align: center;
         margin: 80px 20px;
-        color: #f05423;
+        color: #02061f;
         font-weight: 600;
 
         .tech-icon {
           font-size: 35px;
-          color: #f05423;
+          color: #02061f;
         }
       }
 
@@ -267,7 +270,7 @@ p {
           .tech-icon {
             height: 30px;
             padding: 10px 11px;
-            color: #f05423;
+            color: #02061f;
           }
         }
       }

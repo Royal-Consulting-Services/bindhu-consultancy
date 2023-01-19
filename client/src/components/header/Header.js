@@ -244,11 +244,11 @@ function Header(props) {
 
   const navigateLogin = () => {
     headerNavigate('/login');
-    props.forceLoad();
+    // props.forceLoad();
   };
   const navigateSignup = () => {
     headerNavigate('/signup');
-    props.forceLoad();
+    // props.forceLoad();
   };
   const url = window.location.pathname;
   return (

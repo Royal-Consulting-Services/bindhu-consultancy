@@ -16,7 +16,7 @@ const Careerlist = CAREERLIST.map((career) => {
         <p> {career.location}</p>
       </div>
       <div className='job-link'>
-        <a href='/careersdescription' target='_blank'>
+        <a href='/careersdescription' target='_blank' className='link'>
           <FontAwesomeIcon icon={faArrowRight} className='tech-icon' />
         </a>
       </div>
