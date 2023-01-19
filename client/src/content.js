@@ -204,14 +204,14 @@ function careerDescribcont() {
 export const CAREERLIST = [
   {
     name: 'UI Developer',
-    location: 'Bangalore',
+    location: 'US',
     description:
-      "   A UI Developer is a technical role that is responsible for creating a product's coding and development in a way that is attractive and convenient for users. A UI developer uses programming code to create interactive programs that enhance a customer's experience with a brand and facilitate an enjoyable experience on the business's website or platform. UI developers also need to have a detailed understanding of coding and transfer the brand's strengths through the interface of a product.",
+      "A UI Developer is a technical role that is responsible for creating a product's coding and development in a way that is attractive and convenient for users. A UI developer uses programming code to create interactive programs that enhance a customer's experience with a brand and facilitate an enjoyable experience on the business's website or platform. UI developers also need to have a detailed understanding of coding and transfer the brand's strengths through the interface of a product.",
     careerdescribcont: careerDescribcont(),
   },
   {
     name: 'HR',
-    location: 'Bangalore',
+    location: 'US',
     description:
       'We are looking to employ an HR officer with excellent communication skills, both written and verbal. The HR officer is expected to be knowledgeable with employment legislation and possess strategic and commercial insight to the labor process. He or she must be able to negotiate with diplomacy.To ensure success, an HR officer should display excellent organizational skills, good time-management skills, and the ability to multi-task in a fast-paced environment. A top HR officer should possess remarkable conflict management and decision-making skills to ensure employee compliance.',
     careerdescribcont: careerDescribcont(),

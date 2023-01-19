@@ -4,6 +4,8 @@
 body {
   font-size: 16px;
   font-family: 'RobotoRegular';
+  background-color: #f8f9f1;
+  text-rendering: optimizeSpeed;
 
   textarea:focus,
   textarea.form-control:focus,
@@ -24,6 +26,18 @@ body {
     border-radius: 0px;
   }
 }
+a {
+  color: white;
+}
+.rounded,
+.choose-image {
+  border-radius: 20px !important;
+}
+p {
+  margin-top: 1rem;
+  font-family: 'Poppins', sans-serif;
+  text-align: justify;
+}
 
 .form-control {
   border-radius: 0px;
@@ -37,6 +51,8 @@ body {
 
   span {
     margin: 0px 20px;
+    color: #02061f;
+    font-family: 'RobotoBold';
   }
 }
 
@@ -47,25 +63,26 @@ body {
   flex-grow: 1;
   content: '';
   display: block;
-  border-top: 1px solid #d8d8d8;
+  border-top: 2px solid #02061f;
 }
 
 .app-header {
   box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
+  background-color: #f8f9f1 !important;
 
   .nav-link {
     border-bottom: solid 3px transparent;
     margin: 0px 5px;
+    font-family: 'RobotoMedium';
   }
 
   .nav-link.active,
   .nav-link:hover {
-    border-bottom: solid 3px #b2dafd;
+    border-bottom: solid 3px #02061f;
   }
 }
 
 .technology-timeline {
-  // width: 100px;
   margin: auto;
   position: relative;
 
@@ -114,6 +131,7 @@ body {
 
   .card-body {
     text-align: center;
+    background-color: #5369b4;
   }
 
   .card-text {
@@ -133,7 +151,7 @@ body {
     right: 0;
     width: 0;
     bottom: -5px;
-    background: #000;
+    background: #02061f;
     height: 4px;
     transition-property: width;
     transition-duration: 0.3s;
@@ -164,7 +182,7 @@ body {
 
 .technology-card:hover {
   border: none;
-  background: #8c898943;
+  background: #5369b4;
 }
 
 .help-cont-service:hover {
@@ -268,7 +286,7 @@ body {
   .tech-icon {
     height: 30px;
     padding: 10px 11px;
-    color: #f05423;
+    color: #02061f;
   }
 }
 
@@ -426,7 +444,6 @@ body {
 }
 
 .help-cont-card:hover {
-  // height: 180px;
   cursor: pointer;
 
   .overlay {
@@ -443,7 +460,9 @@ body {
 
   .card-body {
     .card-title {
-      opacity: 1;
+      font-size: 20px;
+      height: 50px;
+      font-family: 'RobotoMedium';
     }
 
     .card-text {
@@ -481,7 +500,7 @@ body {
     bottom: 50px;
     right: 50px;
     font-size: 30px;
-    color: #b2dafd;
+    color: #02061f;
   }
 
   .hidden-btn {
@@ -617,6 +636,7 @@ body {
   .panel-header {
     margin-top: 20px;
     text-align: center;
+    font-family: 'RobotoMedium';
   }
 
   .panel-content {
@@ -631,7 +651,7 @@ body {
     right: 0px;
     width: 600px;
     padding: 5px 0px;
-    background: #000;
+    background: #02061f;
     height: 41px;
   }
 }
@@ -739,6 +759,7 @@ body {
   .list-group {
     .list-group-item {
       border: none;
+      background-color: #f8f9f1;
     }
   }
 }
@@ -865,10 +886,8 @@ body {
 }
 
 .choose-image {
-  border-radius: 50%;
   display: block;
   margin: auto;
-  border: solid 5px #cec9c9;
   height: 300px;
 }
 
@@ -885,6 +904,8 @@ body {
 .contact-card {
   text-align: center;
   height: 180px;
+  background-color: #5369b4;
+  color: white;
 
   address {
     margin-bottom: 0px;
@@ -895,7 +916,7 @@ body {
     display: block;
     margin: auto;
     margin-bottom: 5px;
-    color: #b2dafd;
+    color: #02061f;
   }
 }
 
@@ -976,7 +997,7 @@ body {
   .technology-timeline::after,
   .firsttimeline::after {
     content: '';
-    background-color: #000;
+    background-color: #02061f;
     position: absolute;
     width: 5px;
     height: 115px;

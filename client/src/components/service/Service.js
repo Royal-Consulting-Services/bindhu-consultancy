@@ -7,37 +7,22 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'react-bootstrap/Image';
 import { useNavigate } from 'react-router-dom';
 
+import {
+  Projmanag,
+  Staffaug,
+  Consult,
+  Migrate,
+  Implement,
+} from '../../images/images';
+
 function Service(props) {
   const serviceNavigate = useNavigate();
-  const [dservicesData, setDservicesData] = useState([]);
   const [servicesData, setServicesData] = useState([]);
 
   useEffect(() => {
     setServicesData(SERVICES);
-    setDservicesData(DSERVICES);
   }, []);
 
-  const deliveryService = dservicesData.map((service, index) => {
-    return (
-      <Col
-        xs={12}
-        md={2}
-        className='col-md-2_5 p-0'
-        style={{ border: 'none', marginBottom: '20px' }}
-      >
-        <div
-          className={`technology-timeline ${index === 0 && 'firsttimeline'} ${
-            index === 4 && 'lasttimeline'
-          }`}
-        >
-          <h5 className='technology-timetitle' style={{ textAlign: 'center' }}>
-            {service.title}
-          </h5>
-          <Image thumbnail={true} src={service.image} className={'w-100'} />
-        </div>
-      </Col>
-    );
-  });
   const serviceClick = (item) => {
     serviceNavigate('/servicedetail');
     props.clickEvent(item);
@@ -53,10 +38,118 @@ function Service(props) {
           <h3 className={'mt-5 mb-5 content-heading'}>
             <span>Delivery Services</span>
           </h3>
-          <br />
-          <br />
-          <Row style={{ borderBottom: 'none' }}>
-            {deliveryService}
+
+          <Row style={{ borderBottom: 'none', marginTop: '50px' }}>
+            <Row style={{ borderBottom: 'none', marginTop: '50px' }}>
+              <Col
+                xs={12}
+                className='col-md-2_5'
+                style={{ padding: '0px', border: 'none' }}
+              >
+                <Card className='technology-card'>
+                  <Card.Body>
+                    <Card.Title
+                      className='technology-title'
+                      style={{ textAlign: 'center', height: '50px' }}
+                    >
+                      Implementation
+                    </Card.Title>
+                    <Card.Text>
+                      <Image
+                        rounded={true}
+                        src={Implement}
+                        className={'w-100'}
+                      />
+                      <p className='tech-content'></p>
+                    </Card.Text>
+                  </Card.Body>
+                </Card>
+              </Col>
+              <Col
+                xs={12}
+                className='col-md-2_5'
+                style={{ padding: '0px', border: 'none' }}
+              >
+                <Card className='technology-card'>
+                  <Card.Body>
+                    <Card.Title
+                      className='technology-title'
+                      style={{ textAlign: 'center', height: '50px' }}
+                    >
+                      Project management
+                    </Card.Title>
+                    <Card.Text>
+                      <Image
+                        rounded={true}
+                        src={Projmanag}
+                        className={'w-100'}
+                      />
+                      <p className='tech-content'></p>
+                    </Card.Text>
+                  </Card.Body>
+                </Card>
+              </Col>
+              <Col xs={12} className='col-md-2_5' style={{ padding: '0px' }}>
+                <Card className='technology-card'>
+                  <Card.Body>
+                    <Card.Title
+                      className='technology-title'
+                      style={{ textAlign: 'center', height: '50px' }}
+                    >
+                      Staff Augmentation
+                    </Card.Title>
+                    <Card.Text>
+                      <Image
+                        rounded={true}
+                        src={Staffaug}
+                        className={'w-100'}
+                      />
+                      <p className='tech-content'></p>
+                    </Card.Text>
+                  </Card.Body>
+                </Card>
+              </Col>
+              <Col
+                xs={12}
+                className='col-md-2_5'
+                style={{ padding: '0px', border: 'none' }}
+              >
+                <Card className='technology-card'>
+                  <Card.Body>
+                    <Card.Title
+                      className='technology-title'
+                      style={{ textAlign: 'center', height: '50px' }}
+                    >
+                      Consultancy
+                    </Card.Title>
+                    <Card.Text>
+                      <Image rounded={true} src={Consult} className={'w-100'} />
+                      <p className='tech-content'></p>
+                    </Card.Text>
+                  </Card.Body>
+                </Card>
+              </Col>
+              <Col
+                xs={12}
+                className='col-md-2_5'
+                style={{ padding: '0px', border: 'none' }}
+              >
+                <Card className='technology-card'>
+                  <Card.Body>
+                    <Card.Title
+                      className='technology-title'
+                      style={{ textAlign: 'center', height: '50px' }}
+                    >
+                      Migration
+                    </Card.Title>
+                    <Card.Text>
+                      <Image rounded={true} src={Migrate} className={'w-100'} />
+                      <p className='tech-content'></p>
+                    </Card.Text>
+                  </Card.Body>
+                </Card>
+              </Col>
+            </Row>
           </Row>
         </div>
         <br />

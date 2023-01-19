@@ -16,17 +16,7 @@
     url(./Roboto/Roboto-Bold.ttf) format("truetype");
 }
 
-@font-face {
-    font-family: RobotoBoldItalic;
-    src: local("Roboto BoldItalic"),
-    url(./Roboto/Roboto-BoldItalic.ttf) format("truetype");
-}
 
-@font-face {
-    font-family: RobotoItalic;
-    src: local("Roboto Italic"),
-    url(./Roboto/Roboto-Italic.ttf) format("truetype");
-}
 
 @font-face {
     font-family: RobotoMedium;
@@ -40,13 +30,8 @@
     url(./Roboto/Roboto-Regular.ttf) format("truetype");
 }
 
-@font-face {
-    font-family: RobotoThin;
-    src: local("Roboto Thin"),
-    url(./Roboto/Roboto-Thin.ttf) format("truetype");
-}
 
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 /* Roboto-Light
 Roboto-LightItalic

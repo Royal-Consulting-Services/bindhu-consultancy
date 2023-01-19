@@ -288,15 +288,15 @@ function Header(props) {
                   <div className='d-flex'>
                     <>
                       <Button
-                        variant='secondary'
+                        variant='outline-secondary'
                         size={'sm'}
                         onClick={navigateLogin}
                       >
                         Login
                       </Button>
                       <Button
-                        variant='primary'
-                        size={'sm'}
+                        variant='outline-primary'
+                        size={'lg'}
                         className={'left'}
                         onClick={navigateSignup}
                       >

@@ -3,6 +3,8 @@ import { Container, Row, Col, Button } from 'react-bootstrap';
 import { CAREERLIST } from '../../content';
 import { Careerbnr } from '../../images/images';
 import Image from 'react-bootstrap/Image';
+import { useNavigate } from 'react-router-dom';
+
 const Careerlist = CAREERLIST.map((career, index) => {
   return index === 1 ? (
     <div className='job-list'>
@@ -23,6 +25,11 @@ const Careerlist = CAREERLIST.map((career, index) => {
   );
 });
 function CareersDescription() {
+  const navigate = useNavigate();
+
+  function contatMe() {
+    return navigate('/contact');
+  }
   return (
     <>
       <div className='page-banner'>
@@ -39,13 +46,8 @@ function CareersDescription() {
         </Row>
         <div className='career-footer mt-3'>
           <div className=' gap-2' style={{ textAlign: 'center' }}>
-            <Button variant='secondary' size={'lg'}>
-              Cancel
-            </Button>
-
-            {''}
-            <Button variant='primary' size={'lg'}>
-              Apply
+            <Button variant='primary' size={'lg'} onClick={() => contatMe()}>
+              Contact Us
             </Button>
           </div>
         </div>

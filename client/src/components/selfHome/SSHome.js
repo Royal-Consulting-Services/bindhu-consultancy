@@ -56,22 +56,25 @@ function SSHome() {
                 src={Aboutuscont}
                 className={'d-flex w-100'}
               />
-              At BR Group Tech, we are a premier software services company that
-              provides tailor-made cloud solutions to organizations across the
-              United States. Our highly skilled professionals offer
-              comprehensive cloud consulting services to help enterprises boost
-              their productivity like never before. Through evaluating a
-              company's requirements, technical aspects, and data assessments,
-              we deliver bespoke cloud computing solutions that are guaranteed
-              to manage and streamline your business more effectively than ever
-              before - all at a cost-effective price. If you're looking for a
-              team of tech experts who can help you transform your IT
-              environment, look no further than BR Group Tech!
-              <br />
-              <br />
-              Our cloud architects are experienced in helping businesses with
-              reliable and future-ready migrations. This way, you can keep your
-              business operations smooth and stay ahead of your competitors.
+              <p>
+                At BR Group Tech, we are a premier software services company
+                that provides tailor-made cloud solutions to organizations
+                across the United States. Our highly skilled professionals offer
+                comprehensive cloud consulting services to help enterprises
+                boost their productivity like never before. Through evaluating a
+                company's requirements, technical aspects, and data assessments,
+                we deliver bespoke cloud computing solutions that are guaranteed
+                to manage and streamline your business more effectively than
+                ever before - all at a cost-effective price. If you're looking
+                for a team of tech experts who can help you transform your IT
+                environment, look no further than BR Group Tech!
+              </p>
+              <p>
+                Our cloud architects are experienced in helping businesses with
+                reliable and future-ready migrations. This way, you can keep
+                your business operations smooth and stay ahead of your
+                competitors.
+              </p>
             </ScrollAnimation>
           </Col>
         </Row>
@@ -81,9 +84,12 @@ function SSHome() {
           </h3>
           <Col xs={12} md={6}>
             <ScrollAnimation animateIn='flipInX'>
-              At our company, we have a team of highly trained individuals who
-              are experienced in large-scale implementations. This team can help
-              you with the following:
+              <p>
+                {' '}
+                At our company, we have a team of highly trained individuals who
+                are experienced in large-scale implementations. This team can
+                help you with the following:
+              </p>
               <ul>
                 <li>Implementation</li>
                 <li>Project management</li>
@@ -95,7 +101,8 @@ function SSHome() {
           </Col>
           <Col xs={12} md={6}>
             <ScrollAnimation animateIn='flipInX'>
-              <img
+              <Image
+                rounded={true}
                 className='d-block w-100'
                 src={Technology}
                 alt='First slide'
@@ -366,7 +373,7 @@ function SSHome() {
           </h3>
           <Col xs={12} md={6}>
             <ScrollAnimation animateIn='flipInY'>
-              <Image className='choose-image' src={Whychoose} />
+              <Image rounded={true} className='choose-image' src={Whychoose} />
             </ScrollAnimation>
           </Col>
           <Col xs={12} md={6}>

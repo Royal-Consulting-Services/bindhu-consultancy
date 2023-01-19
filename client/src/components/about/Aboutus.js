@@ -16,11 +16,7 @@ function Aboutus() {
         </h3>
         <Row className={'service-tabs animate__animated animate__backInUp'}>
           <Col xs={12} md={6}>
-            <Image
-              src={Aboutuscont}
-              rounded={true}
-              className={'d-flex w-100'}
-            />
+            <Image src={Aboutuscont} className={'d-flex w-100 rounded'} />
           </Col>
           <Col Xs={12} md={6}>
             <p>
@@ -35,8 +31,8 @@ function Aboutus() {
               before - all at a cost-effective price. If you're looking for a
               team of tech experts who can help you transform your IT
               environment, look no further than BR Group Tech!
-              <br />
-              <br />
+            </p>
+            <p>
               Our cloud architects are experienced in helping businesses with
               reliable and future-ready migrations. This way, you can keep your
               business operations smooth and stay ahead of your competitors.
@@ -67,7 +63,7 @@ function Aboutus() {
           </Col>
           <Col xs={12} md={6}>
             <ScrollAnimation animateIn='flipInX'>
-              <Image src={Whychoose} rounded={true} className='choose-image' />
+              <Image src={Whychoose} className='choose-image' />
             </ScrollAnimation>
           </Col>
         </Row>

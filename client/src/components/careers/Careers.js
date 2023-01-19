@@ -10,7 +10,7 @@ const Careerlist = CAREERLIST.map((career) => {
   return (
     <div className='job-list'>
       <div className='job-title'>
-        <h4>{career.name} (7)</h4>
+        <h4>{career.name}</h4>
       </div>
       <div className='job-location'>
         <p> {career.location}</p>
@@ -50,10 +50,9 @@ function Careers() {
         <Row className={'career-tabs'}>
           <Col xs={12} md={4}>
             <ListGroup>
-              <ListGroup.Item>All Locations (10)</ListGroup.Item>
-              <ListGroup.Item>India (2)</ListGroup.Item>
+              <ListGroup.Item>All Locations (3)</ListGroup.Item>
+              <ListGroup.Item>India (1)</ListGroup.Item>
               <ListGroup.Item>USA (2)</ListGroup.Item>
-              <ListGroup.Item>UK (1)</ListGroup.Item>
             </ListGroup>
           </Col>
           <Col xs={12} md={8}>
