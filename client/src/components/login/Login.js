@@ -1,5 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { Button, Container, Form, Row, Col, Image, InputGroup } from 'react-bootstrap';
+import {
+  Button,
+  Container,
+  Form,
+  Row,
+  Col,
+  Image,
+  InputGroup,
+} from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import { Slide1 } from '../../images/images';
 import { faClose, faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';

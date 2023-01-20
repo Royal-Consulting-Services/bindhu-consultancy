@@ -14,6 +14,7 @@
     "@testing-library/user-event": "^13.5.0",
     "animate.css": "^4.1.1",
     "bootstrap": "^5.2.2",
+    "country-flags-svg": "^1.1.7",
     "node-sass": "^8.0.0",
     "prettier": "^2.8.2",
     "react": "^18.2.0",

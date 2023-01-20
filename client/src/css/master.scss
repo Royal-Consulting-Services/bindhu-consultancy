@@ -25,6 +25,21 @@ body {
   .btn {
     border-radius: 0px;
   }
+  .btn.btn-outline-primary:hover {
+    background-color: #5369b4;
+    border: #5369b4;
+  }
+  .btn.btn-outline-secondary:hover {
+    background-color: #7c7c7c;
+  }
+  .btn.btn-primary {
+    background-color: #052695;
+    border: #052695;
+  }
+  .btn.btn-primary:hover {
+    background-color: #5369b4;
+    border: #5369b4;
+  }
 }
 a {
   color: white;
@@ -56,6 +71,7 @@ p {
     margin: 0px 20px;
     color: #02061f;
     font-family: 'RobotoBold';
+    font-size: 30px;
   }
 }
 
@@ -66,7 +82,7 @@ p {
   flex-grow: 1;
   content: '';
   display: block;
-  border-top: 2px solid #02061f;
+  border-top: 2px solid #052695;
 }
 
 .app-header {
@@ -79,9 +95,11 @@ p {
     font-family: 'RobotoMedium';
   }
 
-  .nav-link.active,
-  .nav-link:hover {
+  .nav-link.active {
     border-bottom: solid 3px #02061f;
+  }
+  .nav-link:hover {
+    border-bottom: solid 3px #728cb0;
   }
 }
 
@@ -90,11 +108,11 @@ p {
   position: relative;
 
   h5.technology-timetitle {
-    font-size: 15px;
+    font-size: 22px;
   }
 
   img {
-    width: 100px !important;
+    width: 150px !important;
     margin: auto;
     display: block;
   }
@@ -145,6 +163,7 @@ p {
     display: inline;
     position: relative;
     overflow: hidden;
+    font-size: 23px;
   }
 
   .technology-title::after {
@@ -243,7 +262,6 @@ p {
           color: #02061f;
         }
       }
-
     }
 
     .help-cs-back {
@@ -333,7 +351,7 @@ p {
   .fourth-line {
     position: absolute;
     background-color: #fff;
-    transition: width .2s, height .2s;
+    transition: width 0.2s, height 0.2s;
     z-index: 3;
   }
 
@@ -368,12 +386,12 @@ p {
   .overlay {
     position: absolute;
     background-color: rgba(0, 0, 0, 0.349);
-    opacity: .7;
+    opacity: 0.7;
     left: 0;
     top: 0;
     right: 0;
     bottom: 0;
-    transition: all .3s;
+    transition: all 0.3s;
     z-index: 2;
   }
 
@@ -393,7 +411,7 @@ p {
 
     .card-text {
       opacity: 1;
-      transition: all .3s;
+      transition: all 0.3s;
       position: absolute;
       opacity: 0;
       top: 40%;
@@ -419,26 +437,26 @@ p {
 
 .help-cont-card:hover .second-line {
   height: 100%;
-  transition-delay: .2s;
+  transition-delay: 0.2s;
 }
 
 .help-cont-card:hover .third-line {
   width: 100%;
-  transition-delay: .4s;
+  transition-delay: 0.4s;
 }
 
 .help-cont-card:hover .fourth-line {
   height: 100%;
-  transition-delay: .6s;
+  transition-delay: 0.6s;
 }
 
 .help-cont-card:hover img {
   transform: scale(1.2);
-  transition-delay: .3s;
+  transition-delay: 0.3s;
 }
 
 .help-cont-card:hover .overlay {
-  opacity: .4;
+  opacity: 0.4;
 }
 
 .help-cont-card:hover::before {
@@ -452,12 +470,12 @@ p {
   .overlay {
     position: absolute;
     background-color: #000;
-    opacity: .7;
+    opacity: 0.7;
     left: 0;
     top: 0;
     right: 0;
     bottom: 0;
-    transition: all .3s;
+    transition: all 0.3s;
     z-index: 2;
   }
 
@@ -470,7 +488,7 @@ p {
 
     .card-text {
       opacity: 1;
-      transition: all .3s;
+      transition: all 0.3s;
 
       .help-content {
         opacity: 1;
@@ -533,6 +551,18 @@ p {
       button {
         font-size: 25px;
         color: $lightColor;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        /* background: red; */
+        border: solid 2px #bcc4bc;
+      }
+      button:hover {
+        background-color: #95a1bb;
+        .Edit-icon {
+          transition: 0.9s;
+          transform: rotateX(360deg);
+        }
       }
     }
   }
@@ -583,6 +613,12 @@ p {
         color: $lightColor;
         white-space: nowrap;
         text-decoration: none;
+      }
+      .btn:hover {
+        border-bottom: solid 3px #7c7c7c;
+      }
+      .btn.active {
+        border-bottom: solid 3px #052695;
       }
     }
   }
@@ -698,7 +734,6 @@ p {
 }
 
 .side-menu {
-
   .list-group-item.active,
   .list-group-item {
     background-color: transparent;

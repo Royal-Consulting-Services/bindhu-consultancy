@@ -215,13 +215,16 @@ function SSHome() {
             <h3 className={'mt-5 mb-5 content-heading'}>
               <span>Services </span>
             </h3>
-            <Col xs={12} md={4} className="mb-2">
-              <Card className='help-cont-card' onClick={() => homeNavigate('/service')}>
-                <div class="overlay"></div>
-                <div class="first-line"></div>
-                <div class="second-line"></div>
-                <div class="third-line"></div>
-                <div class="fourth-line"></div>
+            <Col xs={12} md={4} className='mb-2'>
+              <Card
+                className='help-cont-card'
+                onClick={() => homeNavigate('/service')}
+              >
+                <div class='overlay'></div>
+                <div class='first-line'></div>
+                <div class='second-line'></div>
+                <div class='third-line'></div>
+                <div class='fourth-line'></div>
                 <Card.Body>
                   <Card.Title>
                     Database Creation & Database Migrations
@@ -245,13 +248,16 @@ function SSHome() {
                 </Card.Body>
               </Card>
             </Col>
-            <Col xs={12} md={4} className="mb-2">
-              <Card className='help-cont-card' onClick={() => homeNavigate('/service')}>
-                <div class="overlay"></div>
-                <div class="first-line"></div>
-                <div class="second-line"></div>
-                <div class="third-line"></div>
-                <div class="fourth-line"></div>
+            <Col xs={12} md={4} className='mb-2'>
+              <Card
+                className='help-cont-card'
+                onClick={() => homeNavigate('/service')}
+              >
+                <div class='overlay'></div>
+                <div class='first-line'></div>
+                <div class='second-line'></div>
+                <div class='third-line'></div>
+                <div class='fourth-line'></div>
                 <Card.Body>
                   <Card.Title>IT Consulting</Card.Title>
                   <Image
@@ -276,13 +282,16 @@ function SSHome() {
                 </Card.Body>
               </Card>
             </Col>
-            <Col xs={12} md={4} className="mb-2">
-              <Card className='help-cont-card' onClick={() => homeNavigate('/service')}>
-                <div class="overlay"></div>
-                <div class="first-line"></div>
-                <div class="second-line"></div>
-                <div class="third-line"></div>
-                <div class="fourth-line"></div>
+            <Col xs={12} md={4} className='mb-2'>
+              <Card
+                className='help-cont-card'
+                onClick={() => homeNavigate('/service')}
+              >
+                <div class='overlay'></div>
+                <div class='first-line'></div>
+                <div class='second-line'></div>
+                <div class='third-line'></div>
+                <div class='fourth-line'></div>
                 <Card.Body>
                   <Card.Title>Cloud Migration</Card.Title>
                   <Image
@@ -308,13 +317,16 @@ function SSHome() {
         </ScrollAnimation>
         <ScrollAnimation animateIn='slideInUp'>
           <Row>
-            <Col xs={12} md={4} className="mb-2">
-              <Card className='help-cont-card' onClick={() => homeNavigate('/service')}>
-                <div class="overlay"></div>
-                <div class="first-line"></div>
-                <div class="second-line"></div>
-                <div class="third-line"></div>
-                <div class="fourth-line"></div>
+            <Col xs={12} md={4} className='mb-2'>
+              <Card
+                className='help-cont-card'
+                onClick={() => homeNavigate('/service')}
+              >
+                <div class='overlay'></div>
+                <div class='first-line'></div>
+                <div class='second-line'></div>
+                <div class='third-line'></div>
+                <div class='fourth-line'></div>
                 <Card.Body>
                   <Card.Title>Cloud Architecture</Card.Title>
                   <Image
@@ -338,13 +350,16 @@ function SSHome() {
                 </Card.Body>
               </Card>
             </Col>
-            <Col xs={12} md={4} className="mb-2">
-              <Card className='help-cont-card' onClick={() => homeNavigate('/service')}>
-                <div class="overlay"></div>
-                <div class="first-line"></div>
-                <div class="second-line"></div>
-                <div class="third-line"></div>
-                <div class="fourth-line"></div>
+            <Col xs={12} md={4} className='mb-2'>
+              <Card
+                className='help-cont-card'
+                onClick={() => homeNavigate('/service')}
+              >
+                <div class='overlay'></div>
+                <div class='first-line'></div>
+                <div class='second-line'></div>
+                <div class='third-line'></div>
+                <div class='fourth-line'></div>
                 <Card.Body>
                   <Card.Title>Business Analytics</Card.Title>
                   <Image

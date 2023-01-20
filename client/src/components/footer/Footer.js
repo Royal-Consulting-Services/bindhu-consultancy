@@ -21,11 +21,12 @@ import {
   faInstagram,
 } from '@fortawesome/free-brands-svg-icons';
 import { MENULINK } from '../../content';
+import { useNavigate } from 'react-router-dom';
 
 function Footer(props) {
   const [show, setShow] = useState(false);
   const [showBtn, setShowBtn] = useState('hidden-btn');
-
+  const footerNavigate = useNavigate();
   window.onscroll = function () {
     scrollFunction();
   };
@@ -45,6 +46,12 @@ function Footer(props) {
     document.documentElement.scrollTop = 0;
   };
   const url = window.location.pathname;
+  const socialCLick = (urlpath) => {
+    window.open(urlpath, '_blank');
+  };
+  const fbUrl =
+    'https://www.facebook.com/login/?privacy_mutation_token=eyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNjc0MTc0NTg4LCJjYWxsc2l0ZV9pZCI6MjY5NTQ4NDUzMDcyMDk1MX0%3D';
+
   return (
     url !== '/login' &&
     url !== '/signup' && (
@@ -96,7 +103,7 @@ function Footer(props) {
                 <Col xs={12} md={6}>
                   <ListGroup horizontal className='foo-social-icon'>
                     <ListGroup.Item>
-                      <Button variant='link'>
+                      <Button variant='link' onClick={() => socialCLick(fbUrl)}>
                         <FontAwesomeIcon
                           icon={faFacebookF}
                           className='Edit-icon'
@@ -146,7 +153,13 @@ function Footer(props) {
                     {MENULINK.map((menu) => {
                       return (
                         <ListGroup.Item>
-                          <Button variant='link' href={menu.key}>
+                          <Button
+                            variant='link'
+                            href={menu.key}
+                            className={
+                              menu.key === props.selectedMenu ? 'active' : ''
+                            }
+                          >
                             {menu.text}
                           </Button>
                         </ListGroup.Item>

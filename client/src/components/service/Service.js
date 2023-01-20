@@ -165,15 +165,18 @@ function Service(props) {
                 onClick={(e) => serviceClick(item)}
               >
                 <Card.Body>
-                  <div class="help-cs-inner">
-                    <div class="help-cs-front">
+                  <div class='help-cs-inner'>
+                    <div class='help-cs-front'>
                       <Card.Title>
-                        <FontAwesomeIcon icon={item.icon} className='tech-icon' />
+                        <FontAwesomeIcon
+                          icon={item.icon}
+                          className='tech-icon'
+                        />
                         <br />
                         <br /> {item.title}
                       </Card.Title>
                     </div>
-                    <div class="help-cs-back">
+                    <div class='help-cs-back'>
                       <Card.Text>
                         <p className='help-content'>{item.content}</p>
                         <div className='help-navigate effect-7 sub-b'>

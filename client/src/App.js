@@ -125,7 +125,9 @@ function App() {
           userLogin === 'admin' ? (
             <Footer type='admin' />
           ) : (
-            <Footer />
+            <Footer
+              selectedMenu={url === '/' ? 'home' : url.replace('/', '')}
+            />
           )
         ) : (
           ''

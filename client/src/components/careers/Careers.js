@@ -5,7 +5,10 @@ import { Careerbnr } from '../../images/images';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'react-bootstrap/Image';
+import { findFlagUrlByIso3Code } from 'country-flags-svg';
 
+const unitedstates = findFlagUrlByIso3Code('USA');
+const india = findFlagUrlByIso3Code('IND');
 const Careerlist = CAREERLIST.map((career) => {
   return (
     <div className='job-list'>
@@ -13,7 +16,14 @@ const Careerlist = CAREERLIST.map((career) => {
         <h4>{career.name}</h4>
       </div>
       <div className='job-location'>
-        <p> {career.location}</p>
+        <p style={{ margin: '0px' }}>
+          {' '}
+          <Image
+            src={career.location === 'IND' ? india : unitedstates}
+            width='20px'
+          />{' '}
+          <span>{career.location}</span>
+        </p>
       </div>
       <div className='job-link'>
         <a href='/careersdescription' target='_blank' className='link'>
@@ -24,7 +34,6 @@ const Careerlist = CAREERLIST.map((career) => {
     </div>
   );
 });
-
 function Careers() {
   return (
     <>
@@ -37,7 +46,7 @@ function Careers() {
             <span>Careers</span>
           </h3>
           <Row>
-            <Col xs={12} md={6}>
+            <Col xs={12} md={12}>
               <h3>Open positions</h3>
               <p>
                 We’re looking for people to join the team who are as excited as
@@ -50,9 +59,19 @@ function Careers() {
         <Row className={'career-tabs'}>
           <Col xs={12} md={4}>
             <ListGroup>
-              <ListGroup.Item>All Locations (3)</ListGroup.Item>
-              <ListGroup.Item>India (1)</ListGroup.Item>
-              <ListGroup.Item>USA (2)</ListGroup.Item>
+              <ListGroup.Item>
+                <p style={{ margin: '0px' }}>All Locations (3)</p>
+              </ListGroup.Item>
+              <ListGroup.Item>
+                <p style={{ margin: '0px' }}>
+                  <Image src={india} width='25px' /> India (1)
+                </p>
+              </ListGroup.Item>
+              <ListGroup.Item>
+                <p style={{ margin: '0px' }}>
+                  <Image src={unitedstates} width='25px' /> USA (2)
+                </p>
+              </ListGroup.Item>
             </ListGroup>
           </Col>
           <Col xs={12} md={8}>

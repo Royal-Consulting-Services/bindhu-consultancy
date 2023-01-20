@@ -54,7 +54,16 @@ function ServiceDetail(props) {
           </h3>
           <Row className={'mb-3'}>
             <Col Xs={12} md={6} style={{ position: 'relative' }}>
-              <p> {detailCont.content} </p>
+              <p
+                style={{
+                  display: 'table-cell',
+                  height: '300px',
+                  verticalAlign: 'middle',
+                }}
+              >
+                {' '}
+                {detailCont.content}{' '}
+              </p>
             </Col>
             <Col xs={12} md={6}>
               <Image

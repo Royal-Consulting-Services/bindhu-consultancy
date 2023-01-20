@@ -218,7 +218,7 @@ export const CAREERLIST = [
   },
   {
     name: 'PHP Developer',
-    location: 'Hydrabad',
+    location: 'IND',
     description:
       'A PHP developer works as part of a team in programming applications that are often web-based for clients. Key duties of this role include the writing of PHP scripts and coding to create or modify software and applications according to a clients needs. Other tasks also include troubleshooting any errors or issues relating to PHP programs and creating documentation for the same. The career advancements for PHP developers include promotions to a senior position, managerial roles such as a software development manager or directorial roles such as an information technology director.',
     careerdescribcont: careerDescribcont(),
