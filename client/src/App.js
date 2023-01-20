@@ -40,17 +40,17 @@ function App() {
   const homeCallback = (e) => {
     setUserLogin(userLogin);
     // console.log(localStorage.getItem('user-info')?.loggedinUser?.userName);
-    // window.location.reload();
+    window.location.reload();
   };
   useEffect(() => {
     setUserLogin(userLogin);
   }, []);
   const loginCallback = () => {
     setUserLogin(userLogin);
-    // window.location.reload();
+    window.location.reload();
   };
   const refresh = () => {
-    // window.location.reload();
+    window.location.reload();
   };
   const SignUpcallback = (item) => {
     setRegMessage(item);

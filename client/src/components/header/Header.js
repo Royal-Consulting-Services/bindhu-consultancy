@@ -381,7 +381,7 @@ function Header(props) {
                                 onChange={(e) => handleChange(e)}
                               />
                               {validation.firstName && (
-                                <p style={{ color: 'firebrick' }}>
+                                <p style={{ color: '#ba3939' }}>
                                   {validation.firstName}
                                 </p>
                               )}
@@ -400,7 +400,7 @@ function Header(props) {
                                 onChange={(e) => handleChange(e)}
                               />
                               {validation.lastName && (
-                                <p style={{ color: 'firebrick' }}>
+                                <p style={{ color: '#ba3939' }}>
                                   {validation.lastName}
                                 </p>
                               )}
@@ -418,7 +418,7 @@ function Header(props) {
                                 onChange={(e) => handleChange(e)}
                               />
                               {validation.email && (
-                                <p style={{ color: 'firebrick' }}>
+                                <p style={{ color: '#ba3939' }}>
                                   {validation.email}
                                 </p>
                               )}
@@ -434,7 +434,7 @@ function Header(props) {
                                 onChange={(e) => handleChange(e)}
                               />
                               {validation.mobile && (
-                                <p style={{ color: 'firebrick' }}>
+                                <p style={{ color: '#ba3939' }}>
                                   {validation.mobile}
                                 </p>
                               )}
@@ -469,7 +469,7 @@ function Header(props) {
                                 onChange={(e) => handleChange(e)}
                               />
                               {validation.userName && (
-                                <p style={{ color: 'firebrick' }}>
+                                <p style={{ color: '#ba3939' }}>
                                   {validation.userName}
                                 </p>
                               )}
@@ -505,7 +505,7 @@ function Header(props) {
                         <p
                           style={{
                             color: errMessage
-                              ? 'firebrick'
+                              ? '#ba3939'
                               : regMessage
                               ? 'forestgreen'
                               : '',

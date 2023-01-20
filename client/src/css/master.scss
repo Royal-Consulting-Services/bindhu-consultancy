@@ -25,6 +25,7 @@ body {
   .btn {
     border-radius: 25px;
     min-width: 100px;
+    margin-left: 10px;
   }
   .btn.btn-outline-primary:hover {
     background-color: #5369b4;
@@ -932,7 +933,7 @@ p {
     }
 
     .error-msg {
-      color: firebrick;
+      color: #ba3939;
       margin-bottom: 0px;
       position: absolute;
     }

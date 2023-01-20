@@ -248,16 +248,15 @@ function AdminHome(props) {
       <td>{item.userName}</td>
       <td>{item.email}</td>
       <td>{item.phone}</td>
-      <td>{item.role}</td>
       <td>
         <FontAwesomeIcon
           icon={faEdit}
-          style={{ padding: '5px', cursor: 'pointer' }}
+          style={{ padding: '5px', marginRight: '5px', cursor: 'pointer' }}
           onClick={(event) => editUserOpen(item)}
         />
         <FontAwesomeIcon
           icon={faTrash}
-          style={{ padding: '5px', cursor: 'pointer' }}
+          style={{ padding: '5px', marginRight: '5px', cursor: 'pointer' }}
           onClick={(event) => deleteConfirm(item)}
         />
       </td>
@@ -324,7 +323,6 @@ function AdminHome(props) {
                       <th>User Name</th>
                       <th>Email</th>
                       <th>Phone</th>
-                      <th>Role</th>
                       <th>Actions</th>
                     </tr>
                   </thead>

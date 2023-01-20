@@ -172,7 +172,7 @@ function SignUp(props) {
                       onChange={(e) => handleChange(e)}
                     />
                     {validation.firstName && (
-                      <p style={{ color: 'firebrick' }}>
+                      <p style={{ color: '#ba3939' }}>
                         {validation.firstName}
                       </p>
                     )}
@@ -189,7 +189,7 @@ function SignUp(props) {
                       onChange={(e) => handleChange(e)}
                     />
                     {validation.lastName && (
-                      <p style={{ color: 'firebrick' }}>
+                      <p style={{ color: '#ba3939' }}>
                         {validation.lastName}
                       </p>
                     )}
@@ -208,7 +208,7 @@ function SignUp(props) {
                       onChange={(e) => handleChange(e)}
                     />
                     {validation.email && (
-                      <p style={{ color: 'firebrick' }}>{validation.email}</p>
+                      <p style={{ color: '#ba3939' }}>{validation.email}</p>
                     )}
                   </Form.Group>
                 </Col>
@@ -261,7 +261,7 @@ function SignUp(props) {
                       onChange={(e) => handleChange(e)}
                     />
                     {validation.userName && (
-                      <p style={{ color: 'firebrick' }}>
+                      <p style={{ color: '#ba3939' }}>
                         {validation.userName}
                       </p>
                     )}

@@ -84,7 +84,7 @@ function Login(props) {
               <b
                 style={{
                   color: errMessage
-                    ? 'firebrick'
+                    ? '#ba3939'
                     : regMessage
                     ? 'forestgreen'
                     : '',
