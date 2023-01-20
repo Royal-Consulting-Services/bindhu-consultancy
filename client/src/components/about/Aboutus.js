@@ -14,29 +14,44 @@ function Aboutus() {
         <h3 className={'mt-5 mb-5 content-heading'}>
           <span>About Us</span>
         </h3>
-        <Row className={'service-tabs animate__animated animate__backInUp'}>
+        <Row className={'service-tabs '}>
           <Col xs={12} md={6}>
-            <Image src={Aboutuscont} className={'d-flex w-100 rounded'} />
+            <ScrollAnimation animateIn='flipInX'>
+              <Image src={Aboutuscont} className={'d-flex w-100 rounded'} />
+            </ScrollAnimation>
           </Col>
           <Col Xs={12} md={6}>
-            <p>
-              At BR Group Tech, we are a premier software services company that
-              provides tailor-made cloud solutions to organizations across the
-              United States. Our highly skilled professionals offer
-              comprehensive cloud consulting services to help enterprises boost
-              their productivity like never before. Through evaluating a
-              company's requirements, technical aspects, and data assessments,
-              we deliver bespoke cloud computing solutions that are guaranteed
-              to manage and streamline your business more effectively than ever
-              before - all at a cost-effective price. If you're looking for a
-              team of tech experts who can help you transform your IT
-              environment, look no further than BR Group Tech!
-            </p>
-            <p>
-              Our cloud architects are experienced in helping businesses with
-              reliable and future-ready migrations. This way, you can keep your
-              business operations smooth and stay ahead of your competitors.
-            </p>
+            <ScrollAnimation animateIn='flipInX'>
+              <p>
+                At{' '}
+                <span
+                  style={{
+                    fontWeight: 800,
+                    color: '#052695',
+                    fontSize: '18px',
+                  }}
+                >
+                  BR Group Tech
+                </span>
+                , we are a premier software services company that provides
+                tailor-made cloud solutions to organizations across the United
+                States. Our highly skilled professionals offer comprehensive
+                cloud consulting services to help enterprises boost their
+                productivity like never before. Through evaluating a company's
+                requirements, technical aspects, and data assessments, we
+                deliver bespoke cloud computing solutions that are guaranteed to
+                manage and streamline your business more effectively than ever
+                before - all at a cost-effective price. If you're looking for a
+                team of tech experts who can help you transform your IT
+                environment, look no further than BR Group Tech!
+              </p>
+              <p>
+                Our cloud architects are experienced in helping businesses with
+                reliable and future-ready migrations. This way, you can keep
+                your business operations smooth and stay ahead of your
+                competitors.
+              </p>
+            </ScrollAnimation>
           </Col>
         </Row>
         <Row>
@@ -46,9 +61,19 @@ function Aboutus() {
           <Col xs={12} md={6}>
             <ScrollAnimation animateIn='flipInX'>
               <p>
-                At BR Group Tech, we provide highly customized solutions for
-                your needs. We have experienced IT professionals who are
-                knowledgeable in cloud architecture, engineering, and planning.
+                At{' '}
+                <span
+                  style={{
+                    fontWeight: 800,
+                    color: '#052695',
+                    fontSize: '18px',
+                  }}
+                >
+                  BR Group Tech
+                </span>
+                , we provide highly customized solutions for your needs. We have
+                experienced IT professionals who are knowledgeable in cloud
+                architecture, engineering, and planning.
                 <br />
                 When you partner with us, you gain access to the right knowledge
                 and resources to get the job done right. Our tech experts can

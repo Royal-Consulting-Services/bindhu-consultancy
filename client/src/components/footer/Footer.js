@@ -47,10 +47,18 @@ function Footer(props) {
   };
   const url = window.location.pathname;
   const socialCLick = (urlpath) => {
-    window.open(urlpath, '_blank');
+    if (urlpath !== 'mail') {
+      window.open(urlpath, '_blank');
+    } else if (urlpath === 'mail') {
+      window.location = 'mailto:xyz@yourapplicationdomain.com';
+    }
   };
   const fbUrl =
     'https://www.facebook.com/login/?privacy_mutation_token=eyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNjc0MTc0NTg4LCJjYWxsc2l0ZV9pZCI6MjY5NTQ4NDUzMDcyMDk1MX0%3D';
+  const wapp = 'https://web.whatsapp.com/';
+  const linkIn =
+    'https://www.linkedin.com/signup/cold-join?session_redirect=https%3A%2F%2Fwww%2Elinkedin%2Ecom%2Ffeed%2F&trk=login_reg_redirect';
+  const insta = 'https://www.instagram.com/';
 
   return (
     url !== '/login' &&
@@ -66,8 +74,17 @@ function Footer(props) {
             <Row>
               <Col xs={12} md={12}>
                 <p className='foo-content-text-admin'>
-                  Copyright © {new Date().getFullYear()} BR Group Tech. All
-                  Rights Reserved
+                  Copyright © {new Date().getFullYear()}{' '}
+                  <span
+                    style={{
+                      fontWeight: 800,
+                      color: '#052695',
+                      fontSize: '18px',
+                    }}
+                  >
+                    BR Group Tech
+                  </span>
+                  . All Rights Reserved
                 </p>
               </Col>
             </Row>
@@ -112,7 +129,7 @@ function Footer(props) {
                     </ListGroup.Item>
                     <ListGroup.Item>
                       {' '}
-                      <Button variant='link'>
+                      <Button variant='link' onClick={() => socialCLick(wapp)}>
                         <FontAwesomeIcon
                           icon={faWhatsapp}
                           className='Edit-icon'
@@ -120,7 +137,10 @@ function Footer(props) {
                       </Button>
                     </ListGroup.Item>
                     <ListGroup.Item>
-                      <Button variant='link'>
+                      <Button
+                        variant='link'
+                        onClick={() => socialCLick(linkIn)}
+                      >
                         <FontAwesomeIcon
                           icon={faLinkedinIn}
                           className='Edit-icon'
@@ -129,7 +149,7 @@ function Footer(props) {
                     </ListGroup.Item>
                     <ListGroup.Item>
                       {' '}
-                      <Button variant='link'>
+                      <Button variant='link' onClick={() => socialCLick(insta)}>
                         <FontAwesomeIcon
                           icon={faInstagram}
                           className='Edit-icon'
@@ -137,7 +157,10 @@ function Footer(props) {
                       </Button>
                     </ListGroup.Item>
                     <ListGroup.Item>
-                      <Button variant='link'>
+                      <Button
+                        variant='link'
+                        onClick={() => socialCLick('mail')}
+                      >
                         <FontAwesomeIcon
                           icon={faEnvelope}
                           className='Edit-icon'
@@ -266,6 +289,27 @@ function Footer(props) {
             </>
           )}
         </Container>
+        {props.type !== 'admin' && (
+          <Container fluid className='secondry-footer'>
+            <Row>
+              <Col xs={12} md={12}>
+                <p className='foo-content-copyright-text'>
+                  Copyright © {new Date().getFullYear()}{' '}
+                  <span
+                    style={{
+                      fontWeight: 800,
+                      color: '#052695',
+                      fontSize: '18px',
+                    }}
+                  >
+                    BR Group Tech
+                  </span>
+                  . All Rights Reserved
+                </p>
+              </Col>
+            </Row>
+          </Container>
+        )}
       </>
     )
   );

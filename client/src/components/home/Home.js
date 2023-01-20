@@ -44,7 +44,13 @@ function Home() {
               <p>
                 {' '}
                 At{' '}
-                <span style={{ fontWeight: 600, color: '#052695' }}>
+                <span
+                  style={{
+                    fontWeight: 800,
+                    color: '#052695',
+                    fontSize: '18px',
+                  }}
+                >
                   BR Group Tech
                 </span>
                 , we are a premier software services company that provides
@@ -211,7 +217,13 @@ function Home() {
             <ScrollAnimation animateIn='flipInX'>
               <p>
                 At{' '}
-                <span style={{ fontWeight: 600, color: '#052695' }}>
+                <span
+                  style={{
+                    fontWeight: 800,
+                    color: '#052695',
+                    fontSize: '18px',
+                  }}
+                >
                   BR Group Tech
                 </span>
                 , we provide highly customized solutions for your needs. We have

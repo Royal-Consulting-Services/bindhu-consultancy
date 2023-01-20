@@ -23,7 +23,8 @@ body {
   }
 
   .btn {
-    border-radius: 0px;
+    border-radius: 25px;
+    min-width: 100px;
   }
   .btn.btn-outline-primary:hover {
     background-color: #5369b4;
@@ -509,7 +510,12 @@ p {
   bottom: 0px;
   width: 100%;
 }
-
+.secondry-footer {
+  background: #5369b4;
+  .foo-content-copyright-text {
+    text-align: center;
+  }
+}
 .main-footer {
   background: $darkColor;
   color: $lightColor;
@@ -522,6 +528,11 @@ p {
     right: 50px;
     font-size: 30px;
     color: #02061f;
+    svg {
+      color: #5369b4;
+      border: solid 2px #f8f9f1;
+      border-radius: 50%;
+    }
   }
 
   .hidden-btn {
@@ -551,8 +562,8 @@ p {
       button {
         font-size: 25px;
         color: $lightColor;
-        width: 50px;
-        height: 50px;
+        min-width: 50px !important;
+        height: 50px !important;
         border-radius: 50%;
         /* background: red; */
         border: solid 2px #bcc4bc;
@@ -613,9 +624,10 @@ p {
         color: $lightColor;
         white-space: nowrap;
         text-decoration: none;
+        border-radius: 0px;
       }
       .btn:hover {
-        border-bottom: solid 3px #7c7c7c;
+        border-bottom: solid 3px #5369b4;
       }
       .btn.active {
         border-bottom: solid 3px #052695;
@@ -805,7 +817,7 @@ p {
 .job-list {
   display: block;
   padding: 10px;
-  border-bottom: solid 2px #00000020;
+  border-bottom: solid 2px #5369b4;
 
   .job-title {
     display: inline-block;
@@ -841,6 +853,12 @@ p {
     right: 10px;
     font-size: 25px;
     color: #ffffff;
+    height: 32px;
+    width: 32px;
+    padding: 5px;
+    background: #0422857d;
+    border-radius: 50%;
+    cursor: pointer;
   }
 
   .backgrnd-img {
@@ -874,6 +892,12 @@ p {
     right: 10px;
     font-size: 25px;
     color: #ffffff;
+    height: 32px;
+    width: 32px;
+    padding: 5px;
+    background: #0422857d;
+    border-radius: 50%;
+    cursor: pointer;
   }
 
   .backgrnd-img {
@@ -942,8 +966,11 @@ p {
 .contact-card {
   text-align: center;
   height: 180px;
-  background-color: #5369b4;
+  background-color: #052695;
   color: white;
+  a:hover {
+    color: #02061f;
+  }
 
   address {
     margin-bottom: 0px;
@@ -956,6 +983,11 @@ p {
     margin-bottom: 5px;
     color: #02061f;
   }
+}
+
+.contact-card:hover {
+  background-color: #5369b4;
+  cursor: pointer;
 }
 
 .left {

@@ -289,7 +289,7 @@ function Header(props) {
                     <>
                       <Button
                         variant='outline-secondary'
-                        size={'sm'}
+                        size={'lg'}
                         onClick={navigateLogin}
                       >
                         Login

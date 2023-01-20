@@ -3,6 +3,7 @@ export const Slide1 = require('./slide1.png');
 export const Slide2 = require('./slide2.png');
 export const Slide3 = require('./slide3.png');
 export const Slide4 = require('./slide4.png');
+export const LoginBg = require('./login-bg.png');
 export const Technology = require('./technology.jpg');
 export const Blog1 = require('./blog1.jpg');
 export const Blog2 = require('./blog2.jpg');

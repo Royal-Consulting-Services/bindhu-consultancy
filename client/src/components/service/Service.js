@@ -44,9 +44,17 @@ function Service(props) {
               <Col
                 xs={12}
                 className='col-md-2_5'
-                style={{ padding: '0px', border: 'none' }}
+                style={{
+                  padding: '0px',
+                  border: 'none',
+                  background: '#5369b4',
+                  borderRadius: '20px',
+                }}
               >
-                <Card className='technology-card'>
+                <Card
+                  className='technology-card'
+                  style={{ background: 'transparent' }}
+                >
                   <Card.Body>
                     <Card.Title
                       className='technology-title'
@@ -68,9 +76,17 @@ function Service(props) {
               <Col
                 xs={12}
                 className='col-md-2_5'
-                style={{ padding: '0px', border: 'none' }}
+                style={{
+                  padding: '0px',
+                  border: 'none',
+                  background: '#5369b4',
+                  borderRadius: '20px',
+                }}
               >
-                <Card className='technology-card'>
+                <Card
+                  className='technology-card'
+                  style={{ background: 'transparent' }}
+                >
                   <Card.Body>
                     <Card.Title
                       className='technology-title'
@@ -89,8 +105,19 @@ function Service(props) {
                   </Card.Body>
                 </Card>
               </Col>
-              <Col xs={12} className='col-md-2_5' style={{ padding: '0px' }}>
-                <Card className='technology-card'>
+              <Col
+                xs={12}
+                className='col-md-2_5'
+                style={{
+                  padding: '0px',
+                  background: '#5369b4',
+                  borderRadius: '20px',
+                }}
+              >
+                <Card
+                  className='technology-card'
+                  style={{ background: 'transparent' }}
+                >
                   <Card.Body>
                     <Card.Title
                       className='technology-title'
@@ -112,9 +139,17 @@ function Service(props) {
               <Col
                 xs={12}
                 className='col-md-2_5'
-                style={{ padding: '0px', border: 'none' }}
+                style={{
+                  padding: '0px',
+                  border: 'none',
+                  background: '#5369b4',
+                  borderRadius: '20px',
+                }}
               >
-                <Card className='technology-card'>
+                <Card
+                  className='technology-card'
+                  style={{ background: 'transparent' }}
+                >
                   <Card.Body>
                     <Card.Title
                       className='technology-title'
@@ -132,9 +167,17 @@ function Service(props) {
               <Col
                 xs={12}
                 className='col-md-2_5'
-                style={{ padding: '0px', border: 'none' }}
+                style={{
+                  padding: '0px',
+                  border: 'none',
+                  background: '#5369b4',
+                  borderRadius: '20px',
+                }}
               >
-                <Card className='technology-card'>
+                <Card
+                  className='technology-card'
+                  style={{ background: 'transparent' }}
+                >
                   <Card.Body>
                     <Card.Title
                       className='technology-title'

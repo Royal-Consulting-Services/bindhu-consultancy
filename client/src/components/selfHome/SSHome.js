@@ -57,16 +57,26 @@ function SSHome() {
                 className={'d-flex w-100'}
               />
               <p>
-                At BR Group Tech, we are a premier software services company
-                that provides tailor-made cloud solutions to organizations
-                across the United States. Our highly skilled professionals offer
-                comprehensive cloud consulting services to help enterprises
-                boost their productivity like never before. Through evaluating a
-                company's requirements, technical aspects, and data assessments,
-                we deliver bespoke cloud computing solutions that are guaranteed
-                to manage and streamline your business more effectively than
-                ever before - all at a cost-effective price. If you're looking
-                for a team of tech experts who can help you transform your IT
+                At{' '}
+                <span
+                  style={{
+                    fontWeight: 800,
+                    color: '#052695',
+                    fontSize: '18px',
+                  }}
+                >
+                  BR Group Tech{' '}
+                </span>
+                ,we are a premier software services company that provides
+                tailor-made cloud solutions to organizations across the United
+                States. Our highly skilled professionals offer comprehensive
+                cloud consulting services to help enterprises boost their
+                productivity like never before. Through evaluating a company's
+                requirements, technical aspects, and data assessments, we
+                deliver bespoke cloud computing solutions that are guaranteed to
+                manage and streamline your business more effectively than ever
+                before - all at a cost-effective price. If you're looking for a
+                team of tech experts who can help you transform your IT
                 environment, look no further than BR Group Tech!
               </p>
               <p>
@@ -301,13 +311,23 @@ function SSHome() {
                   />
                   <Card.Text>
                     <p className='help-content'>
-                      At BR Group Tech, our cloud migration service is designed
-                      to lower your company's need for physical resources and
-                      reduce overhead costs while increasing productivity. Our
-                      team of specialists will use proven methodologies and
-                      advanced tools to quickly and effectively transform your
-                      business from on-premise to cloud-based, ensuring a smooth
-                      process that won't disrupt your day-to-day operations.
+                      At{' '}
+                      <span
+                        style={{
+                          fontWeight: 800,
+                          color: '#052695',
+                          fontSize: '18px',
+                        }}
+                      >
+                        BR Group Tech
+                      </span>
+                      , our cloud migration service is designed to lower your
+                      company's need for physical resources and reduce overhead
+                      costs while increasing productivity. Our team of
+                      specialists will use proven methodologies and advanced
+                      tools to quickly and effectively transform your business
+                      from on-premise to cloud-based, ensuring a smooth process
+                      that won't disrupt your day-to-day operations.
                     </p>
                   </Card.Text>
                 </Card.Body>
@@ -369,12 +389,22 @@ function SSHome() {
                   />
                   <Card.Text>
                     <p className='help-content'>
-                      At BR Group Tech, we provide ad hoc business analytics
-                      services to help our clients make better decisions. Our
-                      team helps clients gather insights on customer behavior,
-                      employees’ performance, and partners’ interaction. This
-                      data helps organizations align resources for better
-                      performance and achieving short- and long-term goals.
+                      At{' '}
+                      <span
+                        style={{
+                          fontWeight: 800,
+                          color: '#052695',
+                          fontSize: '18px',
+                        }}
+                      >
+                        BR Group Tech
+                      </span>
+                      , we provide ad hoc business analytics services to help
+                      our clients make better decisions. Our team helps clients
+                      gather insights on customer behavior, employees’
+                      performance, and partners’ interaction. This data helps
+                      organizations align resources for better performance and
+                      achieving short- and long-term goals.
                     </p>
                   </Card.Text>
                 </Card.Body>
@@ -394,9 +424,19 @@ function SSHome() {
           <Col xs={12} md={6}>
             <ScrollAnimation animateIn='flipInX'>
               <p>
-                At BR Group Tech, we provide highly customized solutions for
-                your needs. We have experienced IT professionals who are
-                knowledgeable in cloud architecture, engineering, and planning.
+                At{' '}
+                <span
+                  style={{
+                    fontWeight: 800,
+                    color: '#052695',
+                    fontSize: '18px',
+                  }}
+                >
+                  BR Group Tech
+                </span>
+                , we provide highly customized solutions for your needs. We have
+                experienced IT professionals who are knowledgeable in cloud
+                architecture, engineering, and planning.
                 <br />
                 When you partner with us, you gain access to the right knowledge
                 and resources to get the job done right. Our tech experts can

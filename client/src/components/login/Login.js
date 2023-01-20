@@ -9,7 +9,7 @@ import {
   InputGroup,
 } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
-import { Slide1 } from '../../images/images';
+import { LoginBg } from '../../images/images';
 import { faClose, faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -67,7 +67,7 @@ function Login(props) {
         className={'page-close'}
         onClick={() => loginNavigate('/')}
       />
-      <Image src={Slide1} fluid={true} className='backgrnd-img' />
+      <Image src={LoginBg} fluid={true} className='backgrnd-img' />
       <div className='login-form-content'>
         <h3
           style={{
@@ -140,6 +140,7 @@ function Login(props) {
               style={{
                 color: '#ffffff',
                 margin: '0px auto 20px auto',
+                fontSize: '20px',
               }}
             >
               Please Sign Up Here

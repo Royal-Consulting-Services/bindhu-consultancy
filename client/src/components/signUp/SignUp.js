@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Button, Container, Form, Row, Col, Image } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
-import { Slide1 } from '../../images/images';
+import { LoginBg } from '../../images/images';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 import { faClose } from '@fortawesome/free-solid-svg-icons';
@@ -146,7 +146,7 @@ function SignUp(props) {
         onClick={() => signupNavigate('/')}
       />
       <div className='overlay'></div>
-      <Image src={Slide1} fluid={true} className='backgrnd-img' />
+      <Image src={LoginBg} fluid={true} className='backgrnd-img' />
       <div className='login-form-content'>
         <Row>
           <Col xs={12} md={{ span: 6, offset: 3 }}>
@@ -279,6 +279,7 @@ function SignUp(props) {
               style={{
                 color: '#ffffff',
                 margin: '0px auto 20px auto',
+                fontSize: '20px',
               }}
             >
               Already have a account login here
