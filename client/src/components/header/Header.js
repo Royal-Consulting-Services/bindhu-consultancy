@@ -180,7 +180,6 @@ function Header(props) {
         onClick={menu.onClick}
         className={menu.key === props.selectedMenu ? 'active' : ''}
       >
-        {' '}
         {menu.icon && (
           <FontAwesomeIcon
             icon={menu.icon}

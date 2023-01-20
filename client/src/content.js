@@ -23,7 +23,7 @@ export const SLIDERS = [
     src: Slide1,
     altText: 'Slide 1',
     captionText:
-      'Value-Added Human Resources and Organizational Development Solutions',
+      'Value Added Human Resources and Organizational Development Solutions',
     captionHeader: '',
   },
   {
@@ -78,7 +78,7 @@ export const SERVICES = [
     icon: faDatabase,
     image: Databasemigrte,
     content:
-      "Our certified cloud engineers provide a tailored database creation & database migrations service that helps cut the time and cost of creating & migrating your data to the public cloud platform. No matter what kind of database you're using - Oracle, SQL server, or something else - we have the knowledge and skills to get it working on the cloud.",
+      "Our certified cloud engineers provide a tailored database creation & database migrations service that helps cut the time and cost of creating & migrating your data to the public cloud platform. No matter what kind of database you're using   Oracle, SQL server, or something else   we have the knowledge and skills to get it working on the cloud.",
   },
   {
     title: 'IT Consulting',
@@ -95,7 +95,7 @@ export const SERVICES = [
     icon: faCloud,
     image: Cloudmigration,
     content:
-      "At BR Group Tech, our cloud migration service is designed to lower your company's need for physical resources and reduce overhead costs while increasing productivity. Our team of specialists will use proven methodologies and advanced tools to quickly and effectively transform your business from on-premise to cloud-based, ensuring a smooth process that won't disrupt your day-to-day operations.",
+      "At BR Group Tech, our cloud migration service is designed to lower your company's need for physical resources and reduce overhead costs while increasing productivity. Our team of specialists will use proven methodologies and advanced tools to quickly and effectively transform your business from on premise to cloud based, ensuring a smooth process that won't disrupt your day to day operations.",
   },
   {
     title: 'Cloud Architecture',
@@ -103,7 +103,7 @@ export const SERVICES = [
     icon: faSitemap,
     image: Cloudarchitecture,
     content:
-      'Our team provides tailored cloud architecture services that are based on what future businesses will need. We help you to adopt new-age architectures that are cloud-powered and designed for high performance. We have the expertise to build robust designs that simplify business opportunities and workflows. By putting the best practices combined with our expertise at the core of your projects, you can be confident that your business is future-proofed.',
+      'Our team provides tailored cloud architecture services that are based on what future businesses will need. We help you to adopt new age architectures that are cloud powered and designed for high performance. We have the expertise to build robust designs that simplify business opportunities and workflows. By putting the best practices combined with our expertise at the core of your projects, you can be confident that your business is future proofed.',
   },
   {
     title: 'Business Analytics',
@@ -111,7 +111,7 @@ export const SERVICES = [
     icon: faBusinessTime,
     image: Businessanalytics,
     content:
-      'At BR Group Tech, we provide ad hoc business analytics services to help our clients make better decisions. Our team helps clients gather insights on customer behavior, employees’ performance, and partners’ interaction. This data helps organizations align resources for better performance and achieving short- and long-term goals.',
+      'At BR Group Tech, we provide ad hoc business analytics services to help our clients make better decisions. Our team helps clients gather insights on customer behavior, employees’ performance, and partners’ interaction. This data helps organizations align resources for better performance and achieving short  and long term goals.',
   },
 ];
 
@@ -154,12 +154,12 @@ function careerDescribcont() {
         <li>Developing commercial progressive SSR Angular applications</li>
         <li>Using TypeScript on a daily basis</li>
         <li>
-          Creating integrations with headless backend systems and third-party
+          Creating integrations with headless backend systems and third party
           SaaS products
         </li>
         <li>Performing technical analysis of business requirements</li>
         <li>
-          Providing bullet-proof functionality in cooperation with the QA team
+          Providing bullet proof functionality in cooperation with the QA team
         </li>
       </ul>
       <b style={{ display: 'block', marginTop: '20px' }}>
@@ -192,7 +192,7 @@ function careerDescribcont() {
         Preferred Qualifications/Skills/Experience :
       </b>
       <ul>
-        <li> Know how to work with SAP Commerce - it's a big plus</li>
+        <li> Know how to work with SAP Commerce it's a big plus</li>
         <li>Like to get involved in additional initiatives</li>
         <li>Know what a development architecture is</li>
         <li>Easily coordinate your work</li>
@@ -213,14 +213,14 @@ export const CAREERLIST = [
     name: 'HR',
     location: 'US',
     description:
-      'We are looking to employ an HR officer with excellent communication skills, both written and verbal. The HR officer is expected to be knowledgeable with employment legislation and possess strategic and commercial insight to the labor process. He or she must be able to negotiate with diplomacy.To ensure success, an HR officer should display excellent organizational skills, good time-management skills, and the ability to multi-task in a fast-paced environment. A top HR officer should possess remarkable conflict management and decision-making skills to ensure employee compliance.',
+      'We are looking to employ an HR officer with excellent communication skills, both written and verbal. The HR officer is expected to be knowledgeable with employment legislation and possess strategic and commercial insight to the labor process. He or she must be able to negotiate with diplomacy.To ensure success, an HR officer should display excellent organizational skills, good time management skills, and the ability to multi task in a fast paced environment. A top HR officer should possess remarkable conflict management and decision making skills to ensure employee compliance.',
     careerdescribcont: careerDescribcont(),
   },
   {
     name: 'PHP Developer',
     location: 'IND',
     description:
-      'A PHP developer works as part of a team in programming applications that are often web-based for clients. Key duties of this role include the writing of PHP scripts and coding to create or modify software and applications according to a clients needs. Other tasks also include troubleshooting any errors or issues relating to PHP programs and creating documentation for the same. The career advancements for PHP developers include promotions to a senior position, managerial roles such as a software development manager or directorial roles such as an information technology director.',
+      'A PHP developer works as part of a team in programming applications that are often web based for clients. Key duties of this role include the writing of PHP scripts and coding to create or modify software and applications according to a clients needs. Other tasks also include troubleshooting any errors or issues relating to PHP programs and creating documentation for the same. The career advancements for PHP developers include promotions to a senior position, managerial roles such as a software development manager or directorial roles such as an information technology director.',
     careerdescribcont: careerDescribcont(),
   },
 ];

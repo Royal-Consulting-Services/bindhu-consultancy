@@ -17,7 +17,6 @@ const Careerlist = CAREERLIST.map((career) => {
       </div>
       <div className='job-location'>
         <p style={{ margin: '0px' }}>
-          {' '}
           <Image
             src={career.location === 'IND' ? india : unitedstates}
             width='20px'
@@ -26,7 +25,7 @@ const Careerlist = CAREERLIST.map((career) => {
         </p>
       </div>
       <div className='job-link'>
-        <a href='/careersdescription' target='_blank' className='link'>
+        <a href='/careersdescription' className='link'>
           <FontAwesomeIcon icon={faArrowRight} className='tech-icon' />
         </a>
       </div>

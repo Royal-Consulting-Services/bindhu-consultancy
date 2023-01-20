@@ -128,7 +128,6 @@ function Footer(props) {
                       </Button>
                     </ListGroup.Item>
                     <ListGroup.Item>
-                      {' '}
                       <Button variant='link' onClick={() => socialCLick(wapp)}>
                         <FontAwesomeIcon
                           icon={faWhatsapp}
@@ -148,7 +147,6 @@ function Footer(props) {
                       </Button>
                     </ListGroup.Item>
                     <ListGroup.Item>
-                      {' '}
                       <Button variant='link' onClick={() => socialCLick(insta)}>
                         <FontAwesomeIcon
                           icon={faInstagram}

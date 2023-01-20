@@ -41,19 +41,6 @@ function Contact() {
               <Card className='contact-card'>
                 <Card.Body>
                   <FontAwesomeIcon icon={faPhone} className='contact-icon' />
-                  <a
-                    href='tel:+44 9832149032'
-                    style={{ padding: '0px 10px', textDecoration: 'none' }}
-                  >
-                    +44 9832149032
-                  </a>
-                  <br />
-                  <a
-                    href='tel:+44 9732739092'
-                    style={{ padding: '0px 10px', textDecoration: 'none' }}
-                  >
-                    +44 9732739092
-                  </a>
                   <br />
                   <a
                     href='tel:+1 9455369778'

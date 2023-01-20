@@ -14,7 +14,6 @@ import {
 
 import Image from 'react-bootstrap/Image';
 import ScrollAnimation from 'react-animate-on-scroll';
-import { useNavigate } from 'react-router-dom';
 
 const slides = SLIDERS.map((slider) => {
   return (
@@ -29,7 +28,6 @@ const slides = SLIDERS.map((slider) => {
 });
 
 function Home() {
-  const homeNavigate = useNavigate();
   return (
     <>
       <Carousel>{slides}</Carousel>
@@ -42,7 +40,6 @@ function Home() {
               </h3>
               <Image src={Aboutuscont} className={'d-flex w-100 rounded'} />
               <p>
-                {' '}
                 At{' '}
                 <span
                   style={{
@@ -61,7 +58,7 @@ function Home() {
                 requirements, technical aspects, and data assessments, we
                 deliver bespoke cloud computing solutions that are guaranteed to
                 manage and streamline your business more effectively than ever
-                before - all at a cost-effective price. If you're looking for a
+                before all at a cost effective price. If you're looking for a
                 team of tech experts who can help you transform your IT
                 environment, look no further than BR Group Tech!
               </p>
@@ -82,10 +79,19 @@ function Home() {
           <Col xs={12} md={6}>
             <ScrollAnimation animateIn='flipInX'>
               <p>
-                {' '}
-                At our company, we have a team of highly trained individuals who
-                are experienced in large-scale implementations. This team can
-                help you with the following:
+                At{' '}
+                <span
+                  style={{
+                    fontWeight: 800,
+                    color: '#052695',
+                    fontSize: '18px',
+                  }}
+                >
+                  BR Group Tech
+                </span>
+                , we have a team of highly trained individuals who are
+                experienced in large-scale implementations. This team can help
+                you with the following:
               </p>
 
               <ul>
@@ -234,8 +240,8 @@ function Home() {
                 and resources to get the job done right. Our tech experts can
                 assist your businesses in streamlining IT infrastructure and
                 migrating to the cloud. We have the resources and expertise to
-                guide you through the entire process, from pre-migration
-                planning to post-migration maintenance. Our goal is to make your
+                guide you through the entire process, from pre migration
+                planning to post migration maintenance. Our goal is to make your
                 transition to the cloud as smooth and seamless as possible.
                 Contact us today to get started!
               </p>

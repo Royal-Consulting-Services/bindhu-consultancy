@@ -86,6 +86,12 @@ p {
   border-top: 2px solid #052695;
 }
 
+.admin-app-header {
+  background-color: #02061f;
+  color: white;
+  border-radius: 3px;
+}
+
 .app-header {
   box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
   background-color: #f8f9f1 !important;
@@ -147,7 +153,6 @@ p {
 }
 
 .technology-card {
-  cursor: pointer;
   border: none;
   border-radius: 0px;
 
@@ -165,6 +170,7 @@ p {
     position: relative;
     overflow: hidden;
     font-size: 23px;
+    white-space: nowrap;
   }
 
   .technology-title::after {
@@ -511,9 +517,10 @@ p {
   width: 100%;
 }
 .secondry-footer {
-  background: #5369b4;
+  background: #02061f;
   .foo-content-copyright-text {
     text-align: center;
+    color: $lightColor;
   }
 }
 .main-footer {
@@ -950,7 +957,7 @@ p {
 .choose-image {
   display: block;
   margin: auto;
-  height: 300px;
+  width: 100%;
 }
 
 .react-phone-control {

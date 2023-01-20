@@ -250,7 +250,6 @@ function AdminHome(props) {
       <td>{item.phone}</td>
       <td>{item.role}</td>
       <td>
-        {' '}
         <FontAwesomeIcon
           icon={faEdit}
           style={{ padding: '5px', cursor: 'pointer' }}

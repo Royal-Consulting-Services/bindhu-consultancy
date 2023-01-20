@@ -41,7 +41,7 @@ function Aboutus() {
                 requirements, technical aspects, and data assessments, we
                 deliver bespoke cloud computing solutions that are guaranteed to
                 manage and streamline your business more effectively than ever
-                before - all at a cost-effective price. If you're looking for a
+                before all at a cost effective price. If you're looking for a
                 team of tech experts who can help you transform your IT
                 environment, look no further than BR Group Tech!
               </p>
@@ -79,8 +79,8 @@ function Aboutus() {
                 and resources to get the job done right. Our tech experts can
                 assist your businesses in streamlining IT infrastructure and
                 migrating to the cloud. We have the resources and expertise to
-                guide you through the entire process, from pre-migration
-                planning to post-migration maintenance. Our goal is to make your
+                guide you through the entire process, from pre migration
+                planning to post migration maintenance. Our goal is to make your
                 transition to the cloud as smooth and seamless as possible.
                 Contact us today to get started!
               </p>

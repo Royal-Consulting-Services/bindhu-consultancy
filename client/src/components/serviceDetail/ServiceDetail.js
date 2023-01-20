@@ -61,7 +61,6 @@ function ServiceDetail(props) {
                   verticalAlign: 'middle',
                 }}
               >
-                {' '}
                 {detailCont.content}{' '}
               </p>
             </Col>

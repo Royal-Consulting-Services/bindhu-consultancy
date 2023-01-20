@@ -75,7 +75,7 @@ function SSHome() {
                 requirements, technical aspects, and data assessments, we
                 deliver bespoke cloud computing solutions that are guaranteed to
                 manage and streamline your business more effectively than ever
-                before - all at a cost-effective price. If you're looking for a
+                before all at a cost effective price. If you're looking for a
                 team of tech experts who can help you transform your IT
                 environment, look no further than BR Group Tech!
               </p>
@@ -95,10 +95,19 @@ function SSHome() {
           <Col xs={12} md={6}>
             <ScrollAnimation animateIn='flipInX'>
               <p>
-                {' '}
-                At our company, we have a team of highly trained individuals who
-                are experienced in large-scale implementations. This team can
-                help you with the following:
+                At{' '}
+                <span
+                  style={{
+                    fontWeight: 800,
+                    color: '#052695',
+                    fontSize: '18px',
+                  }}
+                >
+                  BR Group Tech
+                </span>
+                , we have a team of highly trained individuals who are
+                experienced in large-scale implementations. This team can help
+                you with the following:
               </p>
               <ul>
                 <li>Implementation</li>
@@ -250,9 +259,8 @@ function SSHome() {
                       creation & database migrations service that helps cut the
                       time and cost of creating & migrating your data to the
                       public cloud platform. No matter what kind of database
-                      you're using - Oracle, SQL server, or something else - we
-                      have the knowledge and skills to get it working on the
-                      cloud.
+                      you're using Oracle, SQL server, or something else we have
+                      the knowledge and skills to get it working on the cloud.
                     </p>
                   </Card.Text>
                 </Card.Body>
@@ -404,7 +412,7 @@ function SSHome() {
                       gather insights on customer behavior, employees’
                       performance, and partners’ interaction. This data helps
                       organizations align resources for better performance and
-                      achieving short- and long-term goals.
+                      achieving short and long-term goals.
                     </p>
                   </Card.Text>
                 </Card.Body>
@@ -442,8 +450,8 @@ function SSHome() {
                 and resources to get the job done right. Our tech experts can
                 assist your businesses in streamlining IT infrastructure and
                 migrating to the cloud. We have the resources and expertise to
-                guide you through the entire process, from pre-migration
-                planning to post-migration maintenance. Our goal is to make your
+                guide you through the entire process, from pre migration
+                planning to post migration maintenance. Our goal is to make your
                 transition to the cloud as smooth and seamless as possible.
                 Contact us today to get started!
               </p>
