@@ -21,15 +21,15 @@ import {
   faInstagram,
 } from '@fortawesome/free-brands-svg-icons';
 import { MENULINK } from '../../content';
-import { useNavigate } from 'react-router-dom';
 
 function Footer(props) {
   const [show, setShow] = useState(false);
   const [showBtn, setShowBtn] = useState('hidden-btn');
-  const footerNavigate = useNavigate();
+
   window.onscroll = function () {
     scrollFunction();
   };
+  
   const scrollFunction = () => {
     if (
       document.body.scrollTop > 20 ||
@@ -50,16 +50,13 @@ function Footer(props) {
     if (urlpath !== 'mail') {
       window.open(urlpath, '_blank');
     } else if (urlpath === 'mail') {
-      window.location = 'mailto:xyz@yourapplicationdomain.com';
+      window.location = 'mailto:admin@brgrouptech.co';
     }
   };
-  const fbUrl =
-    'https://www.facebook.com/login/?privacy_mutation_token=eyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNjc0MTc0NTg4LCJjYWxsc2l0ZV9pZCI6MjY5NTQ4NDUzMDcyMDk1MX0%3D';
-  const wapp = 'https://web.whatsapp.com/';
-  const linkIn =
-    'https://www.linkedin.com/signup/cold-join?session_redirect=https%3A%2F%2Fwww%2Elinkedin%2Ecom%2Ffeed%2F&trk=login_reg_redirect';
-  const insta = 'https://www.instagram.com/';
-
+  const fbUrl = 'https://www.facebook.com/';
+  const watsAppUrl = 'https://web.whatsapp.com/';
+  const linkedinUrl = 'https://www.linkedin.com/';
+  const instagramUrl = 'https://www.instagram.com/';
   return (
     url !== '/login' &&
     url !== '/signup' && (
@@ -128,7 +125,10 @@ function Footer(props) {
                       </Button>
                     </ListGroup.Item>
                     <ListGroup.Item>
-                      <Button variant='link' onClick={() => socialCLick(wapp)}>
+                      <Button
+                        variant='link'
+                        onClick={() => socialCLick(watsAppUrl)}
+                      >
                         <FontAwesomeIcon
                           icon={faWhatsapp}
                           className='Edit-icon'
@@ -138,7 +138,7 @@ function Footer(props) {
                     <ListGroup.Item>
                       <Button
                         variant='link'
-                        onClick={() => socialCLick(linkIn)}
+                        onClick={() => socialCLick(linkedinUrl)}
                       >
                         <FontAwesomeIcon
                           icon={faLinkedinIn}
@@ -147,7 +147,10 @@ function Footer(props) {
                       </Button>
                     </ListGroup.Item>
                     <ListGroup.Item>
-                      <Button variant='link' onClick={() => socialCLick(insta)}>
+                      <Button
+                        variant='link'
+                        onClick={() => socialCLick(instagramUrl)}
+                      >
                         <FontAwesomeIcon
                           icon={faInstagram}
                           className='Edit-icon'
