@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Button, Container, Form, Row, Col, Image } from 'react-bootstrap';
+import { Button, Container, Form, Row, Col, Image, InputGroup } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import { LoginBg } from '../../images/images';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
-import { faClose } from '@fortawesome/free-solid-svg-icons';
+import { faClose, faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 function SignUp(props) {
   const [inputValues, setInputValues] = useState({
@@ -25,7 +25,7 @@ function SignUp(props) {
     mobile: '',
     passWord: '',
   });
-
+  const [showPassword, setShowPassword] = useState(false);
   const signupNavigate = useNavigate();
   const stringifiedPerson = JSON.parse(localStorage.getItem('user-info'));
   const loginUser = stringifiedPerson?.loggedinUser?.userName;
@@ -239,7 +239,7 @@ function SignUp(props) {
               </Row>
               <Row>
                 <Col xs={12} md={6}>
-                  <Form.Group className='mb-3' controlId='formPassword'>
+                  {/* <Form.Group className='mb-3' controlId='formPassword'>
                     <Form.Label>Password</Form.Label>
                     <Form.Control
                       type='password'
@@ -248,6 +248,24 @@ function SignUp(props) {
                       value={inputValues.passWord}
                       onChange={(e) => handleChange(e)}
                     />
+                  </Form.Group> */}
+                  <Form.Group className='mb-3' controlId='formPassword'>
+                   <Form.Label>Password</Form.Label>
+                  <InputGroup >
+                    <Form.Control
+                      type={!showPassword ? 'password' : 'text'}
+                      name={'passWord'}
+                      placeholder='Password'
+                      value={inputValues.passWord}
+                      onChange={(e) => handleChange(e)}
+                    />
+                    <InputGroup.Text id='basic-addon1'>
+                      <FontAwesomeIcon
+                        icon={!showPassword ? faEye : faEyeSlash}
+                        onClick={() => setShowPassword(!showPassword)}
+                      />
+                    </InputGroup.Text>
+                  </InputGroup>
                   </Form.Group>
                 </Col>
                 <Col xs={12} md={6}>
