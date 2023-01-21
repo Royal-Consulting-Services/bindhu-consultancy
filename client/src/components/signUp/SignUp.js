@@ -1,5 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { Button, Container, Form, Row, Col, Image, InputGroup } from 'react-bootstrap';
+import {
+  Button,
+  Container,
+  Form,
+  Row,
+  Col,
+  Image,
+  InputGroup,
+} from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import { LoginBg } from '../../images/images';
 import PhoneInput from 'react-phone-input-2';
@@ -172,9 +180,7 @@ function SignUp(props) {
                       onChange={(e) => handleChange(e)}
                     />
                     {validation.firstName && (
-                      <p style={{ color: '#ba3939' }}>
-                        {validation.firstName}
-                      </p>
+                      <p style={{ color: '#ba3939' }}>{validation.firstName}</p>
                     )}
                   </Form.Group>
                 </Col>
@@ -189,9 +195,7 @@ function SignUp(props) {
                       onChange={(e) => handleChange(e)}
                     />
                     {validation.lastName && (
-                      <p style={{ color: '#ba3939' }}>
-                        {validation.lastName}
-                      </p>
+                      <p style={{ color: '#ba3939' }}>{validation.lastName}</p>
                     )}
                   </Form.Group>
                 </Col>
@@ -250,22 +254,22 @@ function SignUp(props) {
                     />
                   </Form.Group> */}
                   <Form.Group className='mb-3' controlId='formPassword'>
-                   <Form.Label>Password</Form.Label>
-                  <InputGroup >
-                    <Form.Control
-                      type={!showPassword ? 'password' : 'text'}
-                      name={'passWord'}
-                      placeholder='Password'
-                      value={inputValues.passWord}
-                      onChange={(e) => handleChange(e)}
-                    />
-                    <InputGroup.Text id='basic-addon1'>
-                      <FontAwesomeIcon
-                        icon={!showPassword ? faEye : faEyeSlash}
-                        onClick={() => setShowPassword(!showPassword)}
+                    <Form.Label>Password</Form.Label>
+                    <InputGroup>
+                      <Form.Control
+                        type={!showPassword ? 'password' : 'text'}
+                        name={'passWord'}
+                        placeholder='Password'
+                        value={inputValues.passWord}
+                        onChange={(e) => handleChange(e)}
                       />
-                    </InputGroup.Text>
-                  </InputGroup>
+                      <InputGroup.Text id='basic-addon1'>
+                        <FontAwesomeIcon
+                          icon={!showPassword ? faEye : faEyeSlash}
+                          onClick={() => setShowPassword(!showPassword)}
+                        />
+                      </InputGroup.Text>
+                    </InputGroup>
                   </Form.Group>
                 </Col>
                 <Col xs={12} md={6}>
@@ -279,9 +283,7 @@ function SignUp(props) {
                       onChange={(e) => handleChange(e)}
                     />
                     {validation.userName && (
-                      <p style={{ color: '#ba3939' }}>
-                        {validation.userName}
-                      </p>
+                      <p style={{ color: '#ba3939' }}>{validation.userName}</p>
                     )}
                   </Form.Group>
                 </Col>

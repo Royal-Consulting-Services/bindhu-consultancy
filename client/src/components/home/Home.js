@@ -94,8 +94,8 @@ function Home() {
                 you with the following:
               </p>
 
-              <ul className='unodr-list' style={{listStyleType: "none"}}>
-                <li >Implementation</li>
+              <ul className='unodr-list' style={{ listStyleType: 'none' }}>
+                <li>Implementation</li>
                 <li>Project management</li>
                 <li> Staff Augmentation</li>
                 <li> Consultancy </li>

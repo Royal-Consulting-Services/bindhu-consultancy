@@ -29,7 +29,7 @@ function Footer(props) {
   window.onscroll = function () {
     scrollFunction();
   };
-  
+
   const scrollFunction = () => {
     if (
       document.body.scrollTop > 20 ||

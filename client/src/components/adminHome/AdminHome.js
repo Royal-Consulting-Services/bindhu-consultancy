@@ -446,12 +446,18 @@ function AdminHome(props) {
                   <Button
                     variant='primary'
                     size={'sm'}
+                    className={'left'}
                     onClick={UpdateUserData}
                   >
                     Update
                   </Button>
                 ) : (
-                  <Button variant='primary' size={'sm'} onClick={AddUserData}>
+                  <Button
+                    variant='primary'
+                    size={'sm'}
+                    className={'left'}
+                    onClick={AddUserData}
+                  >
                     Save
                   </Button>
                 )}
