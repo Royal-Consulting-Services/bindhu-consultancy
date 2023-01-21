@@ -680,6 +680,8 @@ ul.unodr-list {
         white-space: nowrap;
         text-decoration: none;
         border-radius: 0px;
+        min-width: auto;
+        padding: 0px 8px;
       }
 
       .btn:hover {
@@ -803,7 +805,6 @@ ul.unodr-list {
 }
 
 .side-menu {
-
   .list-group-item.active,
   .list-group-item {
     background-color: transparent;

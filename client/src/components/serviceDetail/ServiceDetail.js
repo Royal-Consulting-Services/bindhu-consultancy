@@ -23,7 +23,10 @@ function ServiceDetail(props) {
             index === 4 && 'lasttimeline'
           }`}
         >
-          <h5 className='technology-timetitle' style={{ textAlign: 'center', fontFamily: 'RobotoRegular' }}>
+          <h5
+            className='technology-timetitle'
+            style={{ textAlign: 'center', fontFamily: 'RobotoRegular' }}
+          >
             {service.title}
           </h5>
           <Image thumbnail={true} src={service.image} className={'w-100'} />

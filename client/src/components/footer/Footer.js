@@ -77,7 +77,7 @@ function Footer(props) {
                       fontWeight: 800,
                       color: '#052695',
                       fontSize: '18px',
-                         fontFamily: 'RobotoBold',
+                      fontFamily: 'RobotoBold',
                     }}
                   >
                     BR Group Tech

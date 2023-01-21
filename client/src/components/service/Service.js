@@ -40,7 +40,7 @@ function Service(props) {
           </h3>
 
           <Row>
-            <Row >
+            <Row>
               <Col
                 xs={12}
                 className='col-md-2_5'

@@ -17,6 +17,7 @@ import { useNavigate } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { menuClick } from '../../action/action';
 import { MainLogo } from '../../images/images';
+import { isMobile } from 'react-device-detect';
 
 function Header(props) {
   const stringifiedPerson = JSON.parse(localStorage.getItem('user-info'));
@@ -288,14 +289,14 @@ function Header(props) {
                     <>
                       <Button
                         variant='outline-secondary'
-                        size={'lg'}
+                        size={isMobile ? 'sm' : 'lg'}
                         onClick={navigateLogin}
                       >
                         Login
                       </Button>
                       <Button
                         variant='outline-primary'
-                        size={'lg'}
+                        size={isMobile ? 'sm' : 'lg'}
                         className={'left'}
                         onClick={navigateSignup}
                       >
