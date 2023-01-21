@@ -63,6 +63,30 @@ p {
   border-radius: 0px;
 }
 
+ul.unodr-list{
+  font-size: 14px;
+  list-style: none;
+  padding: 0;
+  margin: 20px 5px;
+  li{
+    margin: 0;
+    margin-bottom: 10px;
+    padding-left: 15px;
+    position: relative;
+    &:after {
+      content: '';
+      height: 6px;
+      width: 6px;
+      background: #042183;
+      display: block;
+      position: absolute;
+      transform: rotate(45deg);
+      top: 7px;
+      left: 0;
+    }
+  }
+}
+
 .content-heading {
   text-align: center;
   display: flex;

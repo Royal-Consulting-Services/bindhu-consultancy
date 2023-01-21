@@ -42,12 +42,6 @@ function ServiceDetail(props) {
         <Image fluid={true} src={Servicebnr} />
       </div>
       <Container>
-        <h3 className={'mt-5 mb-5 content-heading'}>
-          <span>Delivery Services</span>
-        </h3>
-        <Row style={{ borderBottom: 'none', marginTop: '50px' }}>
-          {deliveryService}
-        </Row>
         <Row className={'service-tabs animate__animated animate__backInUp'}>
           <h3 className={'mt-5 mb-5 content-heading'}>
             <span>{detailCont.title}</span>

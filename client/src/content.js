@@ -144,7 +144,7 @@ function careerDescribcont() {
       <b style={{ display: 'block', marginTop: '20px' }}>
         Keys & Responsibility
       </b>
-      <ul>
+      <ul className='unodr-list' style={{listStyleType: "none"}}>
         <li>
           {' '}
           Collaborating with Solutions Architects, Business Analysts, Project
@@ -165,7 +165,7 @@ function careerDescribcont() {
       <b style={{ display: 'block', marginTop: '20px' }}>
         Key Requirements/Minimum Qualifications :
       </b>
-      <ul>
+      <ul className='unodr-list' style={{listStyleType: "none"}}>
         <li>
           {' '}
           Have 4+ years of professional experience in Frontend Web application
@@ -191,7 +191,7 @@ function careerDescribcont() {
         {' '}
         Preferred Qualifications/Skills/Experience :
       </b>
-      <ul>
+      <ul className='unodr-list' style={{listStyleType: "none"}}>
         <li> Know how to work with SAP Commerce it's a big plus</li>
         <li>Like to get involved in additional initiatives</li>
         <li>Know what a development architecture is</li>

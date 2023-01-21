@@ -68,7 +68,7 @@ function SSHome() {
                   BR Group Tech{' '}
                 </span>
                 ,we are a premier software services company that provides
-                tailor-made cloud solutions to organizations across the United
+                tailor made cloud solutions to organizations across the United
                 States. Our highly skilled professionals offer comprehensive
                 cloud consulting services to help enterprises boost their
                 productivity like never before. Through evaluating a company's
@@ -81,7 +81,7 @@ function SSHome() {
               </p>
               <p>
                 Our cloud architects are experienced in helping businesses with
-                reliable and future-ready migrations. This way, you can keep
+                reliable and future ready migrations. This way, you can keep
                 your business operations smooth and stay ahead of your
                 competitors.
               </p>
@@ -106,10 +106,10 @@ function SSHome() {
                   BR Group Tech
                 </span>
                 , we have a team of highly trained individuals who are
-                experienced in large-scale implementations. This team can help
+                experienced in large scale implementations. This team can help
                 you with the following:
               </p>
-              <ul>
+              <ul className='unodr-list' style={{listStyleType: "none"}}>
                 <li>Implementation</li>
                 <li>Project management</li>
                 <li> Staff Augmentation</li>
