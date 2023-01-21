@@ -26,36 +26,48 @@ body {
     border-radius: 25px;
     min-width: 100px;
   }
+
   .btn.btn-outline-primary:hover {
     background-color: #5369b4;
     border: #5369b4;
   }
+
   .btn.btn-outline-secondary:hover {
     background-color: #7c7c7c;
   }
+
   .btn.btn-primary {
     background-color: #052695;
     border: #052695;
   }
+
   .btn.btn-primary:hover {
     background-color: #5369b4;
     border: #5369b4;
   }
 }
+
 a {
   color: white;
 }
+
 .link {
   color: #02061f !important;
 }
+
 .rounded,
 .choose-image {
   border-radius: 20px !important;
 }
+
 p {
   margin-top: 1rem;
   font-family: 'Poppins', sans-serif;
   text-align: justify;
+}
+
+li {
+  font-family: 'Poppins', sans-serif;
 }
 
 .form-control {
@@ -67,11 +79,13 @@ ul.unodr-list {
   list-style: none;
   padding: 0;
   margin: 20px 5px;
+
   li {
     margin: 0;
     margin-bottom: 10px;
     padding-left: 15px;
     position: relative;
+
     &:after {
       content: '';
       height: 6px;
@@ -129,6 +143,7 @@ ul.unodr-list {
   .nav-link.active {
     border-bottom: solid 3px #02061f;
   }
+
   .nav-link:hover {
     border-bottom: solid 3px #728cb0;
   }
@@ -179,6 +194,7 @@ ul.unodr-list {
 .technology-card {
   border: none;
   border-radius: 0px;
+  margin-top: 2rem;
 
   .card-body {
     text-align: center;
@@ -243,6 +259,7 @@ ul.unodr-list {
 
   .help-cs-inner {
     transform: rotateY(180deg);
+
     .card-text {
       .help-navigate:hover {
         height: 50px;
@@ -306,6 +323,7 @@ ul.unodr-list {
           overflow: hidden;
           text-overflow: ellipsis;
           margin: 80px 20px;
+          font-family: 'Poppins', sans-serif;
         }
 
         .help-navigate {
@@ -540,13 +558,16 @@ ul.unodr-list {
   bottom: 0px;
   width: 100%;
 }
+
 .secondry-footer {
   background: #02061f;
+
   .foo-content-copyright-text {
     text-align: center;
     color: $lightColor;
   }
 }
+
 .main-footer {
   background: $darkColor;
   color: $lightColor;
@@ -559,6 +580,7 @@ ul.unodr-list {
     right: 50px;
     font-size: 30px;
     color: #02061f;
+
     svg {
       color: #5369b4;
       border: solid 2px #f8f9f1;
@@ -599,8 +621,10 @@ ul.unodr-list {
         /* background: red; */
         border: solid 2px #bcc4bc;
       }
+
       button:hover {
         background-color: #95a1bb;
+
         .Edit-icon {
           transition: 0.9s;
           transform: rotateX(360deg);
@@ -657,9 +681,11 @@ ul.unodr-list {
         text-decoration: none;
         border-radius: 0px;
       }
+
       .btn:hover {
         border-bottom: solid 3px #5369b4;
       }
+
       .btn.active {
         border-bottom: solid 3px #052695;
       }
@@ -777,6 +803,7 @@ ul.unodr-list {
 }
 
 .side-menu {
+
   .list-group-item.active,
   .list-group-item {
     background-color: transparent;
@@ -999,6 +1026,7 @@ ul.unodr-list {
   height: 180px;
   background-color: #052695;
   color: white;
+
   a:hover {
     color: #02061f;
   }
@@ -1029,6 +1057,7 @@ ul.unodr-list {
   .app-header {
     .app-header-container {
       justify-content: unset;
+
       .profile-dd {
         margin-left: auto;
       }
@@ -1052,12 +1081,15 @@ ul.unodr-list {
       margin-top: 60% !important;
     }
   }
+
   .page-banner {
     height: auto;
   }
+
   .panel {
     width: 100%;
   }
+
   .mob-sidemenu {
     width: 280px;
     position: fixed;

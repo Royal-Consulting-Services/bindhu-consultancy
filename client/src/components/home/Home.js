@@ -46,6 +46,7 @@ function Home() {
                     fontWeight: 800,
                     color: '#052695',
                     fontSize: '18px',
+                       fontFamily: 'RobotoBold',
                   }}
                 >
                   BR Group Tech
@@ -85,6 +86,7 @@ function Home() {
                     fontWeight: 800,
                     color: '#052695',
                     fontSize: '18px',
+                    fontFamily: 'RobotoBold',
                   }}
                 >
                   BR Group Tech
@@ -110,7 +112,7 @@ function Home() {
           </Col>
         </Row>
         <ScrollAnimation animateIn='slideInUp'>
-          <Row style={{ borderBottom: 'none', marginTop: '50px' }}>
+          <Row style={{ borderBottom: 'none' }}>
             <Col
               xs={12}
               className='col-md-2_5'
@@ -228,6 +230,7 @@ function Home() {
                     fontWeight: 800,
                     color: '#052695',
                     fontSize: '18px',
+                    fontFamily: 'RobotoBold',
                   }}
                 >
                   BR Group Tech

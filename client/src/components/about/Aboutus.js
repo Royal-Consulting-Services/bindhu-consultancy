@@ -29,6 +29,7 @@ function Aboutus() {
                     fontWeight: 800,
                     color: '#052695',
                     fontSize: '18px',
+                    fontFamily: 'RobotoBold',
                   }}
                 >
                   BR Group Tech
@@ -67,6 +68,7 @@ function Aboutus() {
                     fontWeight: 800,
                     color: '#052695',
                     fontSize: '18px',
+                    fontFamily: 'RobotoBold',
                   }}
                 >
                   BR Group Tech

@@ -39,8 +39,8 @@ function Service(props) {
             <span>Delivery Services</span>
           </h3>
 
-          <Row style={{ borderBottom: 'none', marginTop: '50px' }}>
-            <Row style={{ borderBottom: 'none', marginTop: '50px' }}>
+          <Row>
+            <Row >
               <Col
                 xs={12}
                 className='col-md-2_5'

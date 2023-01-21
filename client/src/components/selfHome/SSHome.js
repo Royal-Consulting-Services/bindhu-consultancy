@@ -63,9 +63,10 @@ function SSHome() {
                     fontWeight: 800,
                     color: '#052695',
                     fontSize: '18px',
+                    fontFamily: 'RobotoBold',
                   }}
                 >
-                  BR Group Tech{' '}
+                  BR Group Tech
                 </span>
                 ,we are a premier software services company that provides tailor
                 made cloud solutions to organizations across the United States.
@@ -101,6 +102,7 @@ function SSHome() {
                     fontWeight: 800,
                     color: '#052695',
                     fontSize: '18px',
+                    fontFamily: 'RobotoBold',
                   }}
                 >
                   BR Group Tech
@@ -130,7 +132,7 @@ function SSHome() {
           </Col>
         </Row>
         <ScrollAnimation animateIn='slideInUp'>
-          <Row style={{ borderBottom: 'none', marginTop: '50px' }}>
+          <Row style={{ borderBottom: 'none' }}>
             <Col
               xs={12}
               className='col-md-2_5'
@@ -325,6 +327,7 @@ function SSHome() {
                           fontWeight: 800,
                           color: '#052695',
                           fontSize: '18px',
+                          fontFamily: 'RobotoBold',
                         }}
                       >
                         BR Group Tech
@@ -403,6 +406,7 @@ function SSHome() {
                           fontWeight: 800,
                           color: '#052695',
                           fontSize: '18px',
+                          fontFamily: 'RobotoBold',
                         }}
                       >
                         BR Group Tech
@@ -438,6 +442,7 @@ function SSHome() {
                     fontWeight: 800,
                     color: '#052695',
                     fontSize: '18px',
+                    fontFamily: 'RobotoBold',
                   }}
                 >
                   BR Group Tech
