@@ -45,10 +45,8 @@ function Service(props) {
                 xs={12}
                 className='col-md-2_5'
                 style={{
-                  padding: '0px',
                   border: 'none',
                   background: '#5369b4',
-                  borderRadius: '20px',
                 }}
               >
                 <Card
@@ -77,10 +75,8 @@ function Service(props) {
                 xs={12}
                 className='col-md-2_5'
                 style={{
-                  padding: '0px',
                   border: 'none',
                   background: '#5369b4',
-                  borderRadius: '20px',
                 }}
               >
                 <Card
@@ -109,9 +105,8 @@ function Service(props) {
                 xs={12}
                 className='col-md-2_5'
                 style={{
-                  padding: '0px',
+                  border: 'none',
                   background: '#5369b4',
-                  borderRadius: '20px',
                 }}
               >
                 <Card
@@ -140,10 +135,8 @@ function Service(props) {
                 xs={12}
                 className='col-md-2_5'
                 style={{
-                  padding: '0px',
                   border: 'none',
                   background: '#5369b4',
-                  borderRadius: '20px',
                 }}
               >
                 <Card
@@ -168,10 +161,8 @@ function Service(props) {
                 xs={12}
                 className='col-md-2_5'
                 style={{
-                  padding: '0px',
                   border: 'none',
                   background: '#5369b4',
-                  borderRadius: '20px',
                 }}
               >
                 <Card

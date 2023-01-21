@@ -36,6 +36,10 @@ function CareersDescription() {
   function contatMe() {
     return navigate('/contact');
   }
+
+  function gotoCareers() {
+    return navigate('/careers');
+  }
   return (
     <>
       <div className='page-banner'>
@@ -50,36 +54,40 @@ function CareersDescription() {
             {Careerlist}
           </Col>
         </Row>
+        <h3 className={'mt-5 mb-5 content-heading'}>
+          <span>
+            <Button variant='primary' size={'lg'} onClick={() => gotoCareers()}>
+              Back
+            </Button>
+          </span>
+        </h3>
         <div className='career-footer mt-3'>
-          <div className=' gap-2' style={{ textAlign: 'center' }}>
-            <Form>
-              <Form.Group className='mb-3' controlId='formBasicEmail'>
-                <Form.Label>Name</Form.Label>
-                <Form.Control type='text' placeholder='First name' />
+          <Form>
+            <Row className='mb-3'>
+              <Form.Group as={Col} controlId='formGridEmail'>
+                <Form.Label>First Name</Form.Label>
+                <Form.Control type='text' placeholder='Enter Firstname' />
               </Form.Group>
 
-              <Form.Group className='mb-3' controlId='formBasicEmail'>
+              <Form.Group as={Col} controlId='formGridPassword'>
                 <Form.Label>Last Name</Form.Label>
-                <Form.Control type='text' placeholder='Last name' />
+                <Form.Control type='text' placeholder='Enter Lastname' />
               </Form.Group>
-              <Form.Group className='mb-3' controlId='formBasicEmail'>
-                <Form.Label>Email</Form.Label>
-                <Form.Control type='emal' placeholder='Email' />
-              </Form.Group>
-              <Form.Group className='mb-3' controlId='formBasicEmail'>
-                <Form.Label>Message</Form.Label>
-                <Form.Control type='textarea' placeholder='Message' />
-              </Form.Group>
-              <Form.Group className='mb-3' controlId='formBasicPassword'>
-                <Form.Label>Password</Form.Label>
-                <Form.Control type='password' placeholder='Password' />
-              </Form.Group>
+            </Row>
 
-              <Button variant='primary' size={'lg'} onClick={() => contatMe()}>
-                Contact Us
-              </Button>
-            </Form>
-          </div>
+            <Form.Group className='mb-3' controlId='formGridAddress1'>
+              <Form.Group as={Col} controlId='formGridPassword'>
+                <Form.Label>Email</Form.Label>
+                <Form.Control type='email' placeholder='Enter Email' />
+              </Form.Group>
+              <Form.Label>Message</Form.Label>
+              <Form.Control placeholder='Type message' type='textarea' />
+            </Form.Group>
+
+            <Button variant='primary' size={'lg'} onClick={() => contatMe()}>
+              Contact Us
+            </Button>
+          </Form>
         </div>
       </Container>
     </>
