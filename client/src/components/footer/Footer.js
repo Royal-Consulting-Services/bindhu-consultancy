@@ -18,7 +18,7 @@ import {
   faFacebookF,
   faWhatsapp,
   faLinkedinIn,
-  faInstagram,
+  faTwitter,
 } from '@fortawesome/free-brands-svg-icons';
 import { MENULINK } from '../../content';
 
@@ -53,10 +53,10 @@ function Footer(props) {
       window.location = 'mailto:admin@brgrouptech.co';
     }
   };
-  const fbUrl = 'https://www.facebook.com/';
+  const fbUrl = 'https://www.facebook.com/profile.php?id=100089475408218';
   const watsAppUrl = 'https://web.whatsapp.com/';
-  const linkedinUrl = 'https://www.linkedin.com/';
-  const instagramUrl = 'https://www.instagram.com/';
+  const linkedinUrl = 'https://www.linkedin.com/company/brgrouptech/';
+  const twitterUrl = 'https://twitter.com/BRGroupTech';
   return (
     url !== '/login' &&
     url !== '/signup' && (
@@ -150,10 +150,10 @@ function Footer(props) {
                     <ListGroup.Item>
                       <Button
                         variant='link'
-                        onClick={() => socialCLick(instagramUrl)}
+                        onClick={() => socialCLick(twitterUrl)}
                       >
                         <FontAwesomeIcon
-                          icon={faInstagram}
+                          icon={faTwitter}
                           className='Edit-icon'
                         />
                       </Button>

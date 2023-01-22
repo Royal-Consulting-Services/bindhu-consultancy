@@ -117,7 +117,7 @@ function SignUp(props) {
           firstName: inputValues.firstName,
           lastName: inputValues.lastName,
           email: inputValues.email,
-          phone: inputValues.mobile,
+          phone: `+${inputValues.mobile}`,
           password: inputValues.passWord,
           role: 'user',
         }),
