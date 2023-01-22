@@ -203,7 +203,7 @@ function Home() {
                     Migration
                   </Card.Title>
                   <Card.Text>
-                    <Image rounded={true} src={Migrate} className={'w-100'} />
+                    <Image rounded={true} src={Implement} className={'w-100'} />
                     <p className='tech-content'></p>
                   </Card.Text>
                 </Card.Body>

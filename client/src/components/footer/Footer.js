@@ -16,7 +16,6 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faFacebookF,
-  faWhatsapp,
   faLinkedinIn,
   faTwitter,
 } from '@fortawesome/free-brands-svg-icons';
@@ -50,7 +49,7 @@ function Footer(props) {
     if (urlpath !== 'mail') {
       window.open(urlpath, '_blank');
     } else if (urlpath === 'mail') {
-      window.location = 'mailto:admin@brgrouptech.co';
+      window.location = 'mailto:admin@brgrouptech.com';
     }
   };
   const fbUrl = 'https://www.facebook.com/profile.php?id=100089475408218';
@@ -118,25 +117,6 @@ function Footer(props) {
                 <Col xs={12} md={6}>
                   <ListGroup horizontal className='foo-social-icon'>
                     <ListGroup.Item>
-                      <Button variant='link' onClick={() => socialCLick(fbUrl)}>
-                        <FontAwesomeIcon
-                          icon={faFacebookF}
-                          className='Edit-icon'
-                        />
-                      </Button>
-                    </ListGroup.Item>
-                    <ListGroup.Item>
-                      <Button
-                        variant='link'
-                        onClick={() => socialCLick(watsAppUrl)}
-                      >
-                        <FontAwesomeIcon
-                          icon={faWhatsapp}
-                          className='Edit-icon'
-                        />
-                      </Button>
-                    </ListGroup.Item>
-                    <ListGroup.Item>
                       <Button
                         variant='link'
                         onClick={() => socialCLick(linkedinUrl)}
@@ -147,6 +127,15 @@ function Footer(props) {
                         />
                       </Button>
                     </ListGroup.Item>
+                    <ListGroup.Item>
+                      <Button variant='link' onClick={() => socialCLick(fbUrl)}>
+                        <FontAwesomeIcon
+                          icon={faFacebookF}
+                          className='Edit-icon'
+                        />
+                      </Button>
+                    </ListGroup.Item>
+
                     <ListGroup.Item>
                       <Button
                         variant='link'

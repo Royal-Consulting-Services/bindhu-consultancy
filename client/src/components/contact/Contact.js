@@ -55,7 +55,7 @@ function Contact() {
               <Card className='contact-card'>
                 <Card.Body>
                   <FontAwesomeIcon icon={faGlobe} className='contact-icon' />
-                  <a href='mailto:admin@brgrouptech.co'>
+                  <a href='mailto:admin@brgrouptech.com'>
                     admin@brgrouptech.com
                   </a>
                 </Card.Body>
@@ -69,7 +69,7 @@ function Contact() {
               <span>Location</span>
             </h3>
             <Col xs={12} md={12} className='mt-3'>
-               <iframe
+              <iframe
                 src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3348.812476649048!2d-96.95720178533168!3d32.929552383500365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c2857c5a745b1%3A0x5cbed32899b9dd62!2s607%20Mission%20Cir%2C%20Irving%2C%20TX%2075063%2C%20USA!5e0!3m2!1sen!2sin!4v1674303274038!5m2!1sen!2sin'
                 width='100%'
                 height='400'
