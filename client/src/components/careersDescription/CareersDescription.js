@@ -16,8 +16,8 @@ const Careerlist = CAREERLIST.map((career, index) => {
       </div>
       <div className='job-location'>
         <p>
-          <b>Loction :</b>
-          {''}
+          <b>Loction </b>
+
           <Image src={unitedstates} width='25px' />
           {career.location}
         </p>
