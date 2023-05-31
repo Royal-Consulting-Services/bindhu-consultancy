@@ -1,6 +1,6 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import { DSERVICES } from '../../content';
 import { Servicebnr } from '../../images/images';
 
 import Image from 'react-bootstrap/Image';
