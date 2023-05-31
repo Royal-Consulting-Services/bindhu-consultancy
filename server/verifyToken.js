@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken')
-const constants = require('./constants')
+const { secretKey } = require("./models/config");
 
 const verifyToken = (req, res, next) => {
     const token = req.headers.authorization.split(' ')[1];
@@ -10,7 +10,7 @@ const verifyToken = (req, res, next) => {
         })
     } else {
         try {
-            const decodedToken = jwt.verify(token, constants.secretKey)
+            const decodedToken = jwt.verify(token, secretKey)
             req.decodedToken = decodedToken;
         } catch (error) {
             res.status(401).json({
