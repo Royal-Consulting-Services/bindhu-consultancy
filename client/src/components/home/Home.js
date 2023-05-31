@@ -8,7 +8,6 @@ import {
   Projmanag,
   Staffaug,
   Consult,
-  Migrate,
   Whychoose,
 } from '../../images/images';
 

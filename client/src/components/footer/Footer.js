@@ -53,7 +53,6 @@ function Footer(props) {
     }
   };
   const fbUrl = 'https://www.facebook.com/profile.php?id=100089475408218';
-  const watsAppUrl = 'https://web.whatsapp.com/';
   const linkedinUrl = 'https://www.linkedin.com/company/brgrouptech/';
   const twitterUrl = 'https://twitter.com/BRGroupTech';
   return (

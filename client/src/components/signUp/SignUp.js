@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from 'react';
 import {
   Button,
@@ -230,7 +231,7 @@ function SignUp(props) {
                       value={inputValues.mobile}
                       onChange={(value) =>
                         setInputValues(
-                          { ...inputValues, ['mobile']: value },
+                          { ...inputValues, mobile: value },
                           () => checkValidation
                         )
                       }
@@ -243,16 +244,6 @@ function SignUp(props) {
               </Row>
               <Row>
                 <Col xs={12} md={6}>
-                  {/* <Form.Group className='mb-3' controlId='formPassword'>
-                    <Form.Label>Password</Form.Label>
-                    <Form.Control
-                      type='password'
-                      name={'passWord'}
-                      placeholder='Password'
-                      value={inputValues.passWord}
-                      onChange={(e) => handleChange(e)}
-                    />
-                  </Form.Group> */}
                   <Form.Group className='mb-3' controlId='formPassword'>
                     <Form.Label>Password</Form.Label>
                     <InputGroup>

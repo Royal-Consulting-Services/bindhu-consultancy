@@ -1,13 +1,5 @@
 import React from 'react';
-import {
-  Carousel,
-  Container,
-  Row,
-  Col,
-  Card,
-  Button,
-  Image,
-} from 'react-bootstrap';
+import { Carousel, Container, Row, Col, Card, Image } from 'react-bootstrap';
 import { SLIDERS } from '../../content';
 import {
   Technology,

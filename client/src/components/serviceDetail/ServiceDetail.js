@@ -10,30 +10,7 @@ import { useNavigate } from 'react-router-dom';
 function ServiceDetail(props) {
   const serviceNavigate = useNavigate();
   const [detailCont] = useState(props.detail);
-  const deliveryService = DSERVICES.map((service, index) => {
-    return (
-      <Col
-        xs={12}
-        md={2}
-        className='col-md-2_5 p-0'
-        style={{ border: 'none', marginBottom: '20px' }}
-      >
-        <div
-          className={`technology-timeline ${index === 0 && 'firsttimeline'} ${
-            index === 4 && 'lasttimeline'
-          }`}
-        >
-          <h5
-            className='technology-timetitle'
-            style={{ textAlign: 'center', fontFamily: 'RobotoRegular' }}
-          >
-            {service.title}
-          </h5>
-          <Image thumbnail={true} src={service.image} className={'w-100'} />
-        </div>
-      </Col>
-    );
-  });
+
   useEffect(() => {
     if (!detailCont.title) {
       serviceNavigate('/service');

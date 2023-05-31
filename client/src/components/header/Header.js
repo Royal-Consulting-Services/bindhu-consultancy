@@ -47,7 +47,6 @@ function Header(props) {
   const [regMessage, setRegMessage] = useState('');
   const [showProfile, setShowProfile] = useState(false);
   const [formType, setFormType] = useState('');
-  const [headerType] = useState(props.type);
   const headerNavigate = useNavigate();
 
   async function loginSubmit(props) {
