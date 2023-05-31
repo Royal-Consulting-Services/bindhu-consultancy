@@ -1,7 +1,7 @@
 const connection = require("../models/db");
 const jwt = require("jsonwebtoken");
 const constants = require("../constants");
-const { secretKey } = require("../models/config");
+const { secret } = require("../models/config");
 const userDetails = async (req, res) => {
   try {
     if (req && req.decodedToken && req.decodedToken.role === "admin") {
@@ -49,7 +49,7 @@ const getLoginDetails = async (req, res) => {
             password: req.body.password,
             role: doc.role,
           },
-       secretKey,
+          secret,
           {
             expiresIn: "1h",
           }
